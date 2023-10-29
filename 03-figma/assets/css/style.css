@@ -8,3 +8,23 @@
     margin: 0 auto;
 
 }
+.list_top {
+    display: flex; 
+    gap: 40px;
+}
+
+li {
+    list-style-type: none;
+}
+.link_end {
+    display: flex;
+    width: 310px;
+    height: 40px;
+    gap: 50px;
+}
+.button {
+    display: flex;
+    border-radius: 22px;
+    background:#070707;
+    color: #FFF;
+}
