@@ -20,6 +20,10 @@ h4 {
     color: #09970e;
     font-size: 20px;
 }
+img {
+    height: 100%;
+
+}
 .container {
     display: flex;
     flex-direction: row-reverse;
@@ -50,9 +54,10 @@ h4 {
     flex-direction: column;
     margin-top: 25px;
     margin-left: 10px;
+}
+.inform{
     padding-left: 10px;
 }
-
 .link {
     background-color: beige;
     padding: 20px 140px;
