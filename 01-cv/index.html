@@ -1,47 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/ccs/slyte.css">
   </head>
   <body>
-      <h1 style="text-align: center;">Front-End Developer</h1>
-      <p>
-        Front End Developer with six months of education in
-        JavaScript, HTML/CSS. I am able to create a work environment with a high level of collaboration, search for
-        solutions and determining the level of customer satisfaction.
-      </p>
-      <hr />
-      <!-- sidebar -->
-      <aside>
-        <img src="assets/images/4265.JPEG" alt="foto" width="400" height="550" />
-      </aside>
-
-        <h2>Viacheslav Lanchak</h2>
-
-        <!-- Contacts -->
-        <div>
-          <nav>
-          <h3>Contacts</h3>
-          <p>
-            <span> Tel: </span>
-            <a href="tel:+380660060667">+38 066 006 06 67</a>
-          </p>
-          <p>
-            <span> Email: </span>
-            <a href="mailto:slavalanchak16@gmail.com"
-              >slavalanchak16@gmail.com</a
-            >
-          </p>
-          <p>
-            <span> Facebook: </span>
-            <a href="Facebook" target="_blank">https://www.facebook.com</a>
-          </p>
-          </nav>
+    <div class="container">
+      <div class="header">
+        <div class="header_develop">
+            <h1>Front-End Developer</h1>
+            <p>
+              Front End Developer with six months of education in
+              JavaScript, HTML/CSS. I am able to create a work environment with a high level of collaboration, search for
+              solutions and determining the level of customer satisfaction.
+            </p>
         </div>
-      <!-- Work experience -->
-      <div>
+              <!-- Work experience -->
+      <div class="experience">
         <h3>Work Experience</h3>
         <div>
           <h4>Worker in agriculture</h4>
@@ -68,10 +48,44 @@
           <p>September 2007 - May 2012</p>
         </div>
       </div>
-      <hr />
-        <!-- Tech skills -->
+      <div class="link">
+        <div class="link_title">Ukrainian version</div>
+        <a href="./ua/index1.html" target="_blank">UA</a>
+      </div>
+    </div>
+
+    <!-- sidebar -->
+      <div class="sidebar">
+      <aside>
+        <img src="assets/images/4265.JPEG" alt="foto" width="300" height="425">
+      </aside>
+
+        <h2>Viacheslav Lanchak</h2>
+
+        <!-- Contacts -->
         <div>
-          <h3>Tech Skills</h3>
+          <nav>
+          <h3>Contacts</h3>
+          <p>
+            <span> Tel: </span>
+            <a href="tel:+380660060667">+38 066 006 06 67</a>
+          </p>
+          <p>
+            <span> Email: </span>
+            <a href="mailto:slavalanchak16@gmail.com"
+              >slavalanchak16@gmail.com</a
+            >
+          </p>
+          <p>
+            <span> Facebook: </span>
+            <a href="Facebook" target="_blank">https://www.facebook.com</a>
+          </p>
+          </nav>
+        </div>
+       <!-- Tech skills -->
+       <div>
+        <div>
+          <h3 class="skills">Tech Skills</h3>
           <ul>
             <li>HTML5</li>
             <li>CSS</li>
@@ -83,7 +97,7 @@
         </div>
         <!-- Soft skills -->
         <div>
-          <h3>Soft Skills</h3>
+          <h3 class="skills">Soft Skills</h3>
           <ul>
             <li>Teamwork</li>
             <li>Emotional intelligence and positive thinking</li>
@@ -92,8 +106,8 @@
             <li>Desire to learn</li>
           </ul>
         </div>
-    <div>
-      <a href="./ua/index1.html" target="_blank">UA</a>
+      </div>
+      </div>
     </div>
   </body>
 </html>
