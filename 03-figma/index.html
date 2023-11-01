@@ -4,15 +4,18 @@
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Homework_3</title>
-    <link rel="stylesheet" href="./assets/css/style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
     <header class="header">
       <div class="container">
         <nav class="nav_top">
-          <ul class="list_top">
+          <ul>
             <li>
-              <a href="/">Home</a>
+              <a id="link_home" href="/">Home</a>
             </li>
             <li>
               <a href="#about">About me</a>
@@ -33,21 +36,25 @@
 
     <main>
       <div class="container">
-        <h1>Denis Novik</h1>
-        <img src="assets/images/denis-novik.jpg" alt="denis-novik">
+        <h1 class="main_title">Denis Novik</h1>
+          <div class="foto_title">
+            <img src="assets/images/denis-novik.jpg" alt="denis-novik">
+          </div>
       </div>
       <section id="about_me">
         <div class="container">
-          <h2>About me</h2>
-          <p>
+          <h2 class="about_title">About me</h2>
+            <div class="about_info">
+              <p>
             Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design
             and everything connected with it.
-          </p>
-          <p>
+              </p>
+              <p>
             I'm studying at courses "Web and mobile design interfaces" in
             IT-Academy.
-          </p>
-          <p>Ready to implement excellent projects with wonderful people.</p>
+              </p>
+              <p>Ready to implement excellent projects with wonderful people.</p>
+          </div>
         </div>
       </section>
       <section id="skill">
@@ -172,25 +179,28 @@
       </section>
       <section id="portfolio">
         <div class="container">
-          <h2>Portfolio</h2>
+          <h2 class="portfolio_title">Portfolio</h2>
           <div class="foto-section">
             <ul>
               <li>
                 <img
                   src="assets/images/Fashion-Store.jpg"
                   alt="foto-fashion-store">
-                <br>
-                <a href="#">Online fashion store - Homepage</a>
+                  <div class="foto_links">
+                    <a href="#">Online fashion store - Homepage</a>
+                  </div>
               </li>
               <li>
                 <img src="assets/images/reebok_web.jpg" alt="foto-reebok">
-                <br>
-                <a href="#">Reebok Store - Concept</a>
+                <div class="foto_links">
+                  <a href="#">Reebok Store - Concept</a>
+                </div>
               </li>
               <li>
                 <img src="assets/images/braun-landing.jpg" alt="foto-braun">
-                <br>
-                <a href="#">Braun Landing Page - Concept</a>
+                <div class="foto_links">
+                  <a href="#">Braun Landing Page - Concept</a>
+                </div>
               </li>
             </ul>
           </div>

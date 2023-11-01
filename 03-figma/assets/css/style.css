@@ -1,21 +1,120 @@
+:root {
+    --var-black-color: #070707;
+    --var-gray-color: #F6F6F6;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2 {
+    color: var(--var-black-color);
+}
+li {
+    list-style: none;
+}
 .container {
     width: min(90%, 970px);
     margin: 0 auto;
-
 }
+
+.nav_top {
+    padding: 27px 0;
+    border-bottom: 1px solid #828282;
+}
+
+.nav_top ul {
+    text-align: center;
+    font-size: 0;
+}
+.nav_top ul li {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 20px;
+}
+#link_home {
+    color: var(--var-black-color);
+}
+.nav_top ul li a {
+    color: #828282;
+}
+.main_title {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 12px;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+}
+.foto_title img{
+    background: lightgray -0.359px -461.76px / 100% 374.882% ;
+    width: 970px;
+    height: 387px;
+    flex-shrink: 0;
+}
+
+#about_me {
+    background-color: var(--var-gray-color);
+}
+
+.about_title {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+.about_info {
+    columns: var(--var-black-color);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 50px 245px 0 245px;
+    padding-top: 0;
+    padding-bottom: 70px;
+}
+#portfolio {
+    background-color: var(--var-gray-color);
+}
+
+.portfolio_title {
+    text-align: center;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 100px;
+    margin: 0;
+}
+.foto-section {
+    margin-top: 50px;
+    margin-bottom: 100px;
+ }
+
+.foto-section ul{
+    margin: 0;
+    padding: 0;
+} 
+.foto_links {
+    color: var(--var-black-color);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    margin: 40px 0 70px 0;
+}
+
 .footer-content {
     width: 350px;
     margin: 0 auto;
-
-}
-.list_top {
-    display: flex; 
-    gap: 40px;
 }
 
-li {
-    list-style-type: none;
-}
 .link_end {
     display: flex;
     width: 310px;
@@ -25,6 +124,6 @@ li {
 .button {
     display: flex;
     border-radius: 22px;
-    background:#070707;
+    background:var(--var-black-color);
     color: #FFF;
 }
