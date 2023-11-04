@@ -9,44 +9,65 @@
 <body>
     <div class="container">
         <form action="#" method="get">
-            <label for="username">Повне імʼя</label>
-            <span class="forms">
-            <input type="text" name="username" id="username">
-            </span>
-            <br>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
-            <br>
-            <label for="password">Пароль</label>
-            <input type="password" name="password" id="password">
-            <br>
-            <label for="password_again">Пароль ще раз</label>
-            <input type="password" name="password_again" id="password_again">
-            <br>
-            <label for="gender">Стать</label>
-            <input type="radio" name="gender" value="man" id="gender">чоловіча
-            <label for="gender1"></label>
-            <input type="radio" name="gender" value="women" id="gender1">жіноча
-            <br>
-            <label for="age">Вік</label>
-            <input type="number" name="age" min="0" max="120" id="age">
-            <br>
-            <label for="course">Курс</label>
-            <select name="course" id="course">
-                <option value="" disabled selected>-=Виберіть курс=-</option>
-                <option value="1">Front-End</option>
-                <option value="2">Back-End</option>
-                <option value="3">Project Management</option>
-                <option value="4">QA Manual</option>
-            </select>
-            <br>
-            <label for="address">Повна адреса</label>
-            <textarea name="address" id="address" cols="30" rows="4" placeholder="Країна, регіон, місто/селище,вулиця"></textarea>
-            <br>
-            <input type="checkbox" name="agree" id="agree">
-            <label for="agree">Я погоджуюсь з обробкою персональних даних</label>
-            <br>
-            <div>
+            <div class="user_row">
+                <label for="username">Повне імʼя</label>
+                <input type="text" name="username" id="username">
+            </div>
+                <br>
+            <div class="email_row">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+                <br>
+            <div class="password_row">
+                <label for="password">Пароль</label>
+                <input type="password" name="password" id="password">
+            </div>
+                <br>
+            <div class="pass_again">
+                <label for="password_again">Пароль ще раз</label>
+                <input type="password" name="password_again" id="password_again">
+            </div>
+                <br>
+            <div class="gender_row">
+                <span class="gender_title">Стать</span>
+                <label>
+                    <input type="radio" name="gender" value="man">чоловіча
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="women">жіноча
+                </label>
+            </div>
+                <br>
+            <div class="age_row">
+                <label for="age">Вік</label>
+                    <div class="age_count">
+                        <input type="number" name="age" min="0" max="120" id="age">
+                    </div>
+            </div>
+                <br>
+            <div class="course_row">
+                <label for="course">Курс</label>
+                <select name="course" id="course">
+                    <option value="" disabled selected>-=Виберіть курс=-</option>
+                    <option value="1">Front-End</option>
+                    <option value="2">Back-End</option>
+                    <option value="3">Project Management</option>
+                    <option value="4">QA Manual</option>
+                </select>
+            </div>
+                <br>
+            <div class="address_row ">
+                <label for="address">Повна адреса</label>
+                <textarea name="address" id="address" cols="25" rows="4" placeholder="Країна, регіон, місто/селище,вулиця"></textarea>
+            </div>
+                <br>
+            <div class="agree">
+                <input type="checkbox" name="agree" id="agree">
+                <label for="agree">Я погоджуюсь з обробкою персональних даних</label>
+            </div>
+                <br>
+            <div class="button_row">
                 <button type="reset">Очистити форму</button>
                 <button type="submit">Зареєструватися</button>
             </div>

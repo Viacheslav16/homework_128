@@ -1,5 +1,62 @@
 .container {
-    width: 400px;
-    height: 800px;
-    padding-left: 10px;
+    width: 440px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: gainsboro;
+}
+.container input {
+    padding-right: 80px;
+}
+.user_row label {
+    display: inline-block;
+    width: 165px;
+}
+.email_row label {
+    display: inline-block;
+    width: 165px;
+}
+.password_row label {
+    display: inline-block;
+    width: 165px;
+}
+.pass_again label {
+    display: inline-block;
+    width: 165px;
+}
+.gender_row label {
+    display: inline-block;
+}
+.gender_title {
+    margin-right: 120px;
+}
+.age_row label{
+    display: inline-block;
+    width: 165px;
+}
+.age_count {
+    display: inline-block;
+}
+.age_row .age_count input {
+    padding-right: 0;
+}
+.course_row label {
+    display: inline-block;
+    width: 165px;
+}
+.address_row label {
+    display: inline-block;
+    width: 165px;
+}
+.agree input {
+    margin: 0;
+}
+.button_row {
+    padding-left:60px;
+}
+.button_row :first-child {
+    margin: 0 28px;
+    cursor: pointer;
+}
+.button_row :last-child {
+    cursor: pointer;
 }
