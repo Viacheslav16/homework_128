@@ -123,6 +123,7 @@ input[type="checkbox"]:checked + label::after {
     position: absolute;
     left: 6px;
     top: 8px;
+    transition: all 0.4s ease;
 }
 .main_wrapper div:nth-child(2n) {
     border-top: 3px solid var(--var-colors-purple);
@@ -133,6 +134,8 @@ input[type="checkbox"]:checked + label::after {
     border-top: 3px solid #FFF;
     border-bottom: 3px solid #FFF;
     background-color: #625E77;
+    transition: all 0.4s ease;
+
 }
 .main_wrapper div:active {
     background-color: var(--var-text-head);
