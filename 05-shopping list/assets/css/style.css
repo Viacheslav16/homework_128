@@ -6,6 +6,7 @@
     --var-colors-purple-regular: #88839E;
     --var-colors-purple : #7A7593;
     --var-colors-purple-dark: #625E77;
+    --var-text-checked: #9B96AC;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -25,7 +26,7 @@ main {
     display: flex;
     margin: 41px 0 39px;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
 }
 .container {
     width: min(90%, 800px);
@@ -36,17 +37,12 @@ h1 {
     font-size: 36px;
     line-height: 42px;
 }
-
 .info {
     color: var(--var-text-head);
     font-size: 24px;
     font-weight: 400;
     line-height: 28px;
     margin-top: 6px;
-}
-.pickles {
-    border-top: 3px solid var(--var-colors-purple-regular);
-    border-bottom: 3px solid var(--var-colors-purple-regular);
 }
 
 .main_wrapper {
@@ -58,17 +54,16 @@ h1 {
     padding: 0px 15px;
     align-items: center;
 }
-.main_wrapper span {
+.main_wrapper .paragraf {
+    color: var(--var-text-maining);
     font-size: 17px;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 36px;
     padding: 23px 0 23px 0;
-    margin-left: 15px;
-    font-size: 17px;
-    line-height: 22px;
+    margin-left: 10px;
 }
 
-label {
+.main_wrapper .title {
     color: var(--var-text-maining);
     font-size: 27px;
     line-height: 32px;
@@ -87,7 +82,10 @@ label {
     font-size: 28px;
     font-weight: 400;
 }
-
+.main_wrapper div.form_title {
+    margin-left: 0;
+    padding-left: 0;
+}
 input[type="checkbox"] {
     display: none;
 }
@@ -97,8 +95,9 @@ input[type="checkbox"] + label {
     cursor: pointer;
     margin-top: 0;
 }
-input[type="checkbox"]:checked + label {
-    text-decoration: line-through var(--var-main-color);
+input[type="checkbox"]:checked + label :is( span)  {
+    text-decoration: line-through var(--var-text-checked);
+    color: var(--var-text-checked);
 }
 
 input[type="checkbox"] + label::before {
@@ -111,6 +110,7 @@ input[type="checkbox"] + label::before {
     position: absolute;
     left: 0;
     top: 0;
+    margin-top: 3px;
 }
 input[type="checkbox"]:checked + label::after {
     content: '';
