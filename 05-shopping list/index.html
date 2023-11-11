@@ -8,69 +8,79 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 <body>
     <header>
         <div class="container">
             <h1 class="header">CSS Dinner Shopping List</h1>
-            <div class="info">Let’s go to the mall!</div>
+            <div class="subtitle">Let’s go to the mall!</div>
         </div>
     </header>
     <main>
         <div class="container">
-            <div class="main_wrapper">
-                <form action="#" >
-            <div class="pickles">
-                    <input type="checkbox" name="checkbox" id="pickle">
-                        <label for="pickle" >
-                            <span class="title">A lot of pickles</span>
-                            <span class="paragraf">(for the next lessons about CSS)</span>
+            <form method="post" action="#" >
+                <ul class="list">
+                    <li>
+                        <input type="checkbox" name="product[]" id="pickles">
+                        <label for="pickles">
+                            <span>
+                                A lot of pickles 
+                                <small>for the next lessons about CSS</small>
+                            </span>
                         </label>
-            </div>
-            <div class="appels">
-                    <input type="checkbox" name="checkbox" id="appel">
-                        <label for="appel">
-                            <span class="title">10 apples</span>
-                            <span class="paragraf">(for more CSS manipulations)</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="product[]" id="apples">
+                        <label for="apples">
+                            <span>
+                                10 apples
+                                <small>for more CSS manipulations</small>
+                            </span>
                         </label>
-            </div>
-            <div class="oranges">
-                    <input type="checkbox" name="checkbox" id="orange">
-                        <label for="orange">
-                            <span class="title">20 oranges</span>
-                            <span class="paragraf">(because they are awesome)</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="product[]" id="oranges">
+                        <label for="oranges">
+                            <span>
+                                20 oranges
+                                <small>because they are awesome</small>
+                            </span>
                         </label>
-            </div>
-            <div class="plates">
-                    <input type="checkbox" name="checkbox" id="plate">
-                        <label for="plate">
-                            <span class="title">13 plates</span>
-                            <span class="paragraf">(hm... they always dissapear)</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="product[]" id="plates">
+                        <label for="plates">
+                            <span>
+                                13 plates 
+                                <small>hm... they always dissapear</small>
+                            </span>
                         </label>
-            </div>
-            <div class="bentos">
-                    <input type="checkbox" name="checkbox" id="bent">
-                        <label for="bent">
-                            <span class="title">15 bentos</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="product[]" id="bentos">
+                        <label for="bentos">
+                            <span>
+                                15 bentos
+                            </span>
                         </label>
-            </div>
-            <div class="bottles">
-                    <input type="checkbox" name="checkbox" id="bottle">
-                        <label for="bottle">
-                            <span class="title">1 bottle of Sake</span>
-                            <span class="paragraf">(for my friends)</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="product[]" id="sake">
+                        <label for="sake">
+                            <span>
+                                1 bottle of Sake 
+                                <small>for my friends</small>
+                            </span>
                         </label>
-            </div>
-        </form>
-        </div>
+                    </li>
+                </ul>
+            </form>
         </div>
     </main>
     <footer>
         <div class="container">
-            <div class="goodbay">
-                <h3 class="footer_end">Bon appetit :)</h3>
-            </div>
+            <h2 class="footer_title">Bon appetit :)</h2>
         </div>
     </footer>
 </body>
