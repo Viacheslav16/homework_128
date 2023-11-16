@@ -47,17 +47,51 @@ main {
 }
 
 .foto {
-  width: min(90%, 400px);
+  width: 430px;
+  height: 430px;
+  position: relative;
+}
+.foto::before, .foto::after {
+  content: "";
+  border-top: 1px solid #FFCC00;
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+.foto::before {
+  border-left: 1px solid #FFCC00;
+  left: 0;
+}
+.foto::after {
+  border-right: 1px solid #FFCC00;
+  right: 0;
+}
+.foto .photo-wrap {
+  padding: 15px;
+}
+.foto .photo-wrap::before, .foto .photo-wrap::after {
+  content: "";
+  border-bottom: 1px solid #FFCC00;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+.foto .photo-wrap::before {
+  border-left: 1px solid #FFCC00;
+  left: 0;
+}
+.foto .photo-wrap::after {
+  border-right: 1px solid #FFCC00;
+  right: 0;
 }
 .foto img {
-  width: 100%;
   margin-bottom: 5px;
 }
 
-.main_line {
-  display: flex;
-  align-items: center;
-}
 .main_line::after {
   content: "";
   display: inline-block;
@@ -67,7 +101,7 @@ main {
 }
 
 .main_title {
-  margin-bottom: 40px;
+  margin-bottom: 33px;
   text-align: center;
 }
 .main_title .subtitle {
@@ -127,11 +161,14 @@ main {
   background-color: #FFCC00;
 }
 
-.nav ul {
+.nav_icon {
+  margin-top: 27px;
+}
+.nav_icon ul {
   display: flex;
   justify-content: center;
 }
-.nav ul li ~ li {
+.nav_icon ul li ~ li {
   margin-left: 5px;
 }
 
@@ -142,13 +179,14 @@ main {
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.5rem;
-  margin: 49px 0;
+  margin-top: 44px;
 }
 
 .line_end {
   display: flex;
   justify-content: center;
   gap: 5px;
+  margin: 14px 0 28px;
 }
 .line_end .line_first {
   width: 10px;
@@ -172,6 +210,7 @@ main {
 .link button {
   font-family: Open Sans;
   border: 1px solid #FFCC00;
+  background-color: #FFF;
   padding: 5px 10px;
   color: #666666;
   font-size: 0.875rem;

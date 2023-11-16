@@ -49,16 +49,52 @@ main {
 }
 
 .foto {
-    width: min(90%, 400px);
+    width: 430px;
+    height: 430px;
+    position: relative;
+    &::before, &::after {
+        content: '';
+        border-top: 1px solid $gold-text;
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 100px;
+        height: 100px;
+    }
+    &::before{
+        border-left: 1px solid $gold-text;
+        left: 0;
+    }
+    &::after {
+        border-right: 1px solid $gold-text;
+        right: 0;
+    }
+    .photo-wrap {
+        padding: 15px;
+        &::before, &::after {
+            content: '';
+            border-bottom: 1px solid $gold-text;
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+        &::before{
+            border-left: 1px solid $gold-text;
+            left: 0;
+        }
+        &::after {
+            border-right: 1px solid $gold-text;
+            right: 0;
+        }
+    }
     img {
-        width: 100%;
         margin-bottom: 5px;
     }
     
 }
 .main_line {
-    display: flex;
-    align-items: center;
         &::after {
             content:'';
             display: inline-block;
@@ -68,7 +104,7 @@ main {
         }
 }
 .main_title {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
     text-align: center;
     .subtitle {
         font-family: Raleway;
@@ -128,12 +164,13 @@ main {
     }
     
 }
-.nav {
+.nav_icon {
+    margin-top: 27px;
     ul {
         display: flex;
         justify-content: center;
         li ~ li {
-            margin-left: 5px;
+            margin-left: 5px
         }
     }
 }
@@ -144,13 +181,14 @@ main {
     text-align: center;
     font-size: 0.875rem;
     line-height: 1.5rem;
-    margin: 49px 0;
+    margin-top: 44px;
 
 }
 .line_end {
     display: flex;
     justify-content: center;
     gap: 5px;
+    margin: 14px 0 28px;
     .line_first{
         width: 10px;
         height: 4px;
@@ -173,6 +211,7 @@ main {
     button {
         font-family: Open Sans;
         border: 1px solid $gold-text;
+        background-color: #FFF;
         padding: 5px 10px;
         color: $main-text;
         font-size: 0.875rem;
