@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open-Sans", sans-serif;
   font-family: "Raleway", sans-serif;
   font-family: "Roboto", sans-serif;
 }
@@ -105,7 +105,7 @@ main {
   text-align: center;
 }
 .main_title .subtitle {
-  font-family: Raleway;
+  font-family: "Raleway";
   color: #898F8F;
   font-size: 1.125rem;
   line-height: 1.5rem;
@@ -143,7 +143,7 @@ main {
 }
 .info_title .info_text {
   color: #666666;
-  font-family: Raleway;
+  font-family: "Raleway";
   text-align: center;
   font-size: 1.5rem;
   line-height: 2.25rem;
@@ -174,7 +174,7 @@ main {
 
 .text_main {
   width: 430px;
-  font-family: Raleway;
+  font-family: "Raleway";
   color: #333333;
   text-align: center;
   font-size: 0.875rem;
@@ -208,7 +208,7 @@ main {
   text-align: center;
 }
 .link button {
-  font-family: Open Sans;
+  font-family: "Open-Sans";
   border: 1px solid #FFCC00;
   background-color: #FFF;
   padding: 5px 10px;

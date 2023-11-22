@@ -11,7 +11,7 @@ $icon-grey:#CCCCCC;
     box-sizing: border-box; 
  }
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open-Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
@@ -107,7 +107,7 @@ main {
     margin-bottom: 33px;
     text-align: center;
     .subtitle {
-        font-family: Raleway;
+        font-family: 'Raleway';
         color: $sub-text;
         font-size: 1.125rem;
         line-height: 1.5rem;
@@ -145,7 +145,7 @@ main {
     }
     .info_text {
         color: $main-text;
-        font-family: Raleway;
+        font-family: 'Raleway';
         text-align: center;
         font-size: 1.5rem;
         line-height: 2.25rem; 
@@ -176,7 +176,7 @@ main {
 }
 .text_main {
     width: 430px;
-    font-family: Raleway;
+    font-family: 'Raleway';
     color: $small-text;
     text-align: center;
     font-size: 0.875rem;
@@ -209,7 +209,7 @@ main {
 .link {
     text-align: center;
     button {
-        font-family: Open Sans;
+        font-family: 'Open-Sans';
         border: 1px solid $gold-text;
         background-color: #FFF;
         padding: 5px 10px;
