@@ -1,0 +1,138 @@
+$white_color:#FFF;
+$color_black:#000;
+$bg_color:#DADADA;
+
+@import 'fonts';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+header {
+    margin-bottom: 75px;
+}
+.header_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 13px 0;
+    .header_wrap {
+        display: flex;
+        gap: 50px;
+        .nav_wrap {
+            ul {
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }
+}
+.second_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    .chapter {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+            .text_decor {
+                text-decoration-line: underline;
+            }
+            .grey_bg {
+                background-color: $bg_color;
+            }
+        .title {
+            display: flex;
+            gap: 10px;
+        }
+        .chapter_text {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+}
+.pt_sans {
+    font-family: 'PT Sans', sans-serif;
+}
+.francoisn_regular {
+    font-family: 'Francois One', sans-serif;
+}
+.farro_light {
+    font-family: 'Farro', sans-serif;
+}
+.staatliches_regular {
+    font-family: 'Staatliches', sans-serif;
+}
+.tourney_semibold {
+    font-family: 'Tourney',sans-serif;
+}
+p {
+    @extend .pt_sans;
+    font-style: normal;
+    font-weight: 400;
+    color: $color_black;
+    font-size: 1.75rem;
+    // line-height: 3rem;
+    line-height: 48px;
+}
+h2 {
+    @extend .francoisn_regular;
+    color: $color_black;
+    font-size: 2.25rem;
+    line-height: 3rem; 
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
+}
+h3 {
+    @extend .farro_light;
+    color: $color_black;
+    line-height: normal;
+    letter-spacing: 0.075rem;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 300;
+}
+a {
+    @extend .staatliches_regular;
+    color: $color_black;
+    font-size: 1.375rem;
+    line-height: normal;
+    letter-spacing: 0.04125rem;
+}
+.eng {
+    @extend .tourney_semibold;
+    background-color: $white_color;
+    text-align: center;
+    font-size: 1.375rem;
+    line-height: 1.125rem; 
+    letter-spacing: 0.0825rem;
+}
+.bold {
+    @extend .pt_sans;
+    font-style: normal;
+    font-weight: 700;
+    color: $color_black;
+    font-size: 1.75rem;
+    line-height: 3rem; 
+}
+.italic {
+    @extend .pt_sans;
+    font-style: italic;
+    font-weight: 400;
+    color: $color_black;
+    font-size: 1.75rem;
+    line-height: 3rem;
+
+}
