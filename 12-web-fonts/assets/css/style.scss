@@ -1,0 +1,154 @@
+$bg_color:#FFF;
+$main_color:#1C1C1C;
+$text_color:#545454;
+$border_color:#E4E4E4;
+$active_color:#007BFF;
+$footer_text:#969696;
+
+@import 'fonts';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: min(90%, 570px);
+    margin: 0 auto;
+    padding: 35px 34px 16px 34px;
+    background-color: $bg_color;
+}
+body {
+    font-family:  'Roboto' sans-serif;
+    background: #F7F7F7;
+}
+
+.roboto {
+    font-family: 'Roboto' sans-serif;
+}
+.inter {
+    font-family: 'Inter' sans-serif;
+}
+h1 {
+    color: $main_color;
+    @extend .roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+}
+label {
+    @extend .roboto;
+}
+a {
+    color: $active_color;
+    text-decoration: none;
+}
+span {
+    margin: 0 5px;
+}
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    .name_row {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        color: #545454;
+        @extend .roboto;
+        font-size: 15px;
+        line-height: 22px; 
+        letter-spacing: -0.2px;
+        width: 245px;
+    }
+
+}
+.mail_row {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        margin-bottom: 21px;
+}
+.gender_row {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    margin-bottom: 21px;
+    input[type=radio] {
+        margin-right: 8px;
+        height: auto;
+    }
+}
+.country_wrap {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    .country_row {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+    .city_row {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        width: 245px;
+    }
+}
+.button_row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        margin-bottom: 22px;
+        background-color: $active_color;
+    .btn {
+        @extend .roboto;
+        border: none;
+        background-color: $active_color;
+        color: $bg_color;
+        font-size: 15px;
+        line-height: 22px; 
+        letter-spacing: -0.1px;
+        width: 500px;
+        height: 38px;
+    }
+}
+.politic {
+    @extend .roboto;
+    width: 410px;
+    height: 36px;
+    flex-shrink: 0;
+    color: $footer_text;
+    text-align: center;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+    margin: 0 79px 20px 81px;
+}
+.line {
+    display: flex;
+    height: 1px;
+    justify-content: center;
+    align-items: center;
+    background-color: $border_color;
+    margin-bottom: 20px;
+}
+.link {
+    display: flex;
+    justify-content: center;
+    height: 22px;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+}
+input {
+    height: 38px;
+}
+select {
+    height: 38px;
+    width: 245px;
+}
