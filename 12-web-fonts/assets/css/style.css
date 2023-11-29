@@ -43,8 +43,14 @@
   padding: 0;
 }
 
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
 .container {
-  width: min(90%, 570px);
+  width: min(90%, 500px);
   margin: 0 auto;
   padding: 35px 34px 16px 34px;
   background-color: #FFF;
@@ -52,10 +58,10 @@
 
 body {
   font-family: "Roboto" sans-serif;
-  background: #F7F7F7;
+  background: #E4E4E4;
 }
 
-.roboto, .politic, .button_row .btn, .name .name_row, label, h1 {
+.roboto, .politic, .button_row .btn, .name .name_row, label, h2 {
   font-family: "Roboto" sans-serif;
 }
 
@@ -63,12 +69,13 @@ body {
   font-family: "Inter" sans-serif;
 }
 
-h1 {
+h2 {
   color: #1C1C1C;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: 32px;
+  margin-bottom: 20px;
 }
 
 a {
@@ -83,7 +90,6 @@ span {
 .name {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 12px;
   margin-bottom: 20px;
 }
@@ -102,14 +108,15 @@ span {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  margin-bottom: 21px;
+  width: 500px;
+  margin-bottom: 23px;
 }
 
 .gender_row {
   display: flex;
   align-items: center;
   gap: 21px;
-  margin-bottom: 21px;
+  margin-bottom: 23px;
 }
 .gender_row input[type=radio] {
   margin-right: 8px;
@@ -118,7 +125,6 @@ span {
 
 .country_wrap {
   display: flex;
-  justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -137,6 +143,7 @@ span {
 .button_row {
   display: flex;
   justify-content: center;
+  width: 500px;
   align-items: center;
   flex-shrink: 0;
   margin-bottom: 22px;
@@ -162,7 +169,7 @@ span {
   font-size: 15px;
   line-height: 18px;
   letter-spacing: -0.1px;
-  margin: 0 79px 20px 81px;
+  margin: 0 45px 20px 47px;
 }
 
 .line {
@@ -184,10 +191,22 @@ span {
 }
 
 input {
-  height: 38px;
+  height: 35px;
 }
 
 select {
-  height: 38px;
+  height: 39px;
   width: 245px;
+}
+
+.profil_wrap {
+  display: flex;
+  align-items: center;
+}
+.profil_wrap .foto_form {
+  margin-right: 20px;
+}
+.profil_wrap .button_wrap .profil_file {
+  display: inline-block;
+  vertical-align: middle;
 }

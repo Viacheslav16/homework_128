@@ -11,15 +11,20 @@ $footer_text:#969696;
     margin: 0;
     padding: 0;
 }
+.wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
 .container {
-    width: min(90%, 570px);
+    width: min(90%, 500px);
     margin: 0 auto;
     padding: 35px 34px 16px 34px;
     background-color: $bg_color;
 }
 body {
-    font-family:  'Roboto' sans-serif;
-    background: #F7F7F7;
+    font-family: 'Roboto' sans-serif;
+    background:$border_color;
 }
 
 .roboto {
@@ -28,13 +33,14 @@ body {
 .inter {
     font-family: 'Inter' sans-serif;
 }
-h1 {
+h2 {
     color: $main_color;
     @extend .roboto;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
     line-height: 32px;
+    margin-bottom: 20px;
 }
 label {
     @extend .roboto;
@@ -49,7 +55,6 @@ span {
 .name {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 12px;
     margin-bottom: 20px;
     .name_row {
@@ -69,13 +74,14 @@ span {
         display: flex;
         flex-direction: column;
         gap: 7px;
-        margin-bottom: 21px;
+        width: 500px;
+        margin-bottom: 23px;
 }
 .gender_row {
     display: flex;
     align-items: center;
     gap: 21px;
-    margin-bottom: 21px;
+    margin-bottom: 23px;
     input[type=radio] {
         margin-right: 8px;
         height: auto;
@@ -83,7 +89,6 @@ span {
 }
 .country_wrap {
     display: flex;
-    justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
     .country_row {
@@ -101,6 +106,7 @@ span {
 .button_row {
         display: flex;
         justify-content: center;
+        width: 500px;
         align-items: center;
         flex-shrink: 0;
         margin-bottom: 22px;
@@ -127,7 +133,7 @@ span {
     font-size: 15px;
     line-height: 18px;
     letter-spacing: -0.1px;
-    margin: 0 79px 20px 81px;
+    margin: 0 45px 20px 47px;
 }
 .line {
     display: flex;
@@ -146,9 +152,24 @@ span {
     flex-shrink: 0;
 }
 input {
-    height: 38px;
+    height: 35px;
 }
 select {
-    height: 38px;
+    height: 39px;
     width: 245px;
+}
+
+.profil_wrap {
+    display: flex;
+    align-items: center;
+    .foto_form {
+        margin-right: 20px;
+    }
+    .button_wrap{
+        .profil_file {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
 }
