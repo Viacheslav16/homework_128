@@ -5,7 +5,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("../roboto/roboto-v30-cyrillic-ext_latin-regular.woff2") format("woff2");
+  src: url("../fonts/roboto/roboto-v30-cyrillic-ext_latin-regular.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* roboto-500 - cyrillic-ext_latin */
@@ -15,7 +15,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("../roboto/roboto-v30-cyrillic-ext_latin-500.woff2") format("woff2");
+  src: url("../fonts/roboto/roboto-v30-cyrillic-ext_latin-500.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* inter-regular - cyrillic-ext_latin */
@@ -25,7 +25,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("../inter/inter-v13-cyrillic-ext_latin-regular.woff2") format("woff2");
+  src: url("../fonts/inter/inter-v13-cyrillic-ext_latin-regular.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* inter-600 - cyrillic-ext_latin */
@@ -35,7 +35,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  src: url("../inter/inter-v13-cyrillic-ext_latin-600.woff2") format("woff2");
+  src: url("../fonts/inter/inter-v13-cyrillic-ext_latin-600.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 * {
@@ -57,7 +57,6 @@
 }
 
 body {
-  font-family: "Roboto" sans-serif;
   background: #E4E4E4;
 }
 
