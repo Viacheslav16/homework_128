@@ -12,6 +12,9 @@ $border_color: #BDBDBD;
 }
 body {
     position: relative;
+        background-image: url(../images/bg-picture.svg);
+        background-position: left 812px top 153px;
+        background-repeat: no-repeat;
 }
 .container {
     width: min(90%, 789px);
@@ -64,14 +67,10 @@ header {
     display: flex;
     flex-direction: column;
     gap: 67px;
-    .bg {
-        background-image: url(../images/bg-picture.svg);
-        background-position: left 277px top 0;
-        background-repeat: no-repeat;
-        .section_top {
-            margin-bottom: 67px;
-        }
+    .section_top {
+        margin-bottom: 67px;
     }
+
     .chapter {
         display: flex;
         flex-direction: column;

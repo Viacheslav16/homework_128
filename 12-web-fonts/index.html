@@ -8,111 +8,120 @@
 </head>
 <body>
     <main>
-        <div class="wrap">
-            <div class="container">
-                <h2>Create an Account</h2>
-            <form>
-                <div class="name">
-                    <div class="name_row">
-                        <label for="firstrname">First Name</label>
-                        <input type="text" name="username" id="firstrname">
-                    </div>
-                    <div class="name_row">
-                        <label for="secondname">Last Name</label>
-                        <input type="text" name="lastname" id="secondname">
-                    </div>
-                </div>
-                <div class="mail_row">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">
-                    <p>We'll never share your email with anyone else.</p>
-                </div>
-                <div class="gender_row">
-                    <label>
-                        <input type="radio" name="gender" value="man">Male
-                    </label>
-                    <label>
-                        <input type="radio" name="gender" value="women">Female
-                    </label>
-                </div>
-                <div class="country_wrap">
-                    <div class="country_row">
-                        <label for="country">Country</label>
-                        <select name="country" id="country">
-                            <option value="" disabled selected>select</option>
-                            <option value="1">Ukraine</option>
-                            <option value="2">England</option>
-                            <option value="3">Poland</option>
-                            <option value="4">Danmark</option>
-                        </select>
-                    </div>
-                    <div class="city_row">
-                        <label for="city">City</label>
-                        <input type="text" name="city" id="city">
-                    </div>
-                </div>
-                <div class="button_row">
-                    <button type="button" class="btn">Sign Up</button>
-                </div>
-                <div class="politic">
-                    By clicking the 'Sign Up' button, you confirm that you accept our
-                    <a href="">Terms of Use</a><span>and</span><a href="">Privacy Policy</a>                     .
-                </div>
-                <div class="line"></div>
-                <div class="link">
-                    <div>Have an account?</div>
-                    <a href="">Log In</a>
-                </div>
-            </form>
-            </div>
-            <div class="container">
+        <div class="container">
+            <div class="wrap">
+                <div class="first_form">
+                    <h2>Create an Account</h2>
                 <form>
-                    <h2>Profile</h2>
-                    <div class="profil_wrap">
-                        <div class="foto_form"><img src="assets/images/Image.png" alt="foto"></div>
-                        <div class="button_wrap">
-                            <button type="button" class="profil_file">
-                                <input type="file" name="file" id="file">
-                                <img src="assets/images/Photo Camera.png" alt="profil_file">
-                            </button>
-                            <button type="button" class="profil_foto"><img src="assets/images/Trash.png" alt="profil_foto"></button>
-                            <p>Up to 1 MB (300x300 px)</p>
-                        </div>
-                    </div>
-                    <div class="name">
-                        <div class="name_row">
-                            <label for="firstrname">Name</label>
+                    <div class="form_wrap">
+                        <div class="form_row">
+                            <label for="firstrname">First Name</label>
                             <input type="text" name="username" id="firstrname">
                         </div>
-                        <div class="name_row">
-                            <label for="secondname">E-mail</label>
+                        <div class="form_row">
+                            <label for="secondname">Last Name</label>
                             <input type="text" name="lastname" id="secondname">
                         </div>
                     </div>
-                        <div class="name">
-                            <div class="name_row">
-                                <label for="firstrname">Country</label>
-                                <input type="text" name="username" id="firstrname">
-                            </div>
-                            <div class="name_row">
-                                <label for="secondname">City</label>
-                                <input type="text" name="lastname" id="secondname">
-                            </div>
+                    <div class="mail_row">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email">
+                        <p>We'll never share your email with anyone else.</p>
+                    </div>
+                    <div class="gender_row">
+                        <label>
+                            <input type="radio" name="gender" value="man">Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="women">Female
+                        </label>
+                    </div>
+                    <div class="form_wrap">
+                        <div class="form_row">
+                            <label for="country">Country</label>
+                            <select class="select_wrap" name="country" id="country">
+                                <option value="" disabled selected>Select</option>
+                                <option value="1">Ukraine</option>
+                                <option value="2">England</option>
+                                <option value="3">Poland</option>
+                                <option value="4">Danmark</option>
+                            </select>
                         </div>
-                        <div class="name">
-                            <div class="name_row">
-                                <label for="firstrname">Zip Code</label>
-                                <input type="text" name="username" id="firstrname">
-                            </div>
-                            <div class="name_row">
-                                <label for="secondname">Phone Number</label>
-                                <input type="text" name="lastname" id="secondname">
-                            </div>
+                        <div class="form_row">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city">
                         </div>
-                        <div class="fotter_foto">
-                            <button type="button" class="footer_btn">Update</button>
-                        </div>
+                    </div>
+                    <div class="button_row">
+                        <button type="button" class="btn">Sign Up</button>
+                    </div>
+                    <div class="politic">
+                        By clicking the 'Sign Up' button, you confirm that you accept our
+                        <a href="">Terms of Use</a><span>and</span><a href="">Privacy Policy</a>                     .
+                    </div>
+                    <div class="line"></div>
+                    <div class="link">
+                        <div class="link_name">Have an account?</div>
+                        <a href="">Log In</a>
+                    </div>
                 </form>
+                </div>
+                <div class="second_form">
+                    <form>
+                        <h2>Profile</h2>
+                        <div class="profil_wrap">
+                            <div class="foto_form"><img src="assets/images/Image.png" alt="foto"></div>
+                            <div class="button_wrap">
+                                <div class="profil_file">
+                                    <label for="file"></label>
+                                    <input type="text" name="file" id="file">
+                                    <img src="assets/images/Photocamera.png" alt="profil_file">
+                                </div>
+                                <button type="button" class="profil_foto"></button>
+                                <p>Up to 1 MB (300x300 px)</p>
+                            </div>
+                        </div>
+                        <div class="form_wrap">
+                            <div class="form_row">
+                                <label for="name">Name</label>
+                                <input type="text" name="username" id="name">
+                            </div>
+                            <div class="form_row">
+                                <label for="email-name">E-mail</label>
+                                <input type="text" name="e-mail" id="email-name">
+                            </div>
+                        </div>
+                            <div class="form_wrap">
+                                <div class="form_row">
+                                    <label for="againcountry">Country</label>
+                                    <select class="select_footer" name="country" id="againcountry" >
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="1">Ukraine</option>
+                                        <option value="2">England</option>
+                                        <option value="3">Poland</option>
+                                        <option value="4">Danmark</option>
+                                    </select>
+                                </div>
+                                <div class="form_row">
+                                    <label for="town">City</label>
+                                    <input type="text" name="lastname" id="town">
+                                </div>
+                            </div>
+                            <div class="form_wrap">
+                                <div class="form_row">
+                                    <label for="code">Zip Code</label>
+                                    <input type="text" name="code" id="code">
+                                </div>
+                                <div class="form_row">
+                                    <label for="number">Phone Number</label>
+                                    <input type="text" name="number" id="number">
+                                </div>
+                            </div>
+                            <div class="footer_foto">
+                                <button type="button" class="footer_btn">Update</button>
+                            </div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>

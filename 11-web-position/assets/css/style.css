@@ -76,6 +76,9 @@
 
 body {
   position: relative;
+  background-image: url(../images/bg-picture.svg);
+  background-position: left 812px top 153px;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -134,12 +137,7 @@ header {
   flex-direction: column;
   gap: 67px;
 }
-.second_wrap .bg {
-  background-image: url(../images/bg-picture.svg);
-  background-position: left 277px top 0;
-  background-repeat: no-repeat;
-}
-.second_wrap .bg .section_top {
+.second_wrap .section_top {
   margin-bottom: 67px;
 }
 .second_wrap .chapter {

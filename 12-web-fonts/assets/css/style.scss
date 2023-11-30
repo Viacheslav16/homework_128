@@ -7,65 +7,108 @@ $footer_text:#969696;
 
 @import 'fonts';
 
-* {
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.wrap {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
+
 .container {
-    width: min(90%, 500px);
-    margin: 0 auto;
-    padding: 35px 34px 16px 34px;
-    background-color: $bg_color;
+    width: min(90%, 1170px);
+    margin: 70px auto;
+
+    .wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        .first_form {
+            background-color: $bg_color;
+            padding: 35px 36px 16px 33px;
+        }
+        .second_form{
+            background-color: $bg_color;
+            padding: 35px 34px 104px 36px;
+        }
+    }
 }
 body {
+    font-family: 'Roboto' sans-serif;
     background:$border_color;
 }
 
 .roboto {
-    font-family: 'Roboto' sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .inter {
-    font-family: 'Inter' sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 h2 {
     color: $main_color;
     @extend .roboto;
     font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
     line-height: 32px;
     margin-bottom: 20px;
 }
 label {
     @extend .roboto;
+    color: $text_color;
+    font-size: 15px;
+    line-height: 22px; /* 146.667% */
+    letter-spacing: -0.2px;
 }
-a {
-    color: $active_color;
-    text-decoration: none;
+input,
+select {
+    @extend .inter;
+    color: $text_color;
+    font-size: 15px;
+    line-height: 22px; 
+    padding: 7px 10px;
+    appearance: none;
+    border: 1px solid $border_color;
+    background: #fff;
+    border-radius: 6px;
+    letter-spacing: -0.2px;
+
+}
+select {
+    background-image: url(../images/Arrow.png);
+    background-repeat: no-repeat;
+    background-position: right 8px top 50%;
+}
+p {
+    @extend .roboto;
+    color: $footer_text;
+    font-size: 13px;
+    line-height: 18px; 
+    letter-spacing: -0.1px;
 }
 span {
-    margin: 0 5px;
+    @extend .roboto;
+    color: $footer_text;
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+    padding: 0 4px;
 }
-.name {
+option {
+    color: $text_color;
+}
+.form_wrap {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 20px;
-    .name_row {
+    .form_row {
+        @extend .roboto;
         display: flex;
         flex-direction: column;
         gap: 7px;
         color: #545454;
-        @extend .roboto;
-        font-size: 15px;
-        line-height: 22px; 
         letter-spacing: -0.2px;
-        width: 245px;
+        width: 50%;
     }
 
 }
@@ -73,19 +116,38 @@ span {
         display: flex;
         flex-direction: column;
         gap: 7px;
-        width: 500px;
-        margin-bottom: 23px;
+        margin-bottom: 20px;
 }
 .gender_row {
     display: flex;
     align-items: center;
-    gap: 21px;
-    margin-bottom: 23px;
+    gap: 16px;
+    margin-bottom: 20px;
     input[type=radio] {
-        margin-right: 8px;
-        height: auto;
+        appearance: auto;
+        margin-right: 11px;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $border_color;
+        border-radius: 50%;
+        background-color:$active_color;
+        cursor: pointer;
+        position: relative;
+        &::before {
+            width: 8px;
+            height: 8px;
+            border: 1px solid $bg_color;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            outline: 5px solid $active_color;
+        }
     }
 }
+
 .country_wrap {
     display: flex;
     gap: 10px;
@@ -94,45 +156,50 @@ span {
         display: flex;
         flex-direction: column;
         gap: 7px;
+        width: 50%;
     }
     .city_row {
         display: flex;
         flex-direction: column;
         gap: 7px;
-        width: 245px;
+        width: 50%;
     }
 }
 .button_row {
         display: flex;
         justify-content: center;
-        width: 500px;
         align-items: center;
-        flex-shrink: 0;
         margin-bottom: 22px;
         background-color: $active_color;
+        padding: 6px 10px;
+        border: 1px solid #e4e4e4;
+        border-radius: 6px;
+        cursor: pointer;
     .btn {
         @extend .roboto;
+        font-size: 15px;
+        line-height: 22px; 
         border: none;
         background-color: $active_color;
         color: $bg_color;
-        font-size: 15px;
-        line-height: 22px; 
         letter-spacing: -0.1px;
-        width: 500px;
-        height: 38px;
+        width: 100%;
+        cursor: pointer;
     }
 }
 .politic {
     @extend .roboto;
-    width: 410px;
-    height: 36px;
-    flex-shrink: 0;
     color: $footer_text;
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 18px;
     letter-spacing: -0.1px;
-    margin: 0 45px 20px 47px;
+    margin: 0 57px 20px 59px;
+    a {
+        @extend .inter;
+        color: $active_color;
+        text-decoration: none;
+    }
 }
 .line {
     display: flex;
@@ -140,35 +207,101 @@ span {
     justify-content: center;
     align-items: center;
     background-color: $border_color;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
 }
 .link {
     display: flex;
     justify-content: center;
-    height: 22px;
     align-items: flex-start;
     gap: 20px;
-    flex-shrink: 0;
+    .link_name {
+        color: $text_color;
+        text-align: right;
+        @extend .roboto;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+    }
+    a {
+        color: $active_color;
+        text-decoration: none;
+        color: $active_color;
+        @extend .roboto;
+        font-size: 15px;
+        line-height: 22px; 
+        letter-spacing: -0.1px;
+        cursor: pointer;
+    }
 }
-input {
-    height: 35px;
-}
-select {
-    height: 39px;
-    width: 245px;
-}
-
 .profil_wrap {
     display: flex;
     align-items: center;
+    margin-bottom: 16px;
     .foto_form {
         margin-right: 20px;
     }
-    .button_wrap{
+    .button_wrap {
+        .profil_foto {
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/Trash.png);
+            background-repeat: no-repeat;
+            background-position: right 6px  top 50%;
+            vertical-align: sub;
+            border: 1px solid $border_color;
+            border-radius: 6px;
+            cursor: pointer;
+        }
         .profil_file {
             display: inline-block;
             vertical-align: middle;
+            margin-bottom: 8px;
         }
     }
-
+}
+.footer_foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $active_color;
+    padding: 7px 10px;
+    border: 1px solid #e4e4e4;
+    border-radius: 6px;
+    width: calc(50% - 100px);
+    cursor: pointer;
+    .footer_btn {
+        text-align: center;
+        @extend .roboto;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: -0.1px;
+        background-color: $active_color;
+        color: $bg_color;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+    }
+}
+a:hover {
+    color: green;
+}
+.button_row:hover {
+    border: 1px solid $active_color;
+    color: $active_color;
+    background-color: $bg_color;
+}
+.btn:hover {
+    border: 1px solid $active_color;
+    color: $active_color;
+    background-color: $bg_color;
+}
+.footer_foto:hover {
+    border: 1px solid $active_color;
+    color: $active_color;
+    background-color: $bg_color;
+}
+.footer_btn:hover {
+    border: 1px solid $active_color;
+    color: $active_color;
+    background-color: $bg_color;
 }
