@@ -1,3 +1,33 @@
+/* roboto-regular - cyrillic-ext_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto/roboto-v30-cyrillic-ext_latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-500 - cyrillic-ext_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto/roboto-v30-cyrillic-ext_latin-500.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* delius-unicase-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Delius Unicase";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/delius/delius-unicase-v28-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +35,6 @@
 }
 
 body {
-  font-family: "Delius Unicase", cursive;
   font-family: "Roboto", sans-serif;
   background: #FFFFFF;
 }
@@ -18,14 +47,87 @@ body {
 h2 {
   color: #000000;
   text-align: center;
-  font-family: "Delius Unicase";
   font-size: 2.25rem;
   letter-spacing: 0.1125rem;
   margin: 120px 0 80px;
 }
 
-img {
+.roboto, .foto_wrap .date, .foto_wrap .name {
+  font-family: "Roboto", sans-serif;
+}
+
+.delius, h2 {
+  font-family: "Delius Unicase", cursive;
+}
+
+.foto_wrap {
+  overflow: hidden;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.foto_wrap .name {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #FFFFFF;
+}
+.foto_wrap .date {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #FFFFFF;
+}
+.foto_wrap .icon {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  border-radius: 8px;
+  background: rgba(224, 224, 224, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  aspect-ratio: 1;
+  transform: translateY(-150%);
+  transition: all 0.5s ease;
+}
+.foto_wrap .download {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border-radius: 8px;
+  background: rgba(224, 224, 224, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  aspect-ratio: 1;
+  transform: translateY(-150%);
+  transition: all 0.5s ease;
+}
+.foto_wrap img {
   vertical-align: top;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.foto_wrap:hover .foto {
+  scale: 1.2;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.foto_wrap:hover .icon {
+  transform: translateY(0);
+}
+.foto_wrap:hover .icon:active {
+  background: #E0E0E0;
+  opacity: 1;
+}
+.foto_wrap:hover .download {
+  transform: translateY(0);
+}
+.foto_wrap:hover .download:active {
+  background: #E0E0E0;
+  opacity: 1;
 }
 
 .first_wrap {
@@ -33,6 +135,10 @@ img {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 370px);
   gap: 30px;
+  opacity: 0.9;
+}
+.first_wrap:hover .foto_wrap:not(:hover) {
+  opacity: 0.7;
 }
 
 .second_wrap {
@@ -40,6 +146,10 @@ img {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 370px);
   gap: 30px;
+  opacity: 0.9;
+}
+.second_wrap:hover .foto_wrap:not(:hover) {
+  opacity: 0.7;
 }
 
 .third_wrap {
@@ -48,6 +158,10 @@ img {
   grid-template-rows: repeat(5, 370px);
   gap: 30px;
   margin-bottom: 120px;
+  opacity: 0.9;
+}
+.third_wrap:hover .foto_wrap:not(:hover) {
+  opacity: 0.7;
 }
 
 .colspan {
