@@ -159,6 +159,7 @@ option {
   align-items: center;
   gap: 16px;
   margin-bottom: 20px;
+  /* I have a problem with create 'before element'. It is not working */
 }
 .gender_row input[type=radio] {
   appearance: auto;
@@ -217,7 +218,7 @@ option {
   font-size: 15px;
   line-height: 22px;
   border: none;
-  background-color: #007BFF;
+  background-color: transparent;
   color: #FFF;
   letter-spacing: -0.1px;
   width: 100%;
@@ -277,6 +278,14 @@ option {
 .profil_wrap .foto_form {
   margin-right: 20px;
 }
+.profil_wrap .button_wrap .profil_file {
+  position: relative;
+}
+.profil_wrap .button_wrap .profil_file .profil_search {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
 .profil_wrap .button_wrap .profil_foto {
   width: 30px;
   height: 30px;
@@ -286,7 +295,11 @@ option {
   vertical-align: sub;
   border: 1px solid #E4E4E4;
   border-radius: 6px;
+  margin-left: 5px;
   cursor: pointer;
+}
+.profil_wrap .button_wrap .profil_foto:hover {
+  background-color: #cceffb;
 }
 .profil_wrap .button_wrap .profil_file {
   display: inline-block;
@@ -310,7 +323,7 @@ option {
   font-size: 15px;
   line-height: 22px;
   letter-spacing: -0.1px;
-  background-color: #007BFF;
+  background-color: transparent;
   color: #FFF;
   border: none;
   width: 100%;
@@ -318,7 +331,7 @@ option {
 }
 
 a:hover {
-  color: green;
+  color: #58eb58;
 }
 
 .button_row:hover {
@@ -327,10 +340,8 @@ a:hover {
   background-color: #FFF;
 }
 
-.btn:hover {
-  border: 1px solid #007BFF;
+.button_row:hover .btn {
   color: #007BFF;
-  background-color: #FFF;
 }
 
 .footer_foto:hover {
@@ -339,8 +350,6 @@ a:hover {
   background-color: #FFF;
 }
 
-.footer_btn:hover {
-  border: 1px solid #007BFF;
+.footer_foto:hover .footer_btn {
   color: #007BFF;
-  background-color: #FFF;
 }

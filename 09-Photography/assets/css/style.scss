@@ -33,10 +33,12 @@ h2 {
 }
 .foto_wrap {
     overflow: hidden;
-    border: 1px solid $bg;
     border-radius: 20px;
     position: relative;
     overflow: hidden;
+    &:hover {
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.50);
+    }
     .name {
         position: absolute;
         left: 20px;
@@ -84,23 +86,23 @@ h2 {
    
     &:hover {
         .foto {
-        scale: 1.2;
-        border: 1px solid $bg;
-        border-radius: 20px;
-        transition: all .3s ease;
+            scale: 1.2;
+            border: 1px solid $bg;
+            border-radius: 20px;
+            transition: all .3s ease;
        }
        .icon {
-        transform: translateY(0);
+            transform: translateY(0);
         &:active {
             background: $bg_icon;
-            opacity: 1;
+            opacity: .8;
         }
        }
        .download {
-        transform: translateY(0);
+            transform: translateY(0);
         &:active {
             background: $bg_icon;
-            opacity: 1;
+            opacity: .8;
         }
        }
     }

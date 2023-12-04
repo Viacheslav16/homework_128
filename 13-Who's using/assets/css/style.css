@@ -1,0 +1,253 @@
+/* pt-sans-regular - cyrillic-ext_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-sans/pt-sans-v17-cyrillic-ext_latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* pt-sans-italic - cyrillic-ext_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/pt-sans/pt-sans-v17-cyrillic-ext_latin-italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* pt-sans-700 - cyrillic-ext_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans/pt-sans-v17-cyrillic-ext_latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* francois-one-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Francois One";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/francois-one/francois-one-v21-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* farro-300 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Farro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/farro/farro-v14-latin-300.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* staatliches-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Staatliches";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/staatliches/staatliches-v13-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* tourney-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Tourney";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/tourney/tourney-v13-latin-600.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-500 - cyrillic-ext_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto/roboto-v30-cyrillic-ext_latin-500.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a, button {
+  transition: all 0.2s ease;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+  font-size: 1.75rem;
+  line-height: 48px;
+}
+
+h1 {
+  padding-top: 3px;
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #232323;
+}
+
+.pt_sans, p {
+  font-family: "PT Sans", sans-serif;
+}
+
+.francoisn_regular {
+  font-family: "Francois One", sans-serif;
+}
+
+.farro_light {
+  font-family: "Farro", sans-serif;
+}
+
+.staatliches_regular, .header_top .header_wrap .nav_wrap ul a {
+  font-family: "Staatliches", sans-serif;
+}
+
+.tourney_semibold, .header_top .header_wrap .eng {
+  font-family: "Tourney", sans-serif;
+}
+
+.roboto, .top_title .title {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  margin-bottom: 75px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.header_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 13px 0;
+}
+.header_top .header_wrap {
+  display: flex;
+  align-items: flex-start;
+  height: 22px;
+  gap: 53px;
+}
+.header_top .header_wrap .eng {
+  background-color: #FFF;
+  text-align: center;
+  font-size: 1.375rem;
+  line-height: 11px;
+  letter-spacing: 0.0825rem;
+}
+.header_top .header_wrap .nav_wrap ul {
+  display: flex;
+  gap: 10px;
+}
+.header_top .header_wrap .nav_wrap ul a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.375rem;
+  line-height: normal;
+  letter-spacing: 0.04125rem;
+  line-height: 11px;
+}
+
+main {
+  flex-grow: 1;
+  padding: 100px 0;
+}
+
+.top_title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 53px 0 38px;
+}
+.top_title .title {
+  color: #000;
+  font-size: 24px;
+  line-height: 48px;
+  letter-spacing: 1.44px;
+}
+.top_title .line {
+  width: 100px;
+  height: 8px;
+  background: #000;
+}
+
+.wrapper .content_wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 180px);
+  gap: 30px;
+  border-top: 1px solid #BFBFBF;
+  border-bottom: 1px solid #BFBFBF;
+  padding: 20px 15px;
+  /*I have a problem with option "transform", all cards transform together.
+  I tried to fix, but I can't do it*/
+}
+.wrapper .content_wrap .foto_wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrapper .content_wrap .foto_wrap .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+  transform: rotateX(15deg);
+  perspective: 850px;
+}
+.wrapper .content_wrap .foto_wrap .inner .front, .wrapper .content_wrap .foto_wrap .inner .back {
+  position: absolute;
+}
+.wrapper .content_wrap .foto_wrap .inner .front {
+  backface-visibility: hidden;
+}
+.wrapper .content_wrap .foto_wrap .inner .back {
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  z-index: -1;
+  filter: invert(1);
+}
+.wrapper .content_wrap .foto_wrap:hover .inner:not(:hover) {
+  transform: rotateX(180deg);
+}

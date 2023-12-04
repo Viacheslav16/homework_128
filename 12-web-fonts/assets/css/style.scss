@@ -123,6 +123,7 @@ option {
     align-items: center;
     gap: 16px;
     margin-bottom: 20px;
+    /* I have a problem with create 'before element'. It is not working */ 
     input[type=radio] {
         appearance: auto;
         margin-right: 11px;
@@ -180,7 +181,7 @@ option {
         font-size: 15px;
         line-height: 22px; 
         border: none;
-        background-color: $active_color;
+        background-color: transparent;
         color: $bg_color;
         letter-spacing: -0.1px;
         width: 100%;
@@ -241,6 +242,14 @@ option {
         margin-right: 20px;
     }
     .button_wrap {
+        .profil_file {
+            position: relative;
+            .profil_search {
+                position: absolute;
+                right: 8px;
+                bottom: 8px;
+            }
+        }
         .profil_foto {
             width: 30px;
             height: 30px;
@@ -250,7 +259,11 @@ option {
             vertical-align: sub;
             border: 1px solid $border_color;
             border-radius: 6px;
+            margin-left: 5px;
             cursor: pointer;
+        }
+        .profil_foto:hover {
+            background-color: rgb(204, 239, 251);
         }
         .profil_file {
             display: inline-block;
@@ -275,7 +288,7 @@ option {
         font-size: 15px;
         line-height: 22px;
         letter-spacing: -0.1px;
-        background-color: $active_color;
+        background-color: transparent;
         color: $bg_color;
         border: none;
         width: 100%;
@@ -283,25 +296,21 @@ option {
     }
 }
 a:hover {
-    color: green;
+    color: rgb(88, 235, 88);
 }
 .button_row:hover {
     border: 1px solid $active_color;
     color: $active_color;
     background-color: $bg_color;
 }
-.btn:hover {
-    border: 1px solid $active_color;
+.button_row:hover .btn {
     color: $active_color;
-    background-color: $bg_color;
 }
 .footer_foto:hover {
     border: 1px solid $active_color;
     color: $active_color;
     background-color: $bg_color;
 }
-.footer_btn:hover {
-    border: 1px solid $active_color;
+.footer_foto:hover .footer_btn {
     color: $active_color;
-    background-color: $bg_color;
 }
