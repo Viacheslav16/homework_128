@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    color: $primary-color;
+    background: #F6F6F6;
+}
+
+ul {
+    list-style: none;
+}
+
+a, button {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+img {
+    vertical-align: top;
+}
+
+.container {
+    width: min(90%, 1170px);
+    margin: 0 auto;
+}

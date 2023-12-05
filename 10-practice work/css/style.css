@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  color: #3C3C3C;
+  background: #F6F6F6;
+}
+
+ul {
+  list-style: none;
+}
+
+a, button {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+img {
+  vertical-align: top;
+}
+
+.container {
+  width: min(90%, 1170px);
+  margin: 0 auto;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a, button {
+  transition: all 0.2s ease;
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.header {
+  padding: 10px 0;
+  background: #fff;
+  border-bottom: 1px solid #bdbdbd;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo, .header .header-box {
+  width: 200px;
+}
+.header .header-box {
+  text-align: right;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 0 30px;
+}
+.menu a {
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #3C3C3C;
+}
+.menu a:hover {
+  color: #18B5DC;
+}
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: 10px 17px;
+  border: 1px solid #3C3C3C;
+  background-color: transparent;
+}
+.btn svg {
+  display: none;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #18B5DC;
+  border-color: #18B5DC;
+}
+
+.biography-section {
+  padding: 150px 0;
+}
+
+.main-title {
+  text-transform: uppercase;
+  font-size: 2.125rem;
+  letter-spacing: 0.27625rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 16px;
+  margin-bottom: 40px;
+}
+.main-title::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 4px;
+  background-color: #DDDBDB;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hamburger {
+  display: none;
+}
+
+.sub-title {
+  font-weight: 300;
+  max-width: 570px;
+  text-align: center;
+  margin: 0 auto 54px;
+  line-height: 150%;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.item-top:hover .item-soc {
+  opacity: 1;
+}
+
+.item-top {
+  position: relative;
+  margin-bottom: 20px;
+}
+.item-top .item-soc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #18B5DC;
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+
+.item-top img {
+  width: 271px;
+  height: 270px;
+}
+
+.item-bottom {
+  padding-left: 1px;
+  font-size: 1.125rem;
+}
+.item-bottom .bio-title {
+  color: #282528;
+  font-weight: 700;
+}
+.item-bottom .position {
+  color: #646464;
+  font-weight: 300;
+}
+
+.footer {
+  padding: 40px 0;
+  background-color: #fff;
+}
+.footer .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+.footer .menu a {
+  font-size: 1.125rem;
+}
+
+.soc-list, .footer-social {
+  display: flex;
+  gap: 4px;
+}
+.soc-list a, .footer-social a {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  background-color: #5DCBE6;
+  justify-content: center;
+  align-items: center;
+}
+.soc-list a svg, .footer-social a svg {
+  fill: #fff;
+  transition: all 0.2s ease;
+}
+.soc-list a:hover, .footer-social a:hover {
+  background-color: #fff;
+}
+.soc-list a:hover svg, .footer-social a:hover svg {
+  fill: #18B5DC;
+}
+
+.footer-social {
+  gap: 10px;
+}
+.footer-social a {
+  border: 1px solid #18B5DC;
+  background-color: #fff;
+}
+.footer-social a path {
+  fill: #18B5DC;
+}
+.footer-social a:hover {
+  background-color: #18B5DC;
+}
+.footer-social a:hover path {
+  fill: #fff;
+}
+
+@media screen and (max-width: 980px) {
+  .header nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+@media screen and (max-width: 800px) {
+  .biography-section {
+    padding: 50px 0;
+  }
+
+  .team {
+    flex-wrap: wrap;
+  }
+
+  team-item {
+    width: calc(50% - 15px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .btn span {
+    display: none;
+  }
+  .btn svg {
+    display: block;
+  }
+  .btn svg path {
+    fill: #3C3C3C;
+  }
+  .btn:hover svg path {
+    fill: #fff;
+  }
+}
+@media screen and (max-width: 420px) {
+  team-item {
+    width: 100%;
+  }
+
+  .footer .menu {
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20vw;
+  }
+}
