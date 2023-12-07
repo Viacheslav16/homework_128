@@ -213,7 +213,7 @@ button {
 }
 .product_title .product_list .product_icon {
   text-align: start;
-  width: 270px;
+  max-width: 270px;
 }
 .product_title .product_list .product_icon .first_product {
   margin-bottom: 30px;
@@ -563,7 +563,8 @@ button:hover {
   .product_title .product_list {
     gap: 60px;
   }
-  .product_title .product_list .product_icon {
+
+  .product_icon {
     text-align: start;
     width: 180px;
   }
@@ -735,7 +736,7 @@ button:hover {
     font-size: 0.9rem;
   }
 }
-.product_title .product_list .product_icon {
+.product_icon {
   text-align: start;
   width: 134px;
 }

@@ -181,7 +181,7 @@ button {
         margin-bottom: 70px;
         .product_icon {
             text-align: start;
-            width: 270px;
+            max-width: 270px;
             .first_product {
                 margin-bottom: 30px;
                 width: 50px;
@@ -546,13 +546,13 @@ button:hover {
         max-width: 880px;
         .product_list {
             gap: 60px;
-            .product_icon {
-                text-align: start;
-                width: 180px;
-            }
         } 
     }
     
+    .product_icon {
+        text-align: start;
+        width: 180px;
+    }   
     .product_title {
         .product_list {
             .product_icon {
@@ -745,13 +745,9 @@ button:hover {
         }
     }
 }
-.product_title {
-    .product_list {
-        .product_icon {
-            text-align: start;
-            width: 134px;
-        }
-    } 
+.product_icon {
+    text-align: start;
+    width: 134px;
 }
 .sign_in {
     button {

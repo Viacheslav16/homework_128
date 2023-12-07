@@ -212,8 +212,7 @@ button {
 }
 
 .product_title {
-  background: url(/assets/images/bg.svg);
-  margin: 100px 0 176px;
+  margin-bottom: 104px;
 }
 .product_title h2 {
   text-align: center;
@@ -231,7 +230,7 @@ button {
 }
 .product_title .product_list .product_icon {
   text-align: start;
-  width: 270px;
+  max-width: 270px;
 }
 .product_title .product_list .product_icon .first_product {
   margin-bottom: 30px;
