@@ -134,7 +134,7 @@ button {
 }
 .sign_in button {
   display: inline-block;
-  max-width: 110px;
+  width: 110px;
   height: 46px;
   padding: 13px 25px;
   font-weight: 600;
@@ -202,7 +202,7 @@ button {
   margin-bottom: 50px;
 }
 .product_title .back_wrap {
-  background: url(/assets/images/bg.svg) 50% bottom no-repeat;
+  background: url(../images/bg.svg) 50% bottom no-repeat;
   padding-bottom: 74px;
 }
 .product_title .product_list {
@@ -482,7 +482,7 @@ button:hover {
   .header_button .sign_up .sign_btn {
     max-width: 96px;
     height: 36px;
-    padding: 6px 12px;
+    padding: 6px 14px;
   }
 
   .nav_footer {
@@ -738,13 +738,7 @@ button:hover {
 }
 .product_icon {
   text-align: start;
-  width: 134px;
-}
-
-.sign_in button {
-  max-width: 96px;
-  height: 36px;
-  padding: 6px 16px;
+  max-width: 134px;
 }
 
 @media screen and (max-width: 420px) {

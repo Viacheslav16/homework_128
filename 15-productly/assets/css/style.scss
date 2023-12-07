@@ -95,7 +95,7 @@ button {
     vertical-align: top;
     button {
         display: inline-block;
-        max-width: 110px;
+        width: 110px;
         height: 46px;
         padding: 13px 25px;
         @extend .montserrat;
@@ -171,7 +171,7 @@ button {
         margin-bottom: 50px;
     }
     .back_wrap {
-        background: url(/assets/images/bg.svg) 50% bottom no-repeat;
+        background: url(../images/bg.svg) 50% bottom no-repeat;
         padding-bottom: 74px;
     }
     .product_list {
@@ -466,7 +466,7 @@ button:hover {
             .sign_btn {
                max-width: 96px;
                height: 36px;
-               padding: 6px 12px;
+               padding: 6px 14px;
            }
        }
     }
@@ -747,15 +747,9 @@ button:hover {
 }
 .product_icon {
     text-align: start;
-    width: 134px;
+    max-width: 134px;
 }
-.sign_in {
-    button {
-        max-width: 96px;
-        height: 36px;
-        padding: 6px 16px;
-    }
-}
+
 @media screen and (max-width: 420px) {
     .container {
         margin: 20px 24px;
