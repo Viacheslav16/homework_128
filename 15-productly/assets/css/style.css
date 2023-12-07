@@ -298,6 +298,10 @@ button {
   line-height: 1.625rem;
   margin-bottom: 10px;
 }
+.design_content .design_foto img {
+  width: 100%;
+  vertical-align: top;
+}
 
 .nomain_content {
   display: flex;
@@ -351,6 +355,10 @@ button {
   font-size: 1rem;
   line-height: 1.625rem;
   margin-bottom: 12px;
+}
+.market_info .market_foto img {
+  width: 100%;
+  vertical-align: top;
 }
 
 h4 {

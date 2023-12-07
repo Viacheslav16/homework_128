@@ -272,6 +272,12 @@ button {
             }
         }
     }
+    .design_foto {
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+    }
 }
 .nomain_content {
     display: flex;
@@ -327,6 +333,12 @@ button {
                     margin-bottom: 12px;
                 }  
             }
+        }
+    }
+    .market_foto {
+        img {
+            width: 100%;
+            vertical-align: top;
         }
     }
 }

@@ -8,6 +8,8 @@
     $third-product: #F03E3D;
     $fouth-product: #4DADF7;
 
+    @import 'fonts';
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Poppins', sans-serif;
@@ -23,6 +25,12 @@ body {
 .container {
     width: min(90%, 1200px);
     margin: 0 auto;
+}
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+.poppins {
+    font-family: 'Poppins', sans-serif;
 }
 li {
     list-style: none;
@@ -176,6 +184,10 @@ button {
         text-align: center;
         margin-bottom: 50px;
     }
+    .back_wrap {
+        background: url(/assets/images/bg.svg) 50% bottom no-repeat;
+        padding-bottom: 74px;
+    }
     .product_list {
         display: flex;
         align-items: flex-start;
@@ -230,20 +242,18 @@ button {
         
     }
     .product_button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
+        text-align: center;
         .product_btn {
-            width: 180px;
+            display: inline-block;
             height: 50px;
-            font-family: 'Poppins';
+            padding: 13px 42px;
+            @extend .poppins;
+            font-size: 16px;
+            font-weight: 700;
+            border: 1px solid transparent;
             border-radius: 4px;
-            border: none;
-            background: $second-button;
+            background:$second-button;
             color: $bg-color;
-            text-align: center;
-            font-size: 1rem;
         }
     }
 }
@@ -370,60 +380,88 @@ h4 {
                 vertical-align: middle;
             }
         }
-        .link_title{
-            margin-bottom: 32px;
-        }
-        .footer_link {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            a {
-                color: $dark-text;
-                font-family: 'Montserrat';
-                font-size: 1rem;
-                line-height: 1.625rem;
-                text-decoration: none;
+        .footer_wrap {
+            width: 135px;
+            .link_title{
+                margin-bottom: 32px;
             }
-        }
-        .footer_service {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 25px;
-            h4 {
-                width: 280px;
-            }
-            input {
+            .footer_link {
                 display: flex;
-                width: 340px;
-                height: 50px;
-                padding: 0px 10px;
-                align-items: center;
-                gap: 10px;
-                border-radius: 4px;
-                border: 1px solid $first-button;
+                flex-direction: column;
+                gap: 15px;
+                a {
+                    color: $dark-text;
+                    @extend .montserrat;
+                    font-size: 1rem;
+                    line-height: 1.625rem;
+                    text-decoration: none;
+                }
             }
-            .footer_btn {
+        }
+        .footer_end {
+            max-width: 340px;
+            .footer_service {
                 display: flex;
-                width: 180px;
-                height: 50px;
-                padding: 13px 40px;
-                justify-content: center;
-                align-items: center;
-                flex-shrink: 0;
-                font-family: 'Poppins';
-                font-size: 1rem;
-                border: none;
-                border-radius: 4px;
-                background:$second-button;
-                color: $bg-color;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 23px;
+                h4 {
+                    max-width: 280px;
+                    @extend .montserrat;
+                    font-size: 19px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 30px;
+                }
+                .form {
+                    position: relative;
+                    input {
+                        width: 340px;
+                        height: 50px;
+                        padding: 0px 10px;
+                        border-radius: 4px;
+                        border: 1px solid $first-button;
+                    }
+                    .text_end {
+                        position: absolute;
+                        left: 10px;
+                        top: 15px;
+                        color: $first-button;
+                        @extend .montserrat;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+                
+                .footer_btn {
+                    max-width: 180px;
+                    height: 50px;
+                    padding: 13px 38px;
+                    @extend .poppins;
+                    font-weight: 700;
+                    font-size: 1rem;
+                    border: 1px solid transparent;
+                    border-radius: 4px;
+                    background:$second-button;
+                    color: $bg-color;
+                }
             }
+        
         }
     
     }
 }
 button:hover {
-    border: 1px solid blue;
-    color: cyan;
-    background-color: beige;
+    button:hover {
+        border: 1px solid blue;
+        color: $first-product;
+        background-color:rgb(243, 243, 185);
+    }
+    .footer_btn:hover {
+        border: 1px solid blue;
+        color: $first-product;
+        background-color:rgb(243, 243, 185);
+    }
 }
