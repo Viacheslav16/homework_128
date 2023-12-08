@@ -1,15 +1,17 @@
-    $bg-color:#FFF;
-    $dark-title: #2F281E; 
-    $dark-text: #544837;
-    $second-button: #F90;
-    $first-button: #BCD0E5;
-    $first-product: #7752BE;
-    $second-product: #FAB005;
-    $third-product: #F03E3D;
-    $fouth-product: #4DADF7;
+$bg-color:#FFF;
+$dark-title: #2F281E; 
+$dark-text: #544837;
+$second-button: #F90;
+$first-button: #BCD0E5;
+$first-product: #7752BE;
+$second-product: #FAB005;
+$third-product: #F03E3D;
+$fouth-product: #4DADF7;
 
-    
-    @import 'fonts';
+@import 'hamburger';
+
+@import 'fonts';
+
 
 * {
     margin: 0;
@@ -61,6 +63,10 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 15px 0;
+
+    .hamburger{
+        display: none;
+    }
 }
 .nav_top {
     ul {
@@ -75,53 +81,40 @@ header {
             color: $dark-title;
             @extend .montserrat;
             text-decoration: none;
-        }
-        .first_link{
-            a {
+            cursor: pointer;
+            &:hover {
                 color: $second-button;
             }
         }
-    }
 
+    }
 }
 .header_button {
     display: flex;
     gap: 32px;
 }
-button {
-    cursor: pointer;
-}
-.sign_in {
-    vertical-align: top;
     button {
-        display: inline-block;
-        width: 110px;
-        height: 46px;
-        padding: 13px 25px;
-        @extend .montserrat;
-        font-weight: 600;
-        font-size: 1rem;        
-        border-radius: 4px;
-        border: 1px solid $first-button;
+        cursor: pointer;
     }
-
-}
-.sign_up {
-    button  {
-        display: inline-block;
-        max-width: 110px;
-        height: 46px;
-        color: $bg-color;
-        @extend .montserrat;
-        font-weight: 600;
-        font-size: 1rem;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        background: $second-button;
-    }
-    .sign_btn {
-        padding: 13px 21px;
-    }
+    .sign_in,
+    .sign_up  {
+        vertical-align: top;
+        button {
+            display: inline-block;
+            max-width: 110px;
+            height: 46px;
+            padding: 13px 25px;
+            color: $bg-color;
+            @extend .montserrat;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            background: $second-button;
+        }
+        .sign_btn {
+            padding: 13px 21px;
+        } 
 
 }
 .about_info {
@@ -162,7 +155,6 @@ button {
         background:$second-button;
         color: $bg-color;
     }
-    
 }
 .product_title {
     margin-bottom: 104px;
@@ -224,12 +216,11 @@ button {
                 font-size: 1.34rem;
                 margin-bottom: 16px;
             }
-        }
-        
+        } 
     }
     .product_button {
         text-align: center;
-        .product_btn {
+        button {
             display: inline-block;
             height: 50px;
             padding: 13px 42px;
@@ -248,109 +239,109 @@ button {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 100px;
-    .design_part{
-        max-width: 525px;  
-        .design_title {
-            margin-bottom: 41px;
-            h2 {
-                margin-bottom: 20px;
-            } 
-        }
-        .design_list {   
-            ul {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 30px; 
-                h3 {
-                    color: $dark-title;
-                    @extend .montserrat;
-                    font-size: 1rem;
-                    line-height: 1.625rem;
-                    margin-bottom: 10px;
-                }  
+        .design_part{
+            max-width: 525px;  
+            .design_title {
+                margin-bottom: 41px;
+                h2 {
+                    margin-bottom: 20px;
+                } 
+            }
+            .design_list {   
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 30px; 
+                    h3 {
+                        color: $dark-title;
+                        @extend .montserrat;
+                        font-size: 1rem;
+                        line-height: 1.625rem;
+                        margin-bottom: 10px;
+                    }  
+                }
             }
         }
-    }
-    .design_foto {
-        img {
-            width: 100%;
-            vertical-align: top;
-        }
-    }
+        .design_foto {
+            img {
+                width: 100%;
+                vertical-align: top;
+            }
+}
 }
 .nomain_content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 100px;
-    .nomain_info {
-        max-width: 505px;
-    }
-    .nomain_title {
-        margin-bottom: 40px;
-        h2 {
-            margin-bottom: 20px;
+        .nomain_info {
+            max-width: 505px;
         }
-    }
-    .nomain_list {
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            .nomain_foto {
-                display: flex;
-                align-items: center;
-                gap: 30px; 
+        .nomain_title {
+            margin-bottom: 40px;
+            h2 {
+                margin-bottom: 20px;
             }
         }
-    }
+        .nomain_list {
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                .nomain_foto {
+                    display: flex;
+                    align-items: center;
+                    gap: 30px; 
+                }
+            }
+}
 }
 .market_info {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 170px;
-    .market_part{
-        max-width: 486px;  
-        .market_title {
-            margin-bottom: 40px;
-            h2 {
-                margin-bottom: 13px;
-            } 
-        }
-        .market_list {   
-            ul {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 30px; 
-                h3 {
-                    color: $dark-title;
-                    @extend .montserrat;
-                    font-size: 1rem;
-                    line-height: 1.625rem;
-                    margin-bottom: 12px;
-                }  
+        .market_part{
+            max-width: 486px;  
+            .market_title {
+                margin-bottom: 40px;
+                h2 {
+                    margin-bottom: 13px;
+                } 
+            }
+            .market_list {   
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 30px; 
+                    h3 {
+                        color: $dark-title;
+                        @extend .montserrat;
+                        font-size: 1rem;
+                        line-height: 1.625rem;
+                        margin-bottom: 12px;
+                    }  
+                }
             }
         }
-    }
-    .market_foto {
-        img {
-            width: 100%;
-            vertical-align: top;
-        }
-    }
+        .market_foto {
+            img {
+                width: 100%;
+                vertical-align: top;
+            }
+}
 }
 
-h4 {
-    color: $dark-title;
-    @extend .montserrat;
-    font-size: 1.26rem;
-    line-height: 1.88rem;
-}
+    h4 {
+        color: $dark-title;
+        @extend .montserrat;
+        font-size: 1.26rem;
+        line-height: 1.88rem;
+    }
 .nav_footer {
-    margin-bottom: 70px;
+margin-bottom: 70px;
     .footer_list {
         display: flex;
         gap: 130px;
@@ -372,6 +363,9 @@ h4 {
                     font-size: 1rem;
                     line-height: 1.625rem;
                     text-decoration: none;
+                    &:hover {
+                        color: $second-button;
+                    }
                 }
             }
         }
@@ -381,7 +375,7 @@ h4 {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 23px;
+                gap: 24px;
                 h4 {
                     max-width: 280px;
                     @extend .montserrat;
@@ -411,19 +405,22 @@ h4 {
                         line-height: normal;
                     }
                 }
-                
+            
                 .footer_btn {
-                    max-width: 180px;
-                    height: 50px;
-                    padding: 13px 38px;
-                    @extend .poppins;
-                    font-weight: 700;
-                    font-size: 1rem;
-                    border: 1px solid transparent;
-                    border-radius: 4px;
-                    background:$second-button;
-                    color: $bg-color;
-                }
+                    vertical-align: top;
+                    button {
+                        max-width: 180px;
+                        height: 50px;
+                        padding: 13px 38px;
+                        @extend .poppins;
+                        font-weight: 700;
+                        font-size: 1rem;
+                        border: 1px solid transparent;
+                        border-radius: 4px;
+                        background:$second-button;
+                        color: $bg-color;
+                    }
+                }  
             }
         
         }
@@ -431,15 +428,13 @@ h4 {
     }
 }
 button:hover {
-    border: 1px solid blue;
-    color: $first-product;
-    background-color:rgb(243, 243, 185);
+    border-radius: 4px;
+    border: 1px solid $first-button;
+    color:$dark-title;
+    background-color: $bg-color;
 }
-.footer_btn:hover {
-    border: 1px solid blue;
-    color: $first-product;
-    background-color:rgb(243, 243, 185);
-}
+
+
 @media screen and (max-width: 1280px) {
     .about_info {
         max-width: 450px;
@@ -464,11 +459,11 @@ button:hover {
     .header_button {
         .sign_up {
             .sign_btn {
-               max-width: 96px;
-               height: 36px;
-               padding: 6px 14px;
-           }
-       }
+            max-width: 96px;
+            height: 36px;
+            padding: 6px 14px;
+            }
+        }
     }
     .nav_footer {
         border-top: 1px solid $dark-title;
@@ -477,6 +472,7 @@ button:hover {
         padding-top: 20px;
     }
 }
+
 @media screen and (max-width: 980px) {
     .about_list,
     .market_info,
@@ -548,7 +544,7 @@ button:hover {
             gap: 60px;
         } 
     }
-    
+
     .product_icon {
         text-align: start;
         width: 180px;
@@ -595,6 +591,7 @@ button:hover {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
+        margin-bottom: 20px;
     }
     .nav_footer .footer_list .footer_end .footer_service .form input {
         width: 260px;
@@ -615,7 +612,7 @@ button:hover {
                 padding: 6px 12px;
                 font-weight: 700;
                 font-size: .9rem;
-           }
+            }
         } 
     }
     .sign_in {
@@ -625,9 +622,9 @@ button:hover {
             padding: 6px 12px;
         }
     }
-    
+
     .sign_up {
-         .sign_btn {
+        .sign_btn {
             max-width: 96px;
             height: 36px;
             padding: 6px 12px;
@@ -642,15 +639,22 @@ button:hover {
         width: 880px;
         height: 1px;
         padding-top: 20px;
+    }
 }
-}
-@media screen and (max-width: 850px) {
+
+@media screen and (max-width: 770px) {
 
     .header_top {
         display: flex;
-        gap: 64px;
+        gap: 54px;
         align-items: center;
         margin: 15px 0;
+        .logo {
+            max-width: 150px;
+            img {
+                max-width: 150px;
+            }
+        }
     }
 
     .nav_top {
@@ -658,18 +662,28 @@ button:hover {
             display: flex;
             align-items: flex-start;
             gap: 15px;
+            a {
+                font-size: 14px;
+                line-height: 28px;
+            }
         }
     }
     .header_button {
         display: flex;
-        flex-direction: column;
         gap: 5px;
+        .sign_in,
+        .sign_up {
+            button {
+                max-width: 96px;
+                height: 36px;
+                padding: 6px 14px;
+                font-size: 0.5rem;
+            }
+        }
     }
-}
-@media screen and (max-width: 850px) {
     main {
         .container {
-            margin: 20px 24px;
+            margin: 20px 0 20px 38px;
         }
         .about_list {
             margin-left: 40px;
@@ -679,7 +693,6 @@ button:hover {
         .product_list {
             gap: 10px;
             justify-content: space-between;
-            margin-left: 50px;
         }
     }
     .design_content {
@@ -710,52 +723,63 @@ button:hover {
             }
         }
     }
-    
-    .nav_footer {
-        .footer_list {
-            display: flex;
-            gap: 26px;
-        }
-    }
+
     .nav_footer {
         border-top: 1px solid $dark-title;
-        width: 764px;
+        width: 695px;
         height: 1px;
         padding-top: 20px;
         .footer_list {
-            .footer_end {
-                .footer_service {
-                        .footer_end {
-                            .footer_service {
-                                h4 {
-                                    max-width: 280px;
-                                    font-size: 16px;
-                                }
-                            } 
-                        }
-                    .footer_btn {
-                        max-width: 180px;
-                        height: 36px;
-                        padding: 6px 12px;
-                        font-weight: 700;
-                        font-size: .9rem;
-                    }
+            display: flex;
+            gap: 26px;
+            margin-bottom: 20px;
+            .footer_logo {
+                img {
+                    max-width: 160px;
                 }
             }
         }
+        .footer_service {
+            .footer_btn {
+                button {
+                    max-width: 180px;
+                    height: 36px;
+                    padding: 6px 12px;
+                    font-weight: 700;
+                    font-size: .9rem;
+                }
+            }
+            h4 {
+                max-width: 280px;
+                font-size: 16px;
+            }
+        }  
     }
+    
+    .back_wrap {
+        margin-left: 1px;
+    }
+    .product_title{
+        .product_list {
+            margin-bottom: 40px;
+            .product_icon {
+                text-align: start;
+                max-width: 134px;
+                h3 {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }   
 }
-.product_icon {
-    text-align: start;
-    max-width: 134px;
-}
+
 
 @media screen and (max-width: 420px) {
     .container {
         margin: 20px 24px;
         .nav_footer {
             border-top: 1px solid $dark-title;
-            width: 380px;
+            width: 342px;
             height: 1px;
             padding-top: 20px;
             .footer_list {
@@ -791,50 +815,37 @@ button:hover {
                         }
                     }
                     .footer_btn {
-                        max-width: 180px;
-                        height: 28px;
-                        padding: 6px 6px;
-                        font-size: .7rem;
+                        button {
+                            max-width: 180px;
+                            height: 28px;
+                            padding: 6px 6px;
+                            font-size: .7rem;
+                        }
                     }
                 }
             }
         }
         .header_top {
             display: flex;
-            gap: 20px;
+            gap: 80px;
             align-items: center;
             margin: 15px 0;
-            justify-content: center;
+            .hamburger {
+                display: block;
+            }
             .logo {
                 img {
                     max-width: 150px;
                 }
             }
             .nav_top {
-                .nav_link {
-                    gap: 0;
-                    a {
-                        font-size: .8rem;
-                    }
-                }
+                display: none;
+            }
+            .header_button {
+                display: none;
             }
         }
-        .sign_in{
-            button {
-                width: 64px;
-                height: 25px;
-                padding: 2px 8px;
-                font-size: .7rem;
-            }
-        }
-        .sign_up {
-            .sign_btn {
-                max-width: 96px;
-                height: 25px;
-                padding: 2px 8px;
-                font-size: .7rem;
-            }
-        }
+        
     }
     .about_list {
         margin-bottom: 70px;
@@ -883,9 +894,10 @@ button:hover {
     }
     .product_title {
         margin-bottom: 60px;
+        margin-left: 17px;
         .back_wrap {
             padding-bottom: 35px;
-       
+    
             .product_list {
                 gap: 10px;
                 flex-direction: column;
@@ -908,4 +920,191 @@ button:hover {
     h2 {
         font-size: 1.5rem;
     }
-}   
+}
+
+@media screen and (max-width: 390px){
+    main {
+        .container {
+            margin: 20px 10px;
+            .header_top {
+                display: flex;
+                gap: 80px;
+                align-items: center;
+                margin: 15px 0;
+            }
+            .nav_footer {
+                border-top: 1px solid $dark-title;
+                width: 342px;
+                height: 1px;
+                padding-top: 20px;
+                .footer_wrap {
+                    .link_title {
+                        margin-bottom: 15px;
+                    }
+                    .footer_link {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 35px;
+                    }
+                    .footer_btn {
+                        button {
+                            max-width: 180px;
+                            height: 28px;
+                            padding: 6px 6px;
+                            font-size: .7rem;
+                        }
+                    }
+                }
+                .nav_footer .footer_list .footer_end .footer_service {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 15px;
+                    margin-bottom: 20px;
+                }   
+            }
+        }
+        .about_list {
+            margin-left: 20px;
+        }
+    }
+    .design_content {
+        margin-bottom: 60px;
+        margin-left: 18px;
+        .design_foto {
+            img {
+                max-width: 330px;
+            }
+        }
+    }
+    .nomain_content {
+        margin-bottom: 60px;
+        margin-left: 18px;
+        .nomain_top {
+            img {
+                max-width: 330px;
+            }
+        }
+    }
+    .market_info {
+        margin-bottom: 60px;
+        margin-left: 18px;
+        .market_foto {
+            img {
+                max-width: 330px;
+            }
+        }
+    }
+    .about_list {
+        .about_foto {
+            img {
+                max-width: 330px;
+            }
+        }
+    }
+    
+}
+
+
+.page_overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 1000vw;
+    height: 1000vh;
+    background-color: rgba(#000, 0.7);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease;
+}
+.menu-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 1000vh;
+    background-color: $second-product;
+    z-index: 1001;
+    box-shadow: 0 0 10px 10px $first-button;
+    transform: translateX(-120%);
+    transition: all .4s ease;
+        .mobile_nav_top {
+            overflow-y: auto;
+            padding-top: 25px;
+        }
+}
+.panel_top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $first-button;
+    padding-top: 20px;
+    .mobile_logo {
+        margin: 25px 0 50px 25px;;
+        img {
+            max-width: 150px;
+        }
+    } 
+    .hamburger-wrap {
+        padding-top: 21px;
+    }
+}
+.mobile_foto {
+    text-align: center;
+    padding: 100px 30px;
+    img {
+        max-width: 250px;
+    }
+}
+.mobile_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    button {
+        display: inline-block;
+        max-width: 100px;
+        height: 40px;
+        padding: 10px 22px;
+        @extend .montserrat;
+        font-weight: 600;
+        font-size: .8rem;        
+        border-radius: 4px;
+        border: 1px solid $first-button;
+        background-color: $first-button;
+        color: $dark-title;
+    }
+    button:hover {
+        background-color: $bg-color;
+        color: $first-product;
+    }
+}
+
+.mobile_nav_link {
+    margin-bottom: 80px;
+    a {
+        display: inline-block;
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px 30px;
+        text-decoration: none;
+        color: $first-product;
+        background-color: transparent;
+    }
+    li:hover {
+        background-color: $bg-color;
+    }
+    a:hover {
+        color: $fouth-product;
+    }
+}
+
+.open_mobile_menu {
+    .page_overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu-panel {
+        transform: translateX(0);
+    }
+}

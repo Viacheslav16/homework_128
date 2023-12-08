@@ -7,6 +7,46 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 <body>
+    <div class="page_overlay"></div>
+    <div class="menu-panel">
+        <div class="panel_top">
+            <div class="mobile_logo"><img src="assets/images/Logo.svg" alt="Logo-mobile"></div>
+            <div class="hamburger-wrap">
+                <button id="new_hamb" class="hamburger hamburger--squeeze is-active" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                  </button>
+            </div>
+        </div>
+        <nav class="mobile_nav_top">
+            <ul class="mobile_nav_link">
+                <li>
+                    <a href="#product">Product</a>
+                </li>
+                <li>
+                    <a href="#">Customers</a>
+                </li>
+                <li>
+                    <a href="#">Pricing</a>
+                </li>
+                <li>
+                    <a href="#">Resources</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="mobile_button">
+            <div class="mobile_sign_in">
+                <button type="submit">Sign In</button>
+            </div>
+            <div class="mobile_sign_up">
+                <button type="submit" class="sign_btn">Sign Up</button>
+            </div>
+        </div>
+        <div class="mobile_foto">
+            <img src="assets/images/Image_main.svg" alt="image_main">
+        </div>
+    </div>
     <header>
         <div class="container">
             <div class="header_top">
@@ -15,7 +55,7 @@
                 </div>
                 <nav class="nav_top">
                     <ul class="nav_link">
-                        <li class="first_link">
+                        <li>
                             <a href="#product">Product</a>
                         </li>
                         <li>
@@ -29,15 +69,22 @@
                         </li>
                     </ul>
                 </nav>
-            <div class="header_button">
-                <div class="sign_in">
-                    <button type="submit">Sign In</button>
+                <div class="header_button">
+                    <div class="sign_in">
+                        <button type="button">Sign In</button>
+                    </div>
+                    <div class="sign_up">
+                        <button type="button" class="sign_btn">Sign Up</button>
+                    </div>
                 </div>
-                <div class="sign_up">
-                    <button type="submit" class="sign_btn">Sign Up</button>
+                <div class="hamburger">
+                    <button id="hamb_btn_mobile" class="hamburger hamburger--squeeze" type="button">
+                        <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                        </span>
+                      </button>
                 </div>
             </div>
-        </div>
         </div>
     </header>
     <main>
@@ -266,7 +313,9 @@
                                     <p class="text_end">Enter your phone Number</p>
                                 </li>
                                 <li>
-                                    <button type="button" class="footer_btn">Sign up Now</button>
+                                    <div class="footer_btn">
+                                        <button type="button">Sign up Now</button>
+                                    </div>
                                 </li>
                             </ul>
                         </li>
@@ -274,5 +323,18 @@
                 </nav>
         </div>
     </footer>
+
+<script>
+    window.new_hamb.addEventListener('click', function(){
+        document.body.classList.toggle('open_mobile_menu')
+        window.new_hamb.classList.toggle('is-active')
+    })
+
+    window.hamb_btn_mobile.addEventListener('click', function(){
+        document.body.classList.toggle('open_mobile_menu')
+        window.new_hamb.classList.toggle('is-active')
+    })
+</script>
+
 </body>
 </html>
