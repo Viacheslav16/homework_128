@@ -6,7 +6,7 @@
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  padding: 5px 20px;
+  padding: 5px 5px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -161,12 +161,12 @@ body {
   background-color: #FFF;
 }
 
-.montserrat, .mobile_button button, .nav_footer .footer_list .footer_end .footer_service .form .text_end, .nav_footer .footer_list .footer_end .footer_service h4, .nav_footer .footer_list .footer_wrap .footer_link a, h4, .market_info .market_part .market_list ul h3, .design_content .design_part .design_list ul h3, .product_title .product_list .product_icon h3, .about_info .about_text, .about_title, .sign_in button,
-.sign_up button, .nav_top .nav_link a, p, h2 {
+.montserrat, .mobile_button button, .form .text_end, .footer_service h4, .footer_link a, h4, .market_list h3, .design_list h3, .product_list .product_icon h3, .about_info .about_text, .about_title, .sign_in button,
+.sign_up button, .nav_link a, p, h2 {
   font-family: "Montserrat", sans-serif;
 }
 
-.poppins, .nav_footer .footer_list .footer_end .footer_service .footer_btn button, .product_title .product_button button, .main_button button {
+.poppins, .footer_btn button, .product_button button, .main_button button {
   font-family: "Poppins", sans-serif;
 }
 
@@ -206,28 +206,23 @@ header {
   display: none;
 }
 
-.nav_top ul {
+.nav_link {
   display: flex;
   align-items: flex-start;
   gap: 20px;
 }
-
-.nav_top .nav_link a {
+.nav_link a {
   color: #2F281E;
   text-decoration: none;
   cursor: pointer;
 }
-.nav_top .nav_link a:hover {
+.nav_link a:hover {
   color: #F90;
 }
 
 .header_button {
   display: flex;
   gap: 32px;
-}
-
-button {
-  cursor: pointer;
 }
 
 .sign_in,
@@ -299,17 +294,18 @@ button {
   background: url(../images/bg.svg) 50% bottom no-repeat;
   padding-bottom: 74px;
 }
-.product_title .product_list {
+
+.product_list {
   display: flex;
   align-items: flex-start;
   gap: 40px;
   margin-bottom: 70px;
 }
-.product_title .product_list .product_icon {
+.product_list .product_icon {
   text-align: start;
   max-width: 270px;
 }
-.product_title .product_list .product_icon .first_product {
+.product_list .product_icon .first_product {
   margin-bottom: 30px;
   width: 50px;
   height: 50px;
@@ -318,7 +314,7 @@ button {
   border-radius: 15px;
   background: #7752BE;
 }
-.product_title .product_list .product_icon .second_product {
+.product_list .product_icon .second_product {
   margin-bottom: 30px;
   width: 50px;
   height: 50px;
@@ -327,7 +323,7 @@ button {
   border-radius: 15px;
   background: #FAB005;
 }
-.product_title .product_list .product_icon .third_product {
+.product_list .product_icon .third_product {
   margin-bottom: 30px;
   width: 50px;
   height: 50px;
@@ -336,7 +332,7 @@ button {
   border-radius: 15px;
   background: #F03E3D;
 }
-.product_title .product_list .product_icon .fouth_product {
+.product_list .product_icon .fouth_product {
   margin-bottom: 30px;
   width: 50px;
   height: 50px;
@@ -345,15 +341,16 @@ button {
   border-radius: 15px;
   background: #4DADF7;
 }
-.product_title .product_list .product_icon h3 {
+.product_list .product_icon h3 {
   color: #2F281E;
   font-size: 1.34rem;
   margin-bottom: 16px;
 }
-.product_title .product_button {
+
+.product_button {
   text-align: center;
 }
-.product_title .product_button button {
+.product_button button {
   display: inline-block;
   height: 50px;
   padding: 13px 42px;
@@ -371,28 +368,31 @@ button {
   justify-content: space-between;
   margin-bottom: 100px;
 }
-.design_content .design_part {
+
+.design_part {
   max-width: 525px;
 }
-.design_content .design_part .design_title {
+.design_part .design_title {
   margin-bottom: 41px;
 }
-.design_content .design_part .design_title h2 {
+.design_part .design_title h2 {
   margin-bottom: 20px;
 }
-.design_content .design_part .design_list ul {
+
+.design_list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
 }
-.design_content .design_part .design_list ul h3 {
+.design_list h3 {
   color: #2F281E;
   font-size: 1rem;
   line-height: 1.625rem;
   margin-bottom: 10px;
 }
-.design_content .design_foto img {
+
+.design_foto img {
   width: 100%;
   vertical-align: top;
 }
@@ -403,21 +403,24 @@ button {
   justify-content: space-between;
   margin-bottom: 100px;
 }
-.nomain_content .nomain_info {
+
+.nomain_info {
   max-width: 505px;
 }
-.nomain_content .nomain_title {
+
+.nomain_title {
   margin-bottom: 40px;
 }
-.nomain_content .nomain_title h2 {
+.nomain_title h2 {
   margin-bottom: 20px;
 }
-.nomain_content .nomain_list ul {
+
+.nomain_list {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.nomain_content .nomain_list ul .nomain_foto {
+.nomain_list .nomain_foto {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -429,28 +432,31 @@ button {
   justify-content: space-between;
   margin-bottom: 170px;
 }
-.market_info .market_part {
+
+.market_part {
   max-width: 486px;
 }
-.market_info .market_part .market_title {
+.market_part .market_title {
   margin-bottom: 40px;
 }
-.market_info .market_part .market_title h2 {
+.market_part .market_title h2 {
   margin-bottom: 13px;
 }
-.market_info .market_part .market_list ul {
+
+.market_list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
 }
-.market_info .market_part .market_list ul h3 {
+.market_list h3 {
   color: #2F281E;
   font-size: 1rem;
   line-height: 1.625rem;
   margin-bottom: 12px;
 }
-.market_info .market_foto img {
+
+.market_foto img {
   width: 100%;
   vertical-align: top;
 }
@@ -464,60 +470,60 @@ h4 {
 .nav_footer {
   margin-bottom: 70px;
 }
-.nav_footer .footer_list {
+
+.footer_list {
   display: flex;
   gap: 130px;
 }
-.nav_footer .footer_list .footer_logo {
+.footer_list .footer_logo {
   max-width: 200px;
 }
-.nav_footer .footer_list .footer_wrap {
-  width: 135px;
-}
-.nav_footer .footer_list .footer_wrap .link_title {
+
+.footer_wrap .link_title {
   margin-bottom: 32px;
 }
-.nav_footer .footer_list .footer_wrap .footer_link {
+
+.footer_link {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.nav_footer .footer_list .footer_wrap .footer_link a {
+.footer_link a {
   color: #544837;
   font-size: 1rem;
   line-height: 1.625rem;
   text-decoration: none;
 }
-.nav_footer .footer_list .footer_wrap .footer_link a:hover {
-  color: #F90;
-}
-.nav_footer .footer_list .footer_end {
+
+.footer_end {
   max-width: 340px;
 }
-.nav_footer .footer_list .footer_end .footer_service {
+
+.footer_service {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
 }
-.nav_footer .footer_list .footer_end .footer_service h4 {
+.footer_service h4 {
   max-width: 280px;
   font-size: 19px;
   font-style: normal;
   font-weight: 700;
   line-height: 30px;
 }
-.nav_footer .footer_list .footer_end .footer_service .form {
+
+.form {
   position: relative;
 }
-.nav_footer .footer_list .footer_end .footer_service .form input {
+.form input {
   width: 340px;
   height: 50px;
   padding: 0px 10px;
   border-radius: 4px;
   border: 1px solid #BCD0E5;
 }
-.nav_footer .footer_list .footer_end .footer_service .form .text_end {
+.form .text_end {
   position: absolute;
   left: 10px;
   top: 15px;
@@ -527,11 +533,11 @@ h4 {
   font-weight: 400;
   line-height: normal;
 }
-.nav_footer .footer_list .footer_end .footer_service .footer_btn {
+
+.footer_btn {
   vertical-align: top;
 }
-.nav_footer .footer_list .footer_end .footer_service .footer_btn button {
-  max-width: 180px;
+.footer_btn button {
   height: 50px;
   padding: 13px 38px;
   font-weight: 700;
@@ -547,6 +553,11 @@ button:hover {
   border: 1px solid #BCD0E5;
   color: #2F281E;
   background-color: #FFF;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #F90;
 }
 
 @media screen and (max-width: 1280px) {
@@ -564,30 +575,36 @@ button:hover {
     font-size: 2rem;
   }
 
-  .product_title .product_list {
-    gap: 90px;
-    justify-content: center;
+  .product_list {
+    gap: 76px;
   }
-
-  .product_icon {
+  .product_list .product_icon {
     text-align: start;
     width: 240px;
   }
 
-  .header_button .sign_up .sign_btn {
-    max-width: 96px;
-    height: 36px;
-    padding: 6px 14px;
-  }
-
   .nav_footer {
-    border-top: 1px solid #2F281E;
-    width: 1160px;
-    height: 1px;
     padding-top: 20px;
   }
 }
+.footer_service h4 {
+  max-width: 340px;
+  font-size: 21px;
+  line-height: 30px;
+}
+
 @media screen and (max-width: 980px) {
+  .sign_in button,
+.sign_up button {
+    max-width: 96px;
+    height: 40px;
+    padding: 8px 16px;
+  }
+
+  .sign_up .sign_btn {
+    padding: 8px 12px;
+  }
+
   .about_list,
 .market_info,
 .design_content,
@@ -630,24 +647,24 @@ button:hover {
     text-align: center;
   }
 
-  .design_content .design_part {
+  .design_part {
     max-width: 800px;
     text-align: center;
     display: flex;
     flex-direction: column;
   }
-  .design_content .design_part .design_list ul {
+  .design_part .design_list {
     display: flex;
     align-items: stretch;
   }
 
-  .market_info .market_part {
+  .market_part {
     max-width: 800px;
     text-align: center;
     display: flex;
     flex-direction: column;
   }
-  .market_info .market_part .market_list ul {
+  .market_part .market_list {
     display: flex;
     align-items: stretch;
   }
@@ -656,30 +673,29 @@ button:hover {
     max-width: 880px;
   }
   .product_title .product_list {
-    gap: 60px;
+    gap: 30px;
   }
-
-  .product_icon {
+  .product_title .product_list .product_icon {
     text-align: start;
-    width: 180px;
+    width: 200px;
   }
 
-  .product_title .product_list .product_icon h3 {
+  .product_list .product_icon h3 {
     color: #2F281E;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 16px;
   }
 
   p {
     color: #544837;
-    font-size: 0.8rem;
-    line-height: 1.3rem;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
     font-weight: 500;
   }
 
   .nav_footer .footer_list {
     display: flex;
-    gap: 60px;
+    gap: 68px;
   }
 
   h4 {
@@ -688,75 +704,61 @@ button:hover {
     line-height: 1.88rem;
   }
 
-  .nav_footer .footer_list .footer_wrap .footer_link a {
-    color: #544837;
-    font-size: 0.8rem;
-    line-height: 0.6rem;
-    text-decoration: none;
-  }
-
-  .nav_footer .footer_list .footer_wrap .footer_link {
+  .footer_link {
     display: flex;
     flex-direction: column;
     gap: 5px;
   }
+  .footer_link a {
+    color: #544837;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    text-decoration: none;
+  }
 
-  .nav_footer .footer_list .footer_end .footer_service {
+  .footer_service {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
     margin-bottom: 20px;
   }
+  .footer_service h4 {
+    font-size: 19px;
+    line-height: 27px;
+  }
 
-  .nav_footer .footer_list .footer_end .footer_service .form input {
-    width: 260px;
+  .form input {
+    width: 265px;
     height: 40px;
     padding: 0 10px;
   }
-
-  .nav_footer .footer_list .footer_end .footer_service .form .text_end {
+  .form .text_end {
     position: absolute;
     left: 10px;
     top: 10px;
   }
 
-  .footer_end .footer_service .footer_btn {
-    max-width: 180px;
-    height: 36px;
+  .footer_wrap .link_title {
+    margin-bottom: 10px;
+  }
+
+  .footer_btn button {
+    min-width: 134px;
+    height: 44px;
     padding: 6px 12px;
     font-weight: 700;
-    font-size: 0.9rem;
-  }
-
-  .sign_in button {
-    max-width: 96px;
-    height: 36px;
-    padding: 6px 12px;
-  }
-
-  .sign_up .sign_btn {
-    max-width: 96px;
-    height: 36px;
-    padding: 6px 12px;
+    font-size: 1rem;
   }
 
   .nav_footer,
 .header_top {
     max-width: 980px;
   }
-
-  .nav_footer {
-    border-top: 1px solid #2F281E;
-    width: 880px;
-    height: 1px;
-    padding-top: 20px;
-  }
 }
 @media screen and (max-width: 770px) {
   .header_top {
     display: flex;
-    gap: 54px;
     align-items: center;
     margin: 15px 0;
   }
@@ -781,19 +783,17 @@ button:hover {
     display: flex;
     gap: 5px;
   }
-  .header_button .sign_in button,
-.header_button .sign_up button {
-    max-width: 96px;
-    height: 36px;
-    padding: 6px 14px;
-    font-size: 0.5rem;
+
+  .sign_in button,
+.sign_up button {
+    min-width: 77px;
+    height: 40px;
+    padding: 6px 8px;
+    font-size: 0.9rem;
   }
 
-  main .container {
-    margin: 20px 0 20px 38px;
-  }
-  main .about_list {
-    margin-left: 40px;
+  .sign_up .sign_btn {
+    padding: 6px 8px;
   }
 
   .product_title .product_list {
@@ -823,12 +823,6 @@ button:hover {
     align-items: stretch;
   }
 
-  .nav_footer {
-    border-top: 1px solid #2F281E;
-    width: 695px;
-    height: 1px;
-    padding-top: 20px;
-  }
   .nav_footer .footer_list {
     display: flex;
     gap: 26px;
@@ -864,66 +858,23 @@ button:hover {
     font-size: 0.9rem;
   }
 }
-@media screen and (max-width: 420px) {
-  .container {
-    margin: 20px 24px;
-  }
-  .container .nav_footer {
-    border-top: 1px solid #2F281E;
-    width: 342px;
-    height: 1px;
-    padding-top: 20px;
-  }
-  .container .nav_footer .footer_list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .container .nav_footer .footer_list .footer_wrap .link_title {
-    margin-bottom: 15px;
-  }
-  .container .nav_footer .footer_list .footer_wrap .footer_link {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-  }
-  .container .nav_footer .footer_list .footer_end h4 {
-    max-width: 400px;
-    font-size: 15px;
-  }
-  .container .nav_footer .footer_list .footer_end .form input {
-    width: 280px;
-    height: 32px;
-    padding: 0 10px;
-  }
-  .container .nav_footer .footer_list .footer_end .form .text_end {
-    position: absolute;
-    left: 30px;
-    top: 7px;
-    font-size: 13px;
-  }
-  .container .nav_footer .footer_list .footer_end .footer_btn button {
-    max-width: 180px;
-    height: 28px;
-    padding: 6px 6px;
-    font-size: 0.7rem;
-  }
-  .container .header_top {
+@media screen and (max-width: 430px) {
+  .header_top {
     display: flex;
     gap: 80px;
     align-items: center;
     margin: 15px 0;
   }
-  .container .header_top .hamburger {
+  .header_top .hamburger {
     display: block;
   }
-  .container .header_top .logo img {
+  .header_top .logo img {
     max-width: 150px;
   }
-  .container .header_top .nav_top {
+  .header_top .nav_top {
     display: none;
   }
-  .container .header_top .header_button {
+  .header_top .header_button {
     display: none;
   }
 
@@ -933,10 +884,11 @@ button:hover {
   .about_list .about_foto img {
     max-width: 380px;
   }
-  .about_list .about_info .about_title {
+
+  .about_info .about_title {
     font-size: 30px;
   }
-  .about_list .about_info .main_button button {
+  .about_info .main_button button {
     display: inline-block;
     height: 34px;
     padding: 4px 30px;
@@ -966,21 +918,17 @@ button:hover {
 
   .product_title {
     margin-bottom: 60px;
-    margin-left: 17px;
   }
-  .product_title .back_wrap {
-    padding-bottom: 35px;
-  }
-  .product_title .back_wrap .product_list {
+  .product_title .product_list {
     gap: 10px;
     flex-direction: column;
     align-items: center;
   }
-  .product_title .back_wrap .product_list .product_icon {
+  .product_title .product_list .product_icon {
     text-align: start;
-    width: 350px;
+    min-width: 302px;
   }
-  .product_title .back_wrap .product_button .product_btn {
+  .product_title .product_button .product_btn {
     display: inline-block;
     height: 34px;
     padding: 4px 30px;
@@ -990,51 +938,62 @@ button:hover {
   h2 {
     font-size: 1.5rem;
   }
+
+  .nav_footer .footer_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav_footer .footer_list .footer_logo {
+    max-width: 390px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .nav_footer .footer_list h4 {
+    max-width: 390px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .footer_wrap .link_title {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .footer_wrap .footer_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer_wrap .footer_link a {
+    font-size: 0.8rem;
+    line-height: 2rem;
+  }
+
+  .footer_end {
+    max-width: 390px;
+  }
+  .footer_end .form input {
+    min-width: 390px;
+    height: 32px;
+    padding: 0 10px;
+  }
+  .footer_end .form .text_end {
+    position: absolute;
+    left: 30px;
+    top: 7px;
+    font-size: 13px;
+  }
 }
 @media screen and (max-width: 390px) {
-  main .container {
-    margin: 20px 10px;
-  }
   main .container .header_top {
     display: flex;
     gap: 80px;
     align-items: center;
     margin: 15px 0;
   }
-  main .container .nav_footer {
-    border-top: 1px solid #2F281E;
-    width: 342px;
-    height: 1px;
-    padding-top: 20px;
-  }
-  main .container .nav_footer .footer_wrap .link_title {
-    margin-bottom: 15px;
-  }
-  main .container .nav_footer .footer_wrap .footer_link {
-    display: flex;
-    flex-direction: row;
-    gap: 35px;
-  }
-  main .container .nav_footer .footer_wrap .footer_btn button {
-    max-width: 180px;
-    height: 28px;
-    padding: 6px 6px;
-    font-size: 0.7rem;
-  }
-  main .container .nav_footer .nav_footer .footer_list .footer_end .footer_service {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-  main .about_list {
-    margin-left: 20px;
-  }
 
   .design_content {
     margin-bottom: 60px;
-    margin-left: 18px;
   }
   .design_content .design_foto img {
     max-width: 330px;
@@ -1042,7 +1001,6 @@ button:hover {
 
   .nomain_content {
     margin-bottom: 60px;
-    margin-left: 18px;
   }
   .nomain_content .nomain_top img {
     max-width: 330px;
@@ -1050,7 +1008,6 @@ button:hover {
 
   .market_info {
     margin-bottom: 60px;
-    margin-left: 18px;
   }
   .market_info .market_foto img {
     max-width: 330px;
@@ -1058,6 +1015,89 @@ button:hover {
 
   .about_list .about_foto img {
     max-width: 330px;
+  }
+
+  .nav_footer {
+    padding-top: 20px;
+  }
+  .nav_footer .footer_wrap .link_title {
+    margin-bottom: 15px;
+  }
+  .nav_footer .footer_wrap .footer_link {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .nav_footer .footer_wrap .footer_btn button {
+    max-width: 180px;
+    height: 28px;
+    padding: 6px 6px;
+    font-size: 0.7rem;
+  }
+
+  .nav_footer .footer_service {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .footer_end {
+    max-width: 390px;
+  }
+  .footer_end .form input {
+    min-width: 350px;
+    height: 32px;
+    padding: 0 10px;
+  }
+  .footer_end .form .text_end {
+    position: absolute;
+    left: 30px;
+    top: 7px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .nav_footer {
+    padding-top: 20px;
+  }
+  .nav_footer .footer_wrap .link_title {
+    margin-bottom: 15px;
+  }
+  .nav_footer .footer_wrap .footer_link {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .nav_footer .footer_wrap .footer_btn button {
+    max-width: 180px;
+    height: 28px;
+    padding: 6px 6px;
+    font-size: 0.7rem;
+  }
+
+  .nav_footer .footer_service {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .footer_end {
+    max-width: 390px;
+  }
+  .footer_end .form input {
+    min-width: 328px;
+    height: 32px;
+    padding: 0 10px;
+  }
+  .footer_end .form .text_end {
+    position: absolute;
+    left: 30px;
+    top: 7px;
+    font-size: 13px;
   }
 }
 .page_overlay {
@@ -1092,7 +1132,7 @@ button:hover {
 
 .panel_top {
   display: flex;
-  justify-content: space-between;
+  gap: 78px;
   border-bottom: 1px solid #BCD0E5;
   padding-top: 20px;
 }
