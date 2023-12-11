@@ -170,13 +170,16 @@ p {
 }
 .footer_wrap {
     .footer_nav {
-        li {
+        a {
             background-color: $background_color;
-        }
-        li:hover {
-            background-color: $text-color;
-            a:hover {
-                filter: invert(1);
+            svg path {
+                fill: #565656;
+            }
+            &:hover {
+                background-color: $text-color;
+                svg path {
+                    fill: #fff;
+                }
             }
         }
     }

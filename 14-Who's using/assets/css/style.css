@@ -220,8 +220,6 @@ main {
   border-top: 1px solid #BFBFBF;
   border-bottom: 1px solid #BFBFBF;
   padding: 20px 15px;
-  /*I have a problem with option "transform", all cards transform together.
-  I tried to fix, but I can't do it*/
 }
 .wrapper .content_wrap .foto_wrap {
   width: 100%;
@@ -248,6 +246,6 @@ main {
   z-index: -1;
   filter: invert(1);
 }
-.wrapper .content_wrap .foto_wrap:hover .inner:not(:hover) {
+.wrapper .content_wrap .foto_wrap:hover .inner {
   transform: rotateX(180deg);
 }

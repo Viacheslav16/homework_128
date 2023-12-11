@@ -199,14 +199,17 @@ p {
   color: rgba(0, 76, 255, 0.536);
 }
 
-.footer_wrap .footer_nav li {
+.footer_wrap .footer_nav a {
   background-color: #F4F4F4;
 }
-.footer_wrap .footer_nav li:hover {
+.footer_wrap .footer_nav a svg path {
+  fill: #565656;
+}
+.footer_wrap .footer_nav a:hover {
   background-color: #565656;
 }
-.footer_wrap .footer_nav li:hover a:hover {
-  filter: invert(1);
+.footer_wrap .footer_nav a:hover svg path {
+  fill: #fff;
 }
 
 .first_chapter {

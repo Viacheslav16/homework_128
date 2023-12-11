@@ -161,14 +161,9 @@ main {
                     filter: invert(1);
                 }
             } 
-        }
-        //  &:hover .inner {
-        //     transform: rotateX(180deg);
-        // }
-        /*I have a problem with option "transform", all cards transform together.
-        I tried to fix, but I can't do it*/ 
-        .foto_wrap:hover .inner:not(:hover) {
-            transform: rotateX(180deg);
+            &:hover .inner {
+                transform: rotateX(180deg);
+            }
         }
         
     }
