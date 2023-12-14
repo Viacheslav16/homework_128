@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productly</title>
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 <body>
     <div class="page_overlay"></div>
     <div class="menu-panel">
         <div class="panel_top">
-            <div class="mobile_logo"><img src="assets/images/Logo.svg" alt="Logo-mobile"></div>
+            <div class="mobile_logo">
+                <img src="assets/images/Logo.svg" alt="Logo-mobile">
+            </div>
             <div class="hamburger-wrap">
                 <button id="hamb_btn_mobile" class="hamburger hamburger--squeeze is-active" type="button">
                     <span class="hamburger-box">
@@ -50,30 +53,30 @@
     <header>
         <div class="container">
             <div class="header_top">
-                <div class="logo">
+                <div class="logo wow animate__backInLeft">
                     <img src="assets/images/Logo.svg" alt="logo">
                 </div>
                 <nav class="nav_top">
                     <ul class="nav_link">
-                        <li>
+                        <li class="wow animate__tada">
                             <a href="#product">Product</a>
                         </li>
-                        <li>
+                        <li class="wow animate__tada">
                             <a href="">Customers</a>
                         </li>
-                        <li>
+                        <li class="wow animate__tada">
                             <a href="">Pricing</a>
                         </li>
-                        <li>
+                        <li class="wow animate__tada">
                             <a href="">Resources</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="header_button">
-                    <div class="sign_in">
+                    <div class="sign_in wow animate__backInDown">
                         <button type="button">Sign In</button>
                     </div>
-                    <div class="sign_up">
+                    <div class="sign_up wow animate__backInDown">
                         <button type="button" class="sign_btn">Sign Up</button>
                     </div>
                 </div>
@@ -92,25 +95,25 @@
             <section>
                 <div class="about_list">
                     <div class="about_info">
-                        <h1 class="about_title">The Design Thinking superpowers</h1>
+                        <h1 class="about_title wow animate__swing">The Design Thinking superpowers</h1>
                         <div class="about_text">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</div>
                         <div class="main_button">
                             <button type="button">Get started</button>
                         </div>
                     </div>
-                    <div class="about_foto">
+                    <div class="about_foto wow animate__flipInY">
                         <img src="assets/images/Image_main.svg" alt="main_foto">
                     </div>
                 </div>
             </section>
             <section id="product">
                 <div class="product_title">
-                    <h2>We design tools to unveil<br>your superpowers</h2>
+                    <h2 class="wow animate__backInRight" data-wow-delay="0.5s">We design tools to unveil<br>your superpowers</h2>
                     <div class="back_wrap">
                         <ul class="product_list">
                             <li>
                                 <div class="product_icon">
-                                    <div class="first_product">
+                                    <div class="first_product wow animate__heartBeat" data-wow-delay="0.5s">
                                         <img src="assets/images/mouse.svg" alt="mouse">
                                     </div>
                                     <h3>First click tests</h3>
@@ -119,7 +122,7 @@
                             </li>
                             <li>
                                 <div class="product_icon">
-                                    <div class="second_product">
+                                    <div class="second_product wow animate__heartBeat" data-wow-delay="0.5s">
                                         <img src="assets/images/second_mouse.png" alt="something">
                                     </div>
                                     <h3>Design surveys</h3>
@@ -128,7 +131,7 @@
                             </li>
                             <li>
                                 <div class="product_icon">
-                                    <div class="third_product">
+                                    <div class="third_product wow animate__heartBeat" data-wow-delay="0.5s">
                                         <img src="assets/images/heart.png" alt="heart">
                                     </div>
                                     <h3>Preference tests</h3>
@@ -137,7 +140,7 @@
                             </li>
                             <li>
                                 <div class="product_icon">
-                                    <div class="fouth_product">
+                                    <div class="fouth_product wow animate__heartBeat" data-wow-delay="0.5s">
                                         <img src="assets/images/desert_clock.png" alt="desert_clock">
                                     </div>
                                     <h3>Five second tests</h3>
@@ -156,7 +159,7 @@
                         <div class="design_part">
                             <div class="design_title">
                                 <p>Effortless Validation for</p>
-                                <h2>Design Professionals</h2>
+                                <h2 class="wow animate__tada" data-wow-delay="0.5s">Design Professionals</h2>
                                 <p>The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person. </p>
                             </div>
                             <div>
@@ -176,20 +179,20 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="design_foto">
+                        <div class="design_foto wow animate__flipInY" data-wow-delay="0.5s">
                             <img src="assets/images/second_section.svg" alt="second-foto">
                         </div>
                     </div>
             </section>
             <section>
                     <div class="nomain_content">
-                        <div class="nomain_top">
+                        <div class="nomain_top wow animate__flipInY" data-wow-delay="0.5s">
                             <img src="assets/images/third_section.svg" alt="third-foto">
                         </div>
                         <div class="nomain_info">
                             <div class="nomain_title">
                                 <p>Easier decision making for</p>
-                                <h2>Product Managers</h2>
+                                <h2 class="wow animate__backInRight" data-wow-delay="0.5s">Product Managers</h2>
                                 <p>The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person. </p>
                             </div>
                             <div>
@@ -222,7 +225,7 @@
                     <div class="market_part">
                         <div class="market_title">
                             <p>Optimisation for</p>
-                            <h2>Marketers</h2>
+                            <h2 class="wow animate__backInLeft" data-wow-delay="0.5s">Marketers</h2>
                             <p>Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior.  </p>
                         </div>
                         <div>
@@ -242,7 +245,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="market_foto">
+                    <div class="market_foto wow animate__flipInY" data-wow-delay="0.5s">
                         <img src="assets/images/fouth_section.png" alt="fouth-foto">
                     </div>
                 </div>
@@ -254,14 +257,14 @@
                 <nav class="nav_footer">
                     <ul class="footer_list">
                         <li>
-                            <div class="footer_logo">
+                            <div class="footer_logo wow animate__backInLeft" data-wow-delay="0.5s">
                                 <img src="assets/images/Logo.svg" alt="logo">
                             </div>
                         </li>
                         <li class="footer_wrap">
                             <div>
                                 <div class="link_title">   
-                                    <h4>Quick Links</h4>
+                                    <h4 class="wow animate__heartBeat" data-wow-delay="0.5s">Quick Links</h4>
                                 </div>
                                 <ul class="footer_link">
                                     <li>
@@ -282,7 +285,7 @@
                         <li  class="footer_wrap">
                             <div>
                                 <div class="link_title">   
-                                    <h4>Legal Stuff</h4>
+                                    <h4 class="wow animate__heartBeat" data-wow-delay="0.5s">Legal Stuff</h4>
                                 </div>
                                 <ul class="footer_link">
                                     <li>
@@ -303,7 +306,7 @@
                         <li class="footer_end">
                             <ul class="footer_service">
                                 <li>
-                                    <h4>Knowing you're always on the best energy deal.</h4>
+                                    <h4 class="wow animate__backInRight" data-wow-delay="0.5s">Knowing you're always on the best energy deal.</h4>
                                 </li>
                                 <li class="form">
                                     <form action="#" method="get">
@@ -313,7 +316,7 @@
                                     <p class="text_end">Enter your phone Number</p>
                                 </li>
                                 <li>
-                                    <div class="footer_btn">
+                                    <div class="footer_btn wow animate__backInUp" data-wow-delay="0.5s">
                                         <button type="button">Sign up Now</button>
                                     </div>
                                 </li>
@@ -323,6 +326,16 @@
                 </nav>
         </div>
     </footer>
+
+<script src="assets/js/wow.min.js"></script>
+<script>
+    wow = new WOW(
+        {
+        animateClass: 'animate__animated', // default
+    }
+    )
+    wow.init();
+</script>
 
 <script>
     window.new_hamb.addEventListener('click', function(){
