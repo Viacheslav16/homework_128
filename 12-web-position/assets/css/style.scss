@@ -2,6 +2,7 @@ $white_color:#FFF;
 $color_black:#000;
 $bg_color:#DADADA;
 $border_color: #BDBDBD;
+$color-hover: blue;
 
 @import 'fonts';
 
@@ -13,8 +14,9 @@ $border_color: #BDBDBD;
 body {
     position: relative;
         background-image: url(../images/bg-picture.svg);
-        background-position: left 812px top 153px;
+        background-position: right 0 top 153px;
         background-repeat: no-repeat;
+        background-attachment: fixed;
 }
 .container {
     width: min(90%, 789px);
@@ -35,7 +37,7 @@ a {
     grid-template-columns: 385px 1fr;
     gap: 30px;
     margin-top: 150px;
-    align-items: flex-start;
+    align-items:start;
 }
 header {
     margin-bottom: 75px;
@@ -49,19 +51,32 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 13px 0;
+    padding: 13px 0;
+    background-color: rgba($white_color, 0.7);
+    backdrop-filter: blur(4px);
     .header_wrap {
         display: flex;
         align-items: flex-start;
         height: 22px;
         gap: 53px;
-        .nav_wrap {
-            ul {
-                display: flex;
-                gap: 10px;
-            }
+    }
+}
+.nav_wrap {
+    ul {
+        display: flex;
+        gap: 10px;
+    }
+}
+.nav_wrap {
+    ul {
+        a:hover {
+            color:blue;
         }
     }
+}
+
+.main_wrap {
+    display: flex;
 }
 .second_wrap {
     display: flex;
@@ -165,6 +180,10 @@ a {
     font-size: 1.375rem;
     line-height: 11px;
     letter-spacing: 0.0825rem;
+    &:hover {
+        color:blue;
+        cursor: pointer;
+    }
 }
 .bold {
     @extend .pt_sans;
@@ -183,8 +202,11 @@ a {
     line-height: 3rem;
 
 } 
+.aside_container {
+    width: max(90%, 385px);
+    margin: 0 auto;
+}
 aside {
-    width: 385px;
     position: sticky;
     top: 162px;
     left: 128px;
@@ -208,6 +230,9 @@ aside {
                 letter-spacing: 1.25px;
                 text-transform: uppercase;
                 margin-bottom: 10px;
+                &:hover {
+                    color:$color-hover;
+                }
             }
         }   
 

@@ -25,9 +25,6 @@ h2 {
     letter-spacing: 0.1125rem;
     margin: 120px 0 80px;
 }
-.roboto {
-    font-family: 'Roboto', sans-serif;
-}
 .delius {
     font-family: 'Delius Unicase', cursive;
 }
@@ -44,14 +41,12 @@ h2 {
         left: 20px;
         bottom: 20px;
         color: $bg;
-        @extend .roboto;
     }
     .date {
         position: absolute;
         right: 20px;
         bottom: 20px;
         color: $bg;
-        @extend .roboto;
     }
     .icon {
         position: absolute;

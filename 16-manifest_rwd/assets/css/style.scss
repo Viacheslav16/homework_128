@@ -47,6 +47,8 @@ header {
     z-index: 10;
     height: 100px;
     padding-top: 38px;
+    background-color: rgba(#fff, 0.7);
+    backdrop-filter: blur(4px);
     .header_top {
         color: $title-color;
         @extend .lato;

@@ -1,6 +1,7 @@
 $white_color:#FFF;
 $color_black:#000;
 $bg_color:#DADADA;
+$color-hover: blue;
 
 @import 'fonts';
 
@@ -32,12 +33,20 @@ header {
         align-items: flex-start;
         height: 22px;
         gap: 53px;
-        .nav_wrap {
-            line-height: 11px;
-            ul {
-                display: flex;
-                gap: 10px;
-            }
+    }
+}
+.nav_wrap {
+    line-height: 11px;
+    ul {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+.nav_wrap {
+    ul {
+        a:hover {
+            color:$color-hover;
         }
     }
 }
@@ -122,6 +131,10 @@ a {
     font-size: 1.375rem;
     line-height: 11px;
     letter-spacing: 0.0825rem;
+    &:hover {
+        color:blue;
+        cursor: pointer;
+    }
 }
 .bold {
     @extend .pt_sans;

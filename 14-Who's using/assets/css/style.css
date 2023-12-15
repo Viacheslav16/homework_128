@@ -136,7 +136,7 @@ body {
   font-family: "Farro", sans-serif;
 }
 
-.staatliches_regular, .header_top .header_wrap .nav_wrap ul a {
+.staatliches_regular, .nav_wrap ul a {
   font-family: "Staatliches", sans-serif;
 }
 
@@ -176,17 +176,25 @@ header {
   line-height: 11px;
   letter-spacing: 0.0825rem;
 }
-.header_top .header_wrap .nav_wrap ul {
+.header_top .header_wrap .eng:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.nav_wrap ul {
   display: flex;
   gap: 10px;
 }
-.header_top .header_wrap .nav_wrap ul a {
+.nav_wrap ul a {
   text-decoration: none;
   color: #000;
   font-size: 1.375rem;
   line-height: normal;
   letter-spacing: 0.04125rem;
   line-height: 11px;
+}
+.nav_wrap ul a:hover {
+  color: blue;
 }
 
 main {

@@ -103,12 +103,17 @@ header {
   height: 22px;
   gap: 53px;
 }
-.header_top .header_wrap .nav_wrap {
+
+.nav_wrap {
   line-height: 11px;
 }
-.header_top .header_wrap .nav_wrap ul {
+.nav_wrap ul {
   display: flex;
   gap: 10px;
+}
+
+.nav_wrap ul a:hover {
+  color: blue;
 }
 
 .second_wrap {
@@ -196,6 +201,10 @@ a {
   font-size: 1.375rem;
   line-height: 11px;
   letter-spacing: 0.0825rem;
+}
+.eng:hover {
+  color: blue;
+  cursor: pointer;
 }
 
 .bold {

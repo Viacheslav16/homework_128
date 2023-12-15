@@ -77,6 +77,8 @@ header {
   z-index: 10;
   height: 100px;
   padding-top: 38px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
 }
 header .header_top {
   color: #000;

@@ -52,10 +52,6 @@ h2 {
   margin: 120px 0 80px;
 }
 
-.roboto, .foto_wrap .date, .foto_wrap .name {
-  font-family: "Roboto", sans-serif;
-}
-
 .delius, h2 {
   font-family: "Delius Unicase", cursive;
 }
