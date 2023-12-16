@@ -237,7 +237,7 @@ h3 {
   display: flex;
   gap: 30px;
 }
-.blog-item-pic {
+.blog-pic {
   aspect-ratio: 57/47;
 }
 .blog-item:nth-child(1) {
@@ -301,6 +301,9 @@ h3 {
   align-items: center;
   gap: 30px;
 }
+.latest-list li {
+  width: 33%;
+}
 .latest-item .blog-pic {
   margin-bottom: 25px;
 }
@@ -326,6 +329,9 @@ h3 {
 }
 .most-popular .latest-list {
   margin-bottom: 54px;
+}
+.most-popular .latest-list li {
+  width: 50%;
 }
 .most-popular .latest-list .blog-pic {
   aspect-ratio: 57/26;

@@ -107,7 +107,7 @@ p {
 }
 
 .pic_wrap {
-    width: min(100%, 1170px);
+    aspect-ratio: 117/50;
     margin-bottom: 20px;
 }
 
@@ -208,6 +208,9 @@ p {
         width: max(90%, 700px);
         margin: 0 auto;
     }
+    .pic_wrap {
+        aspect-ratio: 70/38;
+    }
     header {
         height: 60px;
         padding-top: 18px;
@@ -280,6 +283,9 @@ p {
     .container {
         width: max(90%, 300px);
         margin: 0 auto;
+    }
+    .pic_wrap {
+        aspect-ratio: 30/30;
     }
     header {
         height: 60px;

@@ -186,9 +186,9 @@ h3 {
     &-item {
         display: flex;
         gap: 30px;
-        &-pic {
-            aspect-ratio: 57/47;
-        }
+    }
+    &-pic {
+        aspect-ratio: 57/47;
     }
     &-item:nth-child(1) {
         display: flex;
@@ -256,10 +256,14 @@ h3 {
         display: flex;
         align-items: center;
         gap: 30px;
+        li {
+            width: 33%;
+        }
     }
     &-item {
         .blog-pic {
             margin-bottom: 25px;
+
         }
     }
     .blog-content {
@@ -287,6 +291,9 @@ h3 {
     gap: 30px;
     .latest-list {
         margin-bottom: 54px;
+        li {
+            width: 50%;
+        }
         .blog-pic {
             aspect-ratio: 57/26;
         }
