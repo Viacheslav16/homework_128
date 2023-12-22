@@ -1,0 +1,8 @@
+User-agent: *
+
+Disallow:
+
+Sitemap: http://Viacheslav16/homework_128/first-exam/sitemap.xml
+
+
+Host:Viacheslav16/homework_128/first-exam
