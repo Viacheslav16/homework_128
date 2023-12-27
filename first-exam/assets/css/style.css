@@ -199,7 +199,7 @@ body {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   left: 0;
   top: 0;
   width: 100%;
@@ -380,7 +380,7 @@ p {
   width: 65.8%;
   position: absolute;
   top: 45px;
-  left: 400px;
+  right: 0;
   opacity: 0.9;
   background: #FFF;
   padding: 45px 0;
