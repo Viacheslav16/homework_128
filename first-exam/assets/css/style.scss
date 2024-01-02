@@ -155,26 +155,28 @@ input[type=checkbox].switch {
     &::before {
         content: '';
         display: inline-block;
-        height: 30px;
+        height: 33px;
         width: 60px;
         background: $primary-grey;
-        border-radius: 30px;
+        border-radius: 10px;
         position: absolute;
         z-index: 1;
-        top: 0;
-        left: 0;
+        bottom: 0;
+        right: 0;
     }
     &::after {
         content: '';
         display: inline-block;
         position: absolute;
-        width: 26px;
-        height: 26px;
-        top: 2px;
+        width: 28px;
+        height: 28px;
+        top: 0;
         left: 2px;
         border-radius: 50%;
         background: $blue-deep;
         z-index: 2;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
         transition: all .3s ease;
     }
 
@@ -208,6 +210,7 @@ main {
 
     .btn {
         position: relative;
+        background-color: transparent;
 
         &::after {
             content: '';
@@ -2983,7 +2986,7 @@ footer {
 
         &-item {
             flex-direction: column;
-            top: 180px;
+            top: 178px;
             left: 46px;
         }
 
@@ -3015,7 +3018,7 @@ footer {
         &-wrap {
             &::before {
                 content: '';
-                width: 290px;
+                width: 296px;
                 bottom: 230px;
             }
         }
@@ -3067,6 +3070,7 @@ footer {
 
         &-video {
             padding: 24px 77px 20px 32px;
+            margin-bottom: 100px;
 
             iframe {
                 max-height: 240px;
@@ -3095,6 +3099,7 @@ footer {
             .btn {
                 padding: 0 16px;
                 height: 44px;
+                margin-top: 46px;
                 &::after {
                     left: 22px;
                     bottom: 8px;
@@ -3116,7 +3121,7 @@ footer {
     }
 
     .sixth {
-        margin-bottom: 70px;
+        margin-bottom: 100px;
 
         &-wrap {
             grid-template-columns: repeat(1, 320px);
@@ -3149,6 +3154,11 @@ footer {
         &-info {
             max-width: 326px;
         }
+        .form_wrap {
+            input {
+                min-width: 344px;
+            }
+        }
     }
 
     .footer-wrap {
@@ -3161,22 +3171,17 @@ footer {
     }
 }
 
-@media screen and (max-width: 390px) {
-
-    .hero-section {
-        margin-bottom: 130px;
-    }
+@media screen and (max-width: 414px) {
 
     .blog {
-        margin-bottom: 940px;
+        margin-bottom: 800px;
         &-item {
-            flex-direction: column;
-            top: 278px;
-
+            top: 210px;
+            left: 45px;
         }
 
         &-subtitle::before {
-            left: 84px;
+            left: 92px;
         }
 
         &-descr {
@@ -3185,18 +3190,12 @@ footer {
     }
 
     .second {
-        gap: 30px;
-
-        h2 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
+        gap: 25px;
 
         &-wrap {
             &::before {
                 content: '';
-                width: 252px;
-                bottom: 230px;
+                width: 282px;
             }
         }
     }
@@ -3226,7 +3225,11 @@ footer {
             font-size: .85rem;
         }
     }
-
+    .fourth {
+        &-video {
+            margin-bottom: 100px;
+        }
+    }
     .fifth {
 
         &-info {
@@ -3240,6 +3243,7 @@ footer {
             .btn {
                 padding: 0 10px;
                 height: 40px;
+                margin-top: 46px;
                 &::after {
                     left: 16px;
                     bottom: 7px;
@@ -3248,13 +3252,28 @@ footer {
             }
         }
     }
+}
 
+@media screen and (max-width: 393px) {
+
+    .blog {
+        &-item {
+            top: 142px;
+        }
+    }
+
+    .second {
+        &-wrap {
+            &::before {
+                content: '';
+                width: 262px;
+                bottom: 230px;
+            }
+        }
+    }
     .sixth {
-        margin-bottom: 70px;
-
         &-wrap {
             grid-template-columns: repeat(1, 320px);
-            margin-left: 15px;
 
             h3 {
                 padding-left: 28px;
@@ -3266,14 +3285,10 @@ footer {
         &-info {
             max-width: 326px;
         }
-    }
-
-    .footer-wrap {
-        gap: 2px;
-
-        .footer-end {
-            flex-direction: column;
-            gap: 0;
+        .form_wrap {
+            input {
+                min-width: 340px;
+            }
         }
     }
 }

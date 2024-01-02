@@ -275,26 +275,28 @@ input[type=checkbox].switch {
 input[type=checkbox].switch::before {
   content: "";
   display: inline-block;
-  height: 30px;
+  height: 33px;
   width: 60px;
   background: #E4E4E4;
-  border-radius: 30px;
+  border-radius: 10px;
   position: absolute;
   z-index: 1;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
 }
 input[type=checkbox].switch::after {
   content: "";
   display: inline-block;
   position: absolute;
-  width: 26px;
-  height: 26px;
-  top: 2px;
+  width: 28px;
+  height: 28px;
+  top: 0;
   left: 2px;
   border-radius: 50%;
   background: #161926;
   z-index: 2;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 input[type=checkbox].switch:checked::after {
@@ -325,6 +327,7 @@ main {
 }
 .main_info .btn {
   position: relative;
+  background-color: transparent;
 }
 .main_info .btn::after {
   content: "";
@@ -2460,7 +2463,7 @@ footer .footer-item {
   }
   .blog-item {
     flex-direction: column;
-    top: 180px;
+    top: 178px;
     left: 46px;
   }
   .blog-subtitle::before {
@@ -2485,7 +2488,7 @@ footer .footer-item {
   }
   .second-wrap::before {
     content: "";
-    width: 290px;
+    width: 296px;
     bottom: 230px;
   }
 
@@ -2526,6 +2529,7 @@ footer .footer-item {
   }
   .fourth-video {
     padding: 24px 77px 20px 32px;
+    margin-bottom: 100px;
   }
   .fourth-video iframe {
     max-height: 240px;
@@ -2545,6 +2549,7 @@ footer .footer-item {
   .fifth-tack .btn {
     padding: 0 16px;
     height: 44px;
+    margin-top: 46px;
   }
   .fifth-tack .btn::after {
     left: 22px;
@@ -2560,7 +2565,7 @@ footer .footer-item {
   }
 
   .sixth {
-    margin-bottom: 70px;
+    margin-bottom: 100px;
   }
   .sixth-wrap {
     grid-template-columns: repeat(1, 320px);
@@ -2581,6 +2586,9 @@ footer .footer-item {
   .seventh-info {
     max-width: 326px;
   }
+  .seventh .form_wrap input {
+    min-width: 344px;
+  }
 
   .footer-wrap {
     gap: 5px;
@@ -2590,36 +2598,27 @@ footer .footer-item {
     gap: 2px;
   }
 }
-@media screen and (max-width: 390px) {
-  .hero-section {
-    margin-bottom: 130px;
-  }
-
+@media screen and (max-width: 414px) {
   .blog {
-    margin-bottom: 940px;
+    margin-bottom: 800px;
   }
   .blog-item {
-    flex-direction: column;
-    top: 278px;
+    top: 210px;
+    left: 45px;
   }
   .blog-subtitle::before {
-    left: 84px;
+    left: 92px;
   }
   .blog-descr {
     margin-bottom: 40px;
   }
 
   .second {
-    gap: 30px;
-  }
-  .second h2 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+    gap: 25px;
   }
   .second-wrap::before {
     content: "";
-    width: 252px;
-    bottom: 230px;
+    width: 282px;
   }
 
   .third-text {
@@ -2643,6 +2642,10 @@ footer .footer-item {
     font-size: 0.85rem;
   }
 
+  .fourth-video {
+    margin-bottom: 100px;
+  }
+
   .fifth-info {
     -moz-column-gap: 20px;
     column-gap: 20px;
@@ -2652,19 +2655,27 @@ footer .footer-item {
   .fifth-tack .btn {
     padding: 0 10px;
     height: 40px;
+    margin-top: 46px;
   }
   .fifth-tack .btn::after {
     left: 16px;
     bottom: 7px;
     width: 104px;
   }
-
-  .sixth {
-    margin-bottom: 70px;
+}
+@media screen and (max-width: 393px) {
+  .blog-item {
+    top: 142px;
   }
+
+  .second-wrap::before {
+    content: "";
+    width: 262px;
+    bottom: 230px;
+  }
+
   .sixth-wrap {
     grid-template-columns: repeat(1, 320px);
-    margin-left: 15px;
   }
   .sixth-wrap h3 {
     padding-left: 28px;
@@ -2673,12 +2684,7 @@ footer .footer-item {
   .seventh-info {
     max-width: 326px;
   }
-
-  .footer-wrap {
-    gap: 2px;
-  }
-  .footer-wrap .footer-end {
-    flex-direction: column;
-    gap: 0;
+  .seventh .form_wrap input {
+    min-width: 340px;
   }
 }
