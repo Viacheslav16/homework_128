@@ -1,0 +1,145 @@
+$color_primary:#fff;
+$color_main:hsl(0, 0%, 14%);
+$color_panel:rgba(0, 31, 125, 0.765);
+$color_title: rgb(58, 58, 191);
+$color_link: rgb(197, 197, 203);
+$color_hover: rgb(155, 155, 156);
+
+@import 'fonts';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $color_main;
+}
+li {
+    list-style: circle;
+}
+img {
+    vertical-align: top;
+    height: 100%;
+    object-fit: cover;
+}
+a, button {
+    text-decoration: none;
+    transition: all .2s ease;
+}
+.container {
+    width: min(95%, 1400px);
+    margin: 0 auto;
+}
+.content_wrap {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.main_container {
+    padding: 30px;
+    background-color: #fff;
+    width: 75%;
+}
+.sidebar {
+    background-color:$color_panel;
+    color:$color_primary;
+    width: 25%;
+}
+h1 {
+    padding-bottom: 5px;
+}
+h2 {
+    color: $color_panel;
+    border-top: 1px solid $color_main; 
+    border-bottom: 1px solid $color_main;
+    padding: 10px 0;
+}
+header {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    margin-top: 30px;
+    padding: 20px 30px;
+    background: linear-gradient(270deg,rgba(0,31,125,.765) 0,rgba(0,31,125,.765) 20%,#c5c5cb73 60%),#c5c5cb00;
+    backdrop-filter: blur(4.5px);
+    .caption {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-link {
+            a {
+                color:$color_primary;
+            }
+        }
+    }
+}
+.main {
+    &-develop {
+        padding-bottom: 20px;
+    }
+    &-experience {
+       display: flex;
+       text-align: start;
+       justify-content: flex-start;
+       padding: 20px 0;
+    }
+    &-date {
+        width: 24%;
+    }
+    &-desc {
+        width: 75%;
+        padding: 0 30px;
+    }
+    &-subtitle {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        list-style: none;
+    }
+}
+.info {
+    &-skills {
+        padding: 30px;
+        a {
+            color: $color_link;
+            &:hover {
+                color: $color_hover;
+            }
+            &:focus {
+                color: $color_hover;
+            }
+        }
+    }
+    &-item {
+        li {
+            list-style: none;
+            padding: 5px 0;
+        } 
+    }
+    &-subtitle {
+        font-weight: bold;
+        background: $color_title;
+        padding: 5px 30px;
+    }
+    &-lang {
+        padding: 30px;
+    }
+    &-rating {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        padding: 5px 0;
+        .stars-dark {
+            img {
+                opacity: .2;
+            }
+        }
+    }
+}
