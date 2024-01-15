@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="card mb-4">
+        <!-- <div class="card mb-4">
             <h5 class="card-header">
                 Task 1
             </h5>
@@ -19,16 +19,81 @@
             <div class="card-footer">
                 <button type="button" class="btn btn-info" onclick="task1()">Run</button>
             </div>
-        </div>
+        </div> -->
         <div class="card mb-4">
             <h5 class="card-header">
-                Check age
+                Check figures
             </h5>
             <div class="card-body">
-                <input type="number" class="form-control" id="age_top" placeholder="Enter your age">
+                <input type="number" class="form-control" id="number_one" placeholder="Enter first number">
+                <br>
+                <input type="number" class="form-control" id="number_two" placeholder="Enter second number">
                 <br>
                 <button type="button" class="btn btn-info" onclick="My_task1()">Check</button>
-                <div id="age-result"></div>
+                <div id="number-result"></div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Check factorial
+            </h5>
+            <div class="card-body">
+                <input type="number" class="form-control" id="number_fact" placeholder="Enter your number">
+                <br>
+                <button type="button" class="btn btn-info" onclick="My_task2()">Check</button>
+                <div id="fact-result"></div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число.            <div class="card-body">
+                <input type="number" class="form-control" id="num_one" placeholder="Enter first number">
+                <br>
+                <input type="number" class="form-control" id="num_two" placeholder="Enter second number">
+                <br>
+                <input type="number" class="form-control" id="num_three" placeholder="Enter third number">
+                <br>
+                <button type="button" class="btn btn-info" onclick="My_task3()">Check</button>
+                <div id="rezult_one"></div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу. Якщо в функцію передали 1 параметр, то вона обчислює площу квадрата.            </h5>
+            <div class="card-body">
+                <input type="number" class="form-control" id="first_side" required placeholder="Введіть довжину прямокутника">
+                <br>
+                <input type="number" class="form-control" id="second_side" placeholder="Введіть ширину прямокутника">
+                <br>
+                <button type="button" class="btn btn-info" onclick="My_task4()">Check</button>
+                <div id="total_side"></div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”.
+            </h5>
+            <div class="card-body">
+                <input type="number" class="form-control" id="num_top" placeholder="Enter your number">
+                <br>
+                <button type="button" class="btn btn-info" onclick="My_task5()">Check</button>
+                <div id="top_result"></div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і виводить тільки ті числа з діапазону, які є досконалими.             <div class="card-body">
+                <input type="number" class="form-control" id="first_num" required placeholder="Введіть мінімальне значення">
+                <br>
+                <input type="number" class="form-control" id="second_num" placeholder="Введіть максимальне значення">
+                <br>
+                <button type="button" class="btn btn-info" onclick="My_task6()">Check</button>
+                <div id="total_side"></div>
             </div>
         </div>
     </div>
