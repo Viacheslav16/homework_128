@@ -55,7 +55,7 @@ function sayMe(name) {
 
 function getIt() {
   var hello = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : function (p) {};
-  var userName = promt("enter name");
+  var userName = prompt("enter name");
 
   if (user) {
     hello(userName);

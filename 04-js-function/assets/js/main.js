@@ -49,7 +49,7 @@ function sayMe(name) {
     console.log(`Hello, ${name}`);
 }
 function getIt(hello = (p)=>{}) {
-    const userName = promt(`enter name`)
+    const userName = prompt(`enter name`)
 
     if (user) {
         hello(userName)
