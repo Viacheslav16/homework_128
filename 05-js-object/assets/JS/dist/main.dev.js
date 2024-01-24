@@ -19,9 +19,22 @@ function My_task1() {
     FuelCapacity: 55,
     IndentNumber: 'XX0000YY',
     DriverName: 'Viacheslav',
-    setDriverName: function mytask1() {
+    setDriverName: function setDriverName() {
       var name = document.getElementById("name_one").value;
-      this.DriverName += name;
+
+      for (var key in this) {
+        if (this[key] === name && key === 'DriverName') {
+          alert('This name is already assigned to a driver. Enter another name.');
+          return;
+        }
+      }
+
+      if (!isNaN(name) || name === '') {
+        alert('Enter a valid name');
+        return;
+      } else {
+        this.DriverName += ',' + name;
+      }
     },
     showInfo: function showInfo() {
       var rez = '<ul>';
@@ -35,19 +48,42 @@ function My_task1() {
       rez += '</ul>';
       return rez;
     },
-    calcFuelForDistance: function mytask2() {
+    calcFuelForDistance: function calcFuelForDistance() {
       var distance = document.getElementById("number_one").valueAsNumber;
       var fuel = distance * this.Using / 100;
       var rechargeCnt = Math.trunc(fuel / this.FuelCapacity);
+      var middleSpeed = 100;
+      var normWay = 4;
+      var hoursOfDriving = distance / middleSpeed;
+      var totalPause = Math.trunc(hoursOfDriving / normWay);
+
+      for (var i = hoursOfDriving; i >= 4; i++) {
+        hoursOfDriving += totalPause;
+        break;
+      }
+
+      this.Fuel = fuel;
+      this.RechargeCnt = rechargeCnt;
+      this.HoursOfDriving = hoursOfDriving;
       return {
-        fuel: fuel,
-        rechargeCnt: rechargeCnt
+        Fuel: fuel,
+        RechargeCnt: rechargeCnt,
+        HoursOfDriving: hoursOfDriving
       };
     }
   };
-  document.getElementById('car_table').innerHTML = car.showInfo(), car.setDriverName();
-  document.getElementById('fuel_table').innerHTML = fuel, rechargeCnt;
-}
+  var nameInfo = car.setDriverName(); // I don't know how show information about (new name and fuel) use different button. I can user only first button 
+
+  document.getElementById('car_table').innerHTML = car.showInfo(), nameInfo;
+  var fuelInfo = car.calcFuelForDistance();
+  document.getElementById('fuel_table').innerHTML = "<p><b>Fuel:</b> ".concat(fuelInfo.Fuel, "</p><p><b>Recharge Count:</b> ").concat(fuelInfo.RechargeCnt, "</p><p><b>HoursOfDriving:</b> ").concat(fuelInfo.HoursOfDriving, "</p>");
+} // function addName(car,name) {
+//     const nameInfo = car.setDriverName();
+//     if(confirm(`Do you want to add ${name}?`)){
+//         document.getElementById('car_table').innerHTML = nameInfo;
+//     }
+// }
+
 
 1.; // Створити об'єкт, що описує час (години, хвилини, секунди), і такі функції для роботи з цим об'єктом:
 // 1)Для виведення часу на екран.
@@ -66,11 +102,11 @@ function myTime() {
     m: document.getElementById("figures_two").valueAsNumber,
     s: document.getElementById("figures_three").valueAsNumber,
     time2sec: function time2sec() {
-      return this.h * 3600 + this.m * 60 + s; // функція,що переводить час в секунди
+      return this.h * 3600 + this.m * 60 + this.s; // функція,що переводить час в секунди
     },
     sec2time: function sec2time(sec) {
       var hours = Math.floor(sec / 3600);
-      var minutes = Math.floor(sec / 60);
+      var minutes = Math.floor(sec / 60) - hours * 60;
       var seconds = sec % 60;
       return {
         h: hours,
@@ -80,7 +116,7 @@ function myTime() {
     },
     // Внутрішня функція для нормалізації часу (перетворення зайвих секунд та хвилин)
     norm2time: function norm2time() {
-      if (this.m = 60) {
+      if (this.m === 60) {
         this.h += this.m / 60;
       }
 
@@ -97,14 +133,24 @@ function myTime() {
         this.h += Math.floor(this.m / 60);
         this.m %= 60;
       }
+    },
+    addSec: function addSec() {
+      var plusSec = document.getElementById("name_sec").valueAsNumber;
+
+      if (plusSec >= 60) {
+        this.m += Math.floor(plusSec / 60);
+        this.s += plusSec %= 60;
+      } else {
+        this.s += plusSec;
+      }
+
+      return showTime; // I have problem with with function to add new seconds
     }
   };
-
-  for (var key in time) {
-    if (typeof time[key] !== 'function') {
-      return "".concat(key, " = ").concat(time[key]);
-    }
-  }
-
-  document.getElementById('time-result').innerHTML = time.time2sec(), sec2time(sec);
+  var sec = time.time2sec();
+  time.norm2time();
+  var showTime = time.sec2time(sec);
+  var newSec = time.addSec();
+  document.getElementById('time-result').innerHTML = "".concat(addZero(showTime.h), ":").concat(addZero(showTime.m), ":").concat(addZero(showTime.s));
+  document.getElementById('sec-result').innerHTML = "".concat(addZero(newSec.h), ":").concat(addZero(newSec.m), ":").concat(addZero(newSec.s));
 }

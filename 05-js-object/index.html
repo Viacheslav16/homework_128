@@ -39,51 +39,60 @@
                 </ul>
             </div>
             <div class="card-body">
-                <input type="text" class="form-control" id="name_one" placeholder="Додайте ім’я водія">
-                <br>
-                <button type="button" class="btn btn-info" onclick="mytask1()">Check</button>
-            </div>
-            <div>
                 <input type="number" class="form-control" id="number_one" placeholder="Додайте дистанцію">
                 <br>
-            <button type="button" class="btn btn-info" onclick="mytask2">Check</button>
-            <div id="fuel_table" class="mb-4">
-                <ul>
-                    <li><b>fuel:</b></li>
-                    <li><b>rechargeCnt:</b></li>
-                </ul>
+                <button type="button" class="btn btn-info" onclick="mytask2()">Check</button>
+                <br>
+                <br>
+                <div id="fuel_table" class="mb-4">
+                    <ul>
+                        <li><b>Fuel:</b></li>
+                        <li><b>Recharge Count:</b></li>
+                        <li><b>HoursOfDriving</b></li>
+                    </ul>
+                </div>
             </div>
-            
+            <div class="card-body">
+                <input type="text" class="form-control" id="name_one" placeholder="Додайте ім’я водія">
+                <br>
+                <button type="button" class="btn btn-info" onclick="addName(car)">Check</button>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <h5 class="card-header">
+                1.Створити об'єкт, що описує час (години, хвилини, секунди), і такі функції для роботи з цим об'єктом:
+                <br>
+                - Для виведення часу на екран.
+                <br>
+                - Зміни часу на передану кількість секунд.
+                <br>
+                - Зміни часу на передану кількість хвилин.
+                <br>
+                - Зміни часу на передану кількість годин.
+                <br>
+                - Враховуйте, що в останніх 3-х функціях, при зміні однієї частини часу, може змінитися і інша. Наприклад: якщо до часу «20:59:45» додати 30 секунд, то повинно вийти «21:00:15», а не «20:59:75». Також потрібно передбачити можливість того що користувач може передати 150 секунд, або 75 хвилин.
+                    Максимум
+            </h5>
+            <div class="card-body">
+                <input type="number" class="form-control" id="figures_one" placeholder="Enter hours">
+                <br>
+                <input type="number" class="form-control" id="figures_two" placeholder="Enter minutes">
+                <br>
+                <input type="number" class="form-control" id="figures_three" placeholder="Enter seconds">
+                <br>
+                <button type="button" class="btn btn-info" onclick="myTime()">Check</button>
+                <div id="time-result"></div>
+            </div>
+
+            <div class="card-body">
+                <input type="text" class="form-control" id="name_sec" placeholder="Enter new number of seconds">
+                <br>
+                <button type="button" class="btn btn-info" onclick="addSec">Check</button>
+                <div id="sec-result"></div>
+            </div>
         </div>
     </div>
-
-    <div class="card mb-4">
-        <h5 class="card-header">
-            1.Створити об'єкт, що описує час (години, хвилини, секунди), і такі функції для роботи з цим об'єктом:
-            <br>
-            - Для виведення часу на екран.
-            <br>
-            - Зміни часу на передану кількість секунд.
-            <br>
-            - Зміни часу на передану кількість хвилин.
-            <br>
-            - Зміни часу на передану кількість годин.
-            <br>
-            - Враховуйте, що в останніх 3-х функціях, при зміні однієї частини часу, може змінитися і інша. Наприклад: якщо до часу «20:59:45» додати 30 секунд, то повинно вийти «21:00:15», а не «20:59:75». Також потрібно передбачити можливість того що користувач може передати 150 секунд, або 75 хвилин.
-                Максимум
-        </h5>
-        <div class="card-body">
-            <input type="number" class="form-control" id="figures_one" placeholder="Enter hours">
-            <br>
-            <input type="number" class="form-control" id="figures_two" placeholder="Enter minutes">
-            <br>
-            <input type="number" class="form-control" id="figures_three" placeholder="Enter seconds">
-            <br>
-            <button type="button" class="btn btn-info" onclick="myTime()">Check</button>
-            <div id="time-result"></div>
-        </div>
-    </div>
-
     <script src="assets/JS/main.js"></script>
 </body>
 </html>

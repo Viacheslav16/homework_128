@@ -19,9 +19,22 @@ function My_task1() {
         IndentNumber: 'XX0000YY',
         DriverName: 'Viacheslav',
 
-        setDriverName: function mytask1() {
+        setDriverName: function() {
             const name = document.getElementById(`name_one`).value;
-            this.DriverName += name;
+
+            for (let key in this) {
+                if (this[key] === name && key === 'DriverName') {
+                    alert('This name is already assigned to a driver. Enter another name.');
+                    return;
+                }
+            }
+            if (!isNaN(name) || name === '') {
+                alert('Enter a valid name');
+                return;
+            }else {
+                this.DriverName +=',' + name;
+            }
+            
         },  
 
         showInfo: function () {
@@ -34,22 +47,51 @@ function My_task1() {
             rez += '</ul>';
             return rez;
         },
-        calcFuelForDistance: function mytask2() {
+        calcFuelForDistance: function() {
            const distance = document.getElementById(`number_one`).valueAsNumber;
            const fuel = distance * this.Using / 100;
-           const rechargeCnt = Math.trunc(fuel / this.FuelCapacity)
+           const rechargeCnt = Math.trunc(fuel / this.FuelCapacity);
+           const middleSpeed = 100;
+           const normWay = 4;
+           let hoursOfDriving = distance / middleSpeed;
+           let totalPause = Math.trunc(hoursOfDriving / normWay);
+           for (let i = hoursOfDriving; i>= 4; i++){
+                    hoursOfDriving += totalPause;
+                    break
+                }
+           this.Fuel = fuel;
+           this.RechargeCnt = rechargeCnt;
+           this.HoursOfDriving = hoursOfDriving;
            return {
-            fuel:fuel,
-            rechargeCnt:rechargeCnt
+            Fuel:fuel,
+            RechargeCnt:rechargeCnt,
+            HoursOfDriving:hoursOfDriving
            }
         }
         
     }
 
-    document.getElementById('car_table').innerHTML = car.showInfo(), car.setDriverName();
-    document.getElementById('fuel_table').innerHTML = fuel,rechargeCnt;
+    const nameInfo = car.setDriverName();
+    // I don't know how show information about (new name and fuel) use different button. I can user only first button 
+    document.getElementById('car_table').innerHTML = car.showInfo(),nameInfo;
+
+    const fuelInfo = car.calcFuelForDistance();
+    document.getElementById('fuel_table').innerHTML = `<p><b>Fuel:</b> ${fuelInfo.Fuel}</p><p><b>Recharge Count:</b> ${fuelInfo.RechargeCnt}</p><p><b>HoursOfDriving:</b> ${fuelInfo.HoursOfDriving}</p>`;
 
 }
+
+
+// function addName(car,name) {
+//     const nameInfo = car.setDriverName();
+//     if(confirm(`Do you want to add ${name}?`)){
+//         document.getElementById('car_table').innerHTML = nameInfo;
+//     }
+// }
+
+
+
+
+
 
 1.// Створити об'єкт, що описує час (години, хвилини, секунди), і такі функції для роботи з цим об'єктом:
 // 1)Для виведення часу на екран.
@@ -68,12 +110,12 @@ function myTime() {
         s:document.getElementById(`figures_three`).valueAsNumber,
 
         time2sec:function() {
-            return this.h * 3600 + this.m * 60 + s; 
+            return this.h * 3600 + this.m * 60 + this.s; 
             // функція,що переводить час в секунди
         },
         sec2time: function (sec) {
             let hours = Math.floor(sec / 3600);
-            let minutes = Math.floor(sec  / 60);
+            let minutes = Math.floor(sec / 60) - (hours * 60);
             let seconds = sec % 60;
 
             return {
@@ -83,9 +125,8 @@ function myTime() {
             };
         },
         // Внутрішня функція для нормалізації часу (перетворення зайвих секунд та хвилин)
-
         norm2time: function () {
-            if (this.m = 60) {
+            if (this.m === 60) {
                 this.h += this.m / 60;
             }
             if(this.h >= 24) {
@@ -101,16 +142,29 @@ function myTime() {
                 this.m %= 60;
             }
         
+        },
+        addSec: function () {
+            let plusSec = document.getElementById(`name_sec`).valueAsNumber;
+
+            if(plusSec>= 60) {
+                this.m += Math.floor(plusSec / 60);
+                this.s += (plusSec %= 60);
+            }else {
+                this.s += plusSec;
+            }
+            return showTime;
+            // I have problem with with function to add new seconds
         }
 
-    };
-    for(let key in time) {
-        if(typeof(time[key]) !== 'function') {
-            return (`${key} = ${time[key]}`);
-        }      
     }
 
-    document.getElementById('time-result').innerHTML = time.time2sec(), sec2time(sec);
+    const sec = time.time2sec();
+    time.norm2time();
+    const showTime = time.sec2time(sec);
+    const newSec = time.addSec();
+
+    document.getElementById('time-result').innerHTML = `${addZero(showTime.h)}:${addZero(showTime.m)}:${addZero(showTime.s)}`;
+    document.getElementById('sec-result').innerHTML = `${addZero(newSec.h)}:${addZero(newSec.m)}:${addZero(newSec.s)}`;
 
 }
     
