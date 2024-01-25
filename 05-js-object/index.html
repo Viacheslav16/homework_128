@@ -22,42 +22,40 @@
                   <br>
                   - Підрахунок необхідного часу та кількості палива для подолання переданої відстані з середньою швидкістю. Враховуй, що через кожні 4 години дороги водієві необхідно робити перерву на 1 годину.             
             </h5>
-            <button type="button" class="btn btn-info" onclick="My_task1()">Check</button>
+            <div class="card-body">
+                <button type="button" class="btn btn-info" onclick="My_car()">Check</button>
+            </div>
             <div id="car_table" class="mb-4">
                 <ul>
-                    <li><b>Brand:</b></li>
-                    <li><b>Model:</b></li>
-                    <li><b>Year of productin:</b></li>
-                    <li><b>Color:</b></li>
-                    <li><b>Max speed:</b></li>
-                    <li><b>Using:</b></li>
-                    <li><b>IsNew:</b></li>
-                    <li><b>IsMechanic:</b></li>
-                    <li><b>FuelCapacity:</b></li>
-                    <li><b>IndentNumber:</b></li>
-                    <li><b>DriverName:</b></li>
+                    <li class="list-group-item"><b>Brand:</b></li>
+                    <li class="list-group-item"><b>Model:</b></li>
+                    <li class="list-group-item"><b>Year of productin:</b></li>
+                    <li class="list-group-item"><b>Color:</b></li>
+                    <li class="list-group-item"><b>Max speed:</b></li>
+                    <li class="list-group-item"><b>Using:</b></li>
+                    <li class="list-group-item"><b>IsNew:</b></li>
+                    <li class="list-group-item"><b>IsMechanic:</b></li>
+                    <li class="list-group-item"><b>FuelCapacity:</b></li>
+                    <li class="list-group-item"><b>IndentNumber:</b></li>
+                    <li class="list-group-item"><b>DriverName:</b></li>
                 </ul>
             </div>
             <div class="card-body">
                 <input type="number" class="form-control" id="number_one" placeholder="Додайте дистанцію">
                 <br>
-                <button type="button" class="btn btn-info" onclick="mytask2()">Check</button>
+                <button type="button" class="btn btn-info" onclick="newService()">Check</button>
                 <br>
                 <br>
                 <div id="fuel_table" class="mb-4">
-                    <ul>
-                        <li><b>Fuel:</b></li>
-                        <li><b>Recharge Count:</b></li>
-                        <li><b>HoursOfDriving</b></li>
-                    </ul>
                 </div>
             </div>
             <div class="card-body">
                 <input type="text" class="form-control" id="name_one" placeholder="Додайте ім’я водія">
                 <br>
-                <button type="button" class="btn btn-info" onclick="addName(car)">Check</button>
+                <button type="button" class="btn btn-info" onclick="newName()">Check</button>
             </div>
         </div>
+
 
         <div class="card mb-4">
             <h5 class="card-header">
@@ -88,7 +86,7 @@
             <div class="card-body">
                 <input type="text" class="form-control" id="name_sec" placeholder="Enter new number of seconds">
                 <br>
-                <button type="button" class="btn btn-info" onclick="addSec">Check</button>
+                <button type="button" class="btn btn-info" onclick="addSeccond">Check</button>
                 <div id="sec-result"></div>
             </div>
         </div>
