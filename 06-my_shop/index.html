@@ -18,11 +18,11 @@
             <input type="text" id="prod_title" class="form-control">
           </div>
           <div class="col-2">
-            <label for="prod_qty">Title</label>
+            <label for="prod_qty">Quantity</label>
             <input type="number" id="prod_qty" class="form-control" value="1" min="1">
           </div>
           <div class="col-2">
-            <label for="prod_price">Title</label>
+            <label for="prod_price">Price</label>
             <input type="number" id="prod_price" class="form-control" min="0">
           </div>
           <div class="col-2">
@@ -31,6 +31,29 @@
         </div>
       </div>
     </div>
+    <div class="card mb-4">
+      <div class="card-header"><h3>Discount</h3></div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <label for="disc_type">Type</label>
+            <select id="disc_type" class="form-control">
+              <option value="percent">Percent</option>
+              <option value="fixed">Fixed</option>
+            </select>
+          </div>
+          <div class="col-2">
+            <label for="disc_amount">Amount</label>
+            <input type="number" value="0" id="disc_amount" class="form-control">
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-success mt-4" onclick="applyDisc()">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <div class="card">
       <div class="card-header">
         <h3>Products list</h3>
@@ -49,6 +72,11 @@
           </thead>
           <tbody id="cart_tbody">
             <tfoot>
+              <tr>
+                <th colspan="4">Discount:</th>
+                <th id="cart-disc"></th>
+                <th></th>
+              </tr>
               <tr>
                 <th colspan="4">Total:</th>
                 <th id="cart-total"></th>

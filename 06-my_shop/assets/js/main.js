@@ -1,4 +1,15 @@
-const CART = [];
+const CART = [
+    {
+        title:'milk',
+        qty: 2,
+        price: 25.5
+    }
+];
+
+let editMode = false;
+let editId = null;
+
+productList();
 
 function _el(id) {
     return document.getElementById(id)
@@ -25,16 +36,27 @@ function addToCard() {
         toast.error('Enter price')
         return;
     }
-
-    const prodIndex = CART.findIndex(prod => prod.title === title)
-    if(prodIndex === -1) {
-        CART.push ({
+    if (editMode){
+        CART[editId] = {
             title,
             qty,
             price
-        })
-    }else {
-        CART[prodIndex].qty += qty;
+        }
+        toast.success ('Product updated')
+        editMode = false;
+        editId = null;
+    }else{
+        const prodIndex = CART.findIndex(prod => prod.title === title)
+        if(prodIndex === -1) {
+            CART.push ({
+                title,
+                qty,
+                price
+            })
+        }else {
+            CART[prodIndex].qty += qty;
+        }
+        toast.success('Product added');
     }
 
 
@@ -42,7 +64,6 @@ function addToCard() {
     _el('prod_qty').valueAsNumber = 1;
     _el('prod_price').value = '';
 
-    toast.success('Product added');
     productList()
 
     
@@ -59,6 +80,7 @@ function addToCard() {
     // CART.push(newProd)
 }
 
+
 function productList() {
     let tbody = '';
     CART.forEach((prod,index)=>{
@@ -74,14 +96,28 @@ function productList() {
             <td>${prod.price.toFixed(2)}</td>
             <td>${(prod.qty * prod.price).toFixed(2)}</td>
             <td>
+                <button type='button' class='btn btn-info btn-sm' onclick='editProd(${index})'>Edit</button>
                 <button type='button' class='btn btn-danger btn-sm' onclick='deleteProd(${index},"${prod.title}")'>Remove</button>
             </td>
         </tr>`
     })
     _el('cart_tbody').innerHTML = tbody;
-    _el('cart-total').innerHTML = sumProduct();
-
+    const disc = calcDisc();
+    _el('cart-total').innerHTML = (sumProduct() - disc).toFixed(2);
+    _el('cart-disc').innerHTML = disc.toFixed(2)
 }
+
+function editProd(index) {
+    const prod = CART[index]
+    editMode = true;
+    editId = index;
+    _el('prod_title').value = prod.title;
+    _el('prod_qty').valueAsNumber = prod.qty;
+    _el('prod_price').value = prod.price;
+}
+
+// let editMode = false;
+// let editId = null;
 
 function deleteProd(index, title) {
     if(confirm(`Do you want to delete ${title}?`)){
@@ -107,4 +143,26 @@ function changeQty (index,action) {
         }
    }
    productList();
+}
+
+function applyDisc() {
+    const amount = _el('disc_amount').valueAsNumber;
+    if(isNaN(amount)){
+        toast.error('Enter amount')
+        return
+    }
+    productList();
+}
+
+function calcDisc() {
+    const type = _el('disc_type').value;
+    const amount = _el('disc_amount').valueAsNumber || 0;
+    let sum = sumProduct() 
+    if(type==='percent'){
+         return sum * amount / 100
+    }
+    if(type==='fixed'){
+        return amount
+    }
+    return 0
 }
