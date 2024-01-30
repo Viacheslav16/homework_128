@@ -59,11 +59,19 @@
         <h3>Products list</h3>
       </div>
       <div class="card-body">
+        <select id="sorting" class="form-control" onchange="productList()">
+          <option value="subTotalAsc">Sub total asc</option>
+          <option value="subTotalDesc">Sub total desc</option>
+          <option value="qtyAsc">Quantity asc</option>
+          <option value="qtyDesc">Quantity desc</option>
+          <option value="title">title</option>
+        </select>
         <table class="table">
           <thead>
             <tr>
               <th>#</th>
               <th>Title</th>
+              <th>Bought</th>
               <th>Quantity</th>
               <th>Price</th>
               <th>Sub-total</th>
@@ -73,12 +81,12 @@
           <tbody id="cart_tbody">
             <tfoot>
               <tr>
-                <th colspan="4">Discount:</th>
+                <th colspan="5">Discount:</th>
                 <th id="cart-disc"></th>
                 <th></th>
               </tr>
               <tr>
-                <th colspan="4">Total:</th>
+                <th colspan="5">Total:</th>
                 <th id="cart-total"></th>
                 <th></th>
               </tr>

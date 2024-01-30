@@ -93,9 +93,9 @@ function newName() {
 // 5)Враховуйте, що в останніх 3-х функціях, при зміні однієї частини часу, може змінитися і інша. Наприклад: якщо до часу «20:59:45» додати 30 секунд, то повинно вийти «21:00:15», а не «20:59:75». Також потрібно передбачити можливість того що користувач може передати 150 секунд, або 75 хвилин.
 
 var time = {
-  h: document.getElementById("figures_one").valueAsNumber,
-  m: document.getElementById("figures_two").valueAsNumber,
-  s: document.getElementById("figures_three").valueAsNumber,
+  h: 0,
+  m: 0,
+  s: 0,
   time2sec: function time2sec() {
     return this.h * 3600 + this.m * 60 + this.s; // функція,що переводить час в секунди
   },
@@ -111,6 +111,14 @@ var time = {
   },
   // Внутрішня функція для нормалізації часу (перетворення зайвих секунд та хвилин)
   norm2time: function norm2time() {
+    if (this.h === 24 && this.m === 60) {
+      this.h = 1;
+    }
+
+    if (this.h === 24 && this.m !== 60) {
+      this.h = 0;
+    }
+
     if (this.m === 60) {
       this.h += this.m / 60;
     }
@@ -128,28 +136,72 @@ var time = {
       this.h += Math.floor(this.m / 60);
       this.m %= 60;
     }
+  },
+  addSec: function addSec() {
+    var plusSec = 0;
+
+    if (plusSec >= 60) {
+      time.norm2time();
+    }
+
+    return {
+      h: this.h,
+      m: this.m,
+      s: this.s
+    };
   }
 };
+
+function installTime() {
+  var h = document.getElementById("figures_one").valueAsNumber;
+  var m = document.getElementById("figures_two").valueAsNumber;
+  var s = document.getElementById("figures_three").valueAsNumber;
+
+  if (h === '' || h < 0 || h > 24 || isNaN(h)) {
+    alert('Enter a valid hour (0-23)');
+    return;
+  }
+
+  if (m === '' || m < 0 || m > 60 || isNaN(m)) {
+    alert('Enter a valid minutes (0-60)');
+    return;
+  }
+
+  if (s === '' || s < 0 || s > 60 || isNaN(s)) {
+    alert('Enter a valid seconds (0-60)');
+    return;
+  } else {
+    time.h = h;
+    time.m = m;
+    time.s = s;
+  }
+}
 
 var addZero = function addZero(n) {
   return n < 10 ? '0' + n : '' + n;
 };
 
 function myTime() {
+  installTime();
   var sec = time.time2sec();
   time.norm2time();
   var showTime = time.sec2time(sec);
   document.getElementById('time-result').innerHTML = "".concat(addZero(showTime.h), ":").concat(addZero(showTime.m), ":").concat(addZero(showTime.s));
-} // addSec: function () {
-//     let plusSec = document.getElementById(`name_sec`).valueAsNumber;
-//     if(plusSec>= 60) {
-//         this.m += Math.floor(plusSec / 60);
-//         this.s += (plusSec %= 60);
-//     }else {
-//         this.s += plusSec;
-//     }
-//     return showTime;
-//     // I have problem with with function to add new seconds
-// }
-// const newSec = time.addSec();
-// document.getElementById('sec-result').innerHTML = `${addZero(newSec.h)}:${addZero(newSec.m)}:${addZero(newSec.s)}`;
+}
+
+function instalSec() {
+  var plusSec = document.getElementById("name_sec").valueAsNumber;
+
+  if (plusSec === '' || plusSec < 0 || plusSec > 60 || isNaN(plusSec)) {
+    alert('Enter a valid seconds (0-60)');
+    return;
+  } else {
+    time.s += plusSec;
+  }
+}
+
+function myNewsec() {
+  instalSec();
+  var newSec = time.addSec();
+  document.getElementById('time-result').innerHTML = "".concat(addZero(newSec.h), ":").concat(addZero(newSec.m), ":").concat(addZero(newSec.s));
+}
