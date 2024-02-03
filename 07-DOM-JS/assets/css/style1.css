@@ -16,7 +16,7 @@ body {
   text-align: center;
 }
 
-#modal {
+.modal_content {
   display: none;
   position: fixed;
   top: 0;
@@ -28,7 +28,7 @@ body {
   align-items: center;
 }
 
-.modal-content {
+.modal_two {
   background: #fff;
   padding: 20px;
   border-radius: 5px;
