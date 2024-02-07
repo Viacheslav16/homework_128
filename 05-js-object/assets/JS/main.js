@@ -133,22 +133,7 @@ const time = {
             this.m %= 60;
         }
     },
-    addSec:function () {
-        let plusSec = 0;
 
-        if(plusSec>= 60){
-            time.norm2time();
-        }
-        
-        return {
-            h: this.h,
-            m: this.m,
-            s: this.s
-        }
-
-        
-    }
-    
 };
 
 function installTime (){
@@ -167,7 +152,8 @@ function installTime (){
     if(s === '' || s < 0 || s > 60 || isNaN(s)) {
         alert('Enter a valid seconds (0-60)')
         return;
-    }else{
+    }
+    else{
         time.h = h;
         time.m = m;
         time.s = s;
@@ -186,19 +172,21 @@ function myTime() {
 }
 
 function instalSec() {
-    let plusSec = document.getElementById(`name_sec`).valueAsNumber;
-    if(plusSec === '' || plusSec < 0 || plusSec > 60 || isNaN(plusSec)) {
-        alert('Enter a valid seconds (0-60)')
+    let plusSec = document.getElementById('name_sec').valueAsNumber;
+    let addSec = time.time2sec();
+    if(plusSec === '' || isNaN(plusSec)) {
+        alert('Enter a valid seconds')
         return;
     }else{
-        time.s += plusSec;
+        time.s = addSec + plusSec;
     }
-
 }
 
 function myNewsec() {
+    installTime(); 
     instalSec();
-    const newSec = time.addSec();
+    const sec = time.time2sec();
+    const newSec = time.sec2time(sec);
     document.getElementById('time-result').innerHTML = `${addZero(newSec.h)}:${addZero(newSec.m)}:${addZero(newSec.s)}`;
 
 }

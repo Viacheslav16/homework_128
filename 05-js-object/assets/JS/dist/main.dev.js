@@ -136,19 +136,6 @@ var time = {
       this.h += Math.floor(this.m / 60);
       this.m %= 60;
     }
-  },
-  addSec: function addSec() {
-    var plusSec = 0;
-
-    if (plusSec >= 60) {
-      time.norm2time();
-    }
-
-    return {
-      h: this.h,
-      m: this.m,
-      s: this.s
-    };
   }
 };
 
@@ -190,18 +177,21 @@ function myTime() {
 }
 
 function instalSec() {
-  var plusSec = document.getElementById("name_sec").valueAsNumber;
+  var plusSec = document.getElementById('name_sec').valueAsNumber;
+  var addSec = time.time2sec();
 
-  if (plusSec === '' || plusSec < 0 || plusSec > 60 || isNaN(plusSec)) {
-    alert('Enter a valid seconds (0-60)');
+  if (plusSec === '' || isNaN(plusSec)) {
+    alert('Enter a valid seconds');
     return;
   } else {
-    time.s += plusSec;
+    time.s = addSec + plusSec;
   }
 }
 
 function myNewsec() {
+  installTime();
   instalSec();
-  var newSec = time.addSec();
+  var sec = time.time2sec();
+  var newSec = time.sec2time(sec);
   document.getElementById('time-result').innerHTML = "".concat(addZero(newSec.h), ":").concat(addZero(newSec.m), ":").concat(addZero(newSec.s));
 }
