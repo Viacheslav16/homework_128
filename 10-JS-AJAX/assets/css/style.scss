@@ -32,6 +32,11 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
+#fav-movies-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+}
 .card-img-top {
     max-height: 400px;
 }
