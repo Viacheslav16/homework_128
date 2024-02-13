@@ -42,6 +42,7 @@ ul, ol {
 
 img {
   vertical-align: top;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -132,6 +133,7 @@ footer {
 .nav_link a {
   text-decoration: none;
   cursor: pointer;
+  color: #000;
 }
 .nav_link a:hover {
   color: #fff;
@@ -360,6 +362,12 @@ h2 {
   align-items: center;
   gap: 34px;
   padding-bottom: 70px;
+}
+.main_end .my_pic {
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main_end .lSSlideOuter .lSPager.lSpg {
   display: none;

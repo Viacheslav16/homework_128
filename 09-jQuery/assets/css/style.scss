@@ -20,7 +20,7 @@ ul,ol {
 }
 img {
     vertical-align: top;
-    // width: 100%;
+    width: 100%;
     // height: 100%;
     object-fit: cover;
 }
@@ -102,6 +102,7 @@ footer{
     a {
         text-decoration: none;
         cursor: pointer;
+        color: $color_text;
         &:hover{
             color: $color_wt;
         }
@@ -331,6 +332,13 @@ h2 {
         align-items: center;
         gap: 34px;
         padding-bottom: 70px;
+
+    }
+    .my_pic {
+        height: 74px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .lSSlideOuter .lSPager.lSpg {
         display: none;
@@ -388,14 +396,6 @@ h2 {
         align-items: center;
         gap: 40px;
         margin-bottom: 35px;
-        // img {
-        //     &:hover{
-        //         border: 1px solid rgb(241, 106, 80);
-        //     }
-        //     &:focus{
-        //         border: 1px solid rgb(241, 106, 80);
-        //     }
-        // }
     }
     .nummer {
         font-size: 26px;
