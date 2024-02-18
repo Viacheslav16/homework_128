@@ -3,16 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery</title>
+    <title>Second Exam</title>
+    <meta name="description" content="The second exam in Beetroot Academy" />
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="assets/favicon/apple-touch-icon.png"/>
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="assets/favicon/favicon-32x32.png"/>
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="assets/favicon/favicon-16x16.png"/>
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+  <link
+    rel="mask-icon"
+    href="assets/favicon/safari-pinned-tab.svg"
+    color="#5bbad5"/>
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+  <meta name="robots" content="all" />
+    <meta name="revisit-after" content="2 days" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="Second Exam" />
+    <meta property="og:title" content="The second exam in Beetroot Academy" />
+    <meta
+      property="og:description"
+      content="The second exam in Beetroot Academy"/>
+    <meta property="og:site_name" content="Second Exam" />
+    <meta
+      property="og:url"
+      content="https://github.com/Viacheslav16/homework_128/tree/main/11-Second-Exam/"/>
+      <meta
+      property="og:image"
+      content="https://github.com/Viacheslav16/homework_128/blob/main/11-Second-Exam/assets/images/Mask%20Group.jpeg"/>
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="520" />
+
+    <meta name="twitter:title" content="Second Exam" />
+    <meta
+      name="twitter:description"
+      content="The second exam in Beetroot Academy"/>
+    <meta
+      name="twitter:image"
+      content="https://github.com/Viacheslav16/homework_128/blob/main/11-Second-Exam/assets/images/Mask%20Group.jpeg"/>
+
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="stylesheet" href="assets/plugins/lightslider/css/lightslider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="assets/plugins/leaflet/leaflet.css">
 </head>
 <body>
   <div class="page_wrapper">
+    <div class="page_overlay"></div>
+    <div class="menu-panel">
+      <div class="panel_top">
+        <div class="mobile_logo">
+          <a href="#">
+            <img src="assets/images/Logo.png" alt="logo">
+          </a>
+        </div>
+        <div class="hamburger-wrap">
+          <button
+            id="hamb_btn_mobile"
+            class="hamburger hamburger--squeeze is-active"
+            type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile_nav_top">
+        <ul class="mobile_nav_link">
+          <li>
+            <div>
+              <a href="#">ABOUT US</a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">PROJECTS</a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">NEWS</a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">CONTACT</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile_social_link">
+        <div>
+          <a href="https://www.facebook.com/" target="_blank"><img src="assets/images/Group1.svg" alt="facebook"></a>
+        </div>
+        <div>
+          <a href="https://twitter.com/" target="_blank"><img src="assets/images/Group2.svg" alt="twitter"></a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/" target="_blank"><img src="assets/images/Group3.svg" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
     <header>
         <div class="header_container">
           <div class="header_top ">
-            <div>
+            <div class="wow animate__backInLeft">
               <img src="assets/images/Logo.png" alt="logo">
             </div>
             <div class="nav_top">
@@ -40,15 +144,25 @@
                     </li>
                 </ul>
               </nav>
-              <div class="header_links">
+              <div class="hamburger">
+                <button
+                  id="new_hamb"
+                  class="hamburger hamburger--squeeze"
+                  type="button">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button>
+              </div>
+              <div class="header_links wow animate__backInDown">
                 <div>
-                  <a href="#"><img src="assets/images/Group 1.svg" alt="facebook"></a>
+                  <a href="#" target="_blank"><img src="assets/images/Group1.svg" alt="facebook"></a>
                 </div>
                 <div>
-                  <a href="#"><img src="assets/images/Group 2.svg" alt="twitter"></a>
+                  <a href="#" target="_blank"><img src="assets/images/Group2.svg" alt="twitter"></a>
                 </div>
                 <div>
-                  <a href="#"><img src="assets/images/Group 3.svg" alt="instagram"></a>
+                  <a href="#" target="_blank"><img src="assets/images/Group3.svg" alt="instagram"></a>
                 </div>
               </div>
             </div>
@@ -57,44 +171,44 @@
     </header>
     <main>
       <section class="first-sec">
-        <div class="container">
-         <div class="main-contain">
-          <ul id="mainSlider">
-            <li>
+        <div class="main-contain">
+          <ul id="mainSlider" class="sliders">
+            <li class="pic_one pic-info ">
                 <h1>SIMPLE & MODERN</h1>
                 <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>            
             </li>
-            <li>
+            <li class="pic_two pic-info">
                 <h1>SIMPLE & MODERN</h1>
                 <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>            
             </li>
-            <li>
+            <li class="pic_three pic-info">
                 <h1>SIMPLE & MODERN</h1>
                 <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>            
             </li>
-            <li>
+            <li class="pic_fouth pic-info">
                 <h1>SIMPLE & MODERN</h1>
                 <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>            
             </li>
-            <li>
+            <li class="pic_fifth pic-info">
                 <h1>SIMPLE & MODERN</h1>
                 <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>            
             </li>
-            <li>
+            <li class="pic_sixth pic-info">
                 <h1>SIMPLE & MODERN</h1>
                 <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>            
             </li>
-            
           </ul> 
+          <div class="custom-pic">
+            <button type="button" class="vectors" id="nextSl"><img src="assets/images/Arrowheader.png" alt="Arrowheader"></button>
+          </div>
          </div> 
-        </div>
       </section>
       <section class="second-sec">
         <div>
           <h2 class="new-el">WHAT WE DO</h2>
           <div class="info-first">
             <div class="info-pic">
-              <img src="assets/images/Mask Group.jpeg" alt="Mask Group">
+              <img alt="Mask Group" class="lazy" src="assets/images/MaskGroup.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
             </div>
             <div class="info-contain">
               <div class="info_sub">ONE WORLD</div>
@@ -108,7 +222,7 @@
           </div>
           <div class="info-revers">
             <div class="pic-revers">
-              <img src="assets/images/Mask Group2.jpeg" alt="Mask Group2">
+              <img alt="Mask Group2" class="lazy" src="assets/images/MaskGroup2.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
             </div>
             <div class="info-contain">
               <div class="info_sub">INTERNATIONAL</div>
@@ -132,48 +246,123 @@
               </div>
               <ul id="mySlider" class="subtitle">
                 <li>
-                  <div class="name-subsc">
+                  <div class="news">
                     <div>
-                      <img src="assets/images/Article 1.jpeg" alt="guitar1">
+                      <img alt="new1" class="lazy" src="assets/images/news1.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
                     </div>
-                    <div class="guitar-name">Hagstrom Alvar Limited Edition</div>
-                    <div class="guitar-price">€2.990,00</div>
+                    <div class="news-title">
+                      <h3>SEE THE UNMATCHED BEAUTY OF THE GREAT.</h3>
+                      <p>Free directories: directories are perfect for customers that are searching for...</p>
+                    </div>
+                    <div class="topic-name">
+                      <div class="name-icon">
+                        <img src="assets/images/photos-13323TAfapiSrc9IO231.png" alt="new1">
+                      </div>
+                      <div>
+                        <h4>ALJA BRUN</h4>
+                        <a href="#">20 Jan 2020</a>
+                      </div>
+                    </div>
                   </div>
                 </li>
                 <li>
-                  <div class="name-subsc">
+                  <div class="news">
                     <div>
-                      <img src="assets/images/Article 1.jpeg" alt="guitar1">
+                      <img alt="new2" class="lazy" src="assets/images/news2.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
                     </div>
-                    <div class="guitar-name">Hagstrom Tremar Viking Deluxe Cloudy Seas</div>
-                    <div class="guitar-price">€1.300,00</div>
+                    <div class="news-title">
+                      <h3>EFFECTIVE ADVERTISING POINTERS.</h3>
+                      <p>Having a home based business is a wonderful asset to your life...</p>
+                    </div>
+                    <div class="topic-name">
+                      <div class="name-icon">
+                        <img src="assets/images/photos-13323vsWmKApDZJIh1.png" alt="new1">
+                      </div>
+                      <div>
+                        <h4>DOMINIC FREEMAN</h4>
+                        <a href="#">13 Dec 2019</a>
+                      </div>
+                    </div>
                   </div>
                 </li>
                 <li>
-                  <div class="name-subsc">
+                  <div class="news">
                     <div>
-                      <img src="assets/images/Article 1.jpeg" alt="guitar1">
+                      <img alt="new3" class="lazy" src="assets/images/news3.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
                     </div>
-                    <div class="guitar-name">Gibson Les Paul Standard 60s</div>
-                    <div class="guitar-price">€3.749,00</div>
+                    <div class="news-title">
+                      <h3>HYPNOTIZE YOURSELF INTO THE GHOST.</h3>
+                      <p>There are many things that are important to catalog design...</p>
+                    </div>
+                    <div class="topic-name">
+                      <div class="name-icon">
+                        <img src="assets/images/photos-13323TAfapiSrc9IO1.png" alt="new1">
+                      </div>
+                      <div>
+                        <h4>ALICE WARD</h4>
+                        <a href="#">30 Nov 2019</a>
+                      </div>
+                    </div>
                   </div>
                 </li>
                 <li>
-                  <div class="name-subsc">
+                  <div class="news">
                     <div>
-                      <img src="assets/images/Article 1.jpeg" alt="guitar1">
+                      <img alt="new2" class="lazy" src="assets/images/news2.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
                     </div>
-                    <div class="guitar-name">Gibson Les Paul Standard 60s</div>
-                    <div class="guitar-price">€3.749,00</div>
+                    <div class="news-title">
+                      <h3>EFFECTIVE ADVERTISING POINTERS.</h3>
+                      <p>Having a home based business is a wonderful asset to your life...</p>
+                    </div>
+                    <div class="topic-name">
+                      <div class="name-icon">
+                        <img src="assets/images/photos-13323vsWmKApDZJIh1.png" alt="new1">
+                      </div>
+                      <div>
+                        <h4>DOMINIC FREEMAN</h4>
+                        <a href="#">13 Dec 2019</a>
+                      </div>
+                    </div>
                   </div>
                 </li>
                 <li>
-                  <div class="name-subsc">
+                  <div class="news">
                     <div>
-                      <img src="assets/images/Article 1.jpeg" alt="guitar1">
+                      <img alt="new3" class="lazy" src="assets/images/news3.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
                     </div>
-                    <div class="guitar-name">Suhr Standard Plus Trans Blue Denim</div>
-                    <div class="guitar-price">€3.449,00</div>
+                    <div class="news-title">
+                      <h3>HYPNOTIZE YOURSELF INTO THE GHOST.</h3>
+                      <p>There are many things that are important to catalog design...</p>
+                    </div>
+                    <div class="topic-name">
+                      <div class="name-icon">
+                        <img src="assets/images/photos-13323TAfapiSrc9IO1.png" alt="new1">
+                      </div>
+                      <div>
+                        <h4>ALICE WARD</h4>
+                        <a href="#">30 Nov 2019</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="news">
+                    <div>
+                      <img alt="new2" class="lazy" src="assets/images/news2.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
+                    </div>
+                    <div class="news-title">
+                      <h3>EFFECTIVE ADVERTISING POINTERS.</h3>
+                      <p>Having a home based business is a wonderful asset to your life...</p>
+                    </div>
+                    <div class="topic-name">
+                      <div class="name-icon">
+                        <img src="assets/images/photos-13323vsWmKApDZJIh1.png" alt="new1">
+                      </div>
+                      <div>
+                        <h4>DOMINIC FREEMAN</h4>
+                        <a href="#">13 Dec 2019</a>
+                      </div>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -184,22 +373,114 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="gallery-section">
         <div class="gallery-container">
-          <h2>GALLERY</h2>
-          <div>
+          <h2 class="new-el">GALLERY</h2>
+          <div id="aniimated-thumbnials" class="anime-gallery">
+            <a href="./assets/images/image1.jpeg" class="colspan rowspan">
+              <img alt="image1" class="lazy" src="./assets/images/image1.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
+            </a>
+            <a href="./assets/images/Image2.jpeg">
+              <img alt="image2" class="lazy" src="./assets/images/Image2.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
+            </a>
+            <a href="./assets/images/Image3.jpeg">
+              <img alt="image3" class="lazy" src="./assets/images/Image3.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
+            </a>
+            <a href="./assets/images/Image4.jpeg">
+              <img alt="image4" class="lazy" src="./assets/images/Image4.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
+            </a>
+            <a href="./assets/images/Image5.jpeg">
+              <img alt="image5" class="lazy" src="./assets/images/Image5.jpeg" data-src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" />
+            </a>
+          </div>
+          <div class="gallery-btn">
             <button type="button" class="btn">SEE MORE</button>
+          </div>
+        </div>
+      </section>
+      <section class="map-section">
+        <div>
+          <div id="map">
+            <a href="#" class="map_link" onclick="myMap(this)">
+              <img src="assets/images/newmap.png" alt="newmap">
+              <span>Click to interactive map</span>
+            </a>
           </div>
         </div>
       </section>
     </main>
     <footer>
-
+      <div class="footer-form">
+        <div class="form-position">
+          <div class="form-bg">
+            <h2 class="new-el">GET IN TOUCH</h2>
+            <div class="info-links">
+              <nav>
+                <ul class="information">
+                  <li>
+                    <a href="#" target="_blank"><img src="assets/images/location-pointer.svg" alt="marks"><span>91 Nolan Extensions Suite 670</span></a>
+                  </li>
+                  <li>
+                    <a href="tel:+0013568682454" target="_blank"><img src="assets/images/telephone.svg" alt="marks"><span>+001 356-868-2454</span></a>
+                  </li>
+                  <li>
+                    <a href="mailto:montichello@service.com" target="_blank"><img src="assets/images/email.svg" alt="marks"><span>montichello@service.com</span></a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank"><img src="assets/images/clock.svg" alt="marks"><span>From 07:05AM to 19:30PM</span></a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="form-info">
+                <form action="#" method="post">
+                  <div class="form-group custom-label">
+                    <input type="text" class="form-control form-control-sm"/>
+                    <label>Mollie Medina</label>
+                  </div>
+                  <div class="form-group custom-label">
+                    <input type="email" class="form-control form-control-sm"/>
+                    <label>Email</label>
+                  </div>
+                </form>
+                <div class="form-btn">
+                  <button type="submit" class="btn">SUBMIT</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_top ">
+        <div>
+          <div class="footer_pic">
+            <img src="assets/images/Logo.png" alt="logo">
+          </div>
+          <div class="copiright">
+            Copyrights © 2020 Montichello
+          </div>
+        </div>
+        <div class="nav_footer">
+          <div class="footer_links">
+            <div>
+              <a href="https://www.facebook.com/" target="_blank"><img src="assets/images/Group1.svg" alt="facebook"></a>
+            </div>
+            <div>
+              <a href="https://twitter.com/" target="_blank"><img src="assets/images/Group2.svg" alt="twitter"></a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/" target="_blank"><img src="assets/images/Group3.svg" alt="instagram"></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   </div>  
 
+  
   <script src="assets/js/jquery-3.7.1.min.js"></script>
   <script src="assets/plugins/lightslider/js/lightslider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js" referrerpolicy="no-referrer"></script>
+  <script src="assets/plugins/leaflet/leaflet.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
