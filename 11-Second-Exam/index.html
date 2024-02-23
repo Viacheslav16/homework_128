@@ -51,10 +51,10 @@
       name="twitter:image"
       content="https://github.com/Viacheslav16/homework_128/blob/main/11-Second-Exam/assets/images/Mask%20Group.jpeg"/>
 
-    <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="stylesheet" href="assets/plugins/lightslider/css/lightslider.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
     <link rel="stylesheet" href="assets/plugins/leaflet/leaflet.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 <body>
   <div class="page_wrapper">
@@ -101,21 +101,21 @@
           </li>
         </ul>
       </nav>
-      <div class="mobile_social_link">
-        <div>
+      <ul class="mobile_social_link">
+        <li>
           <a href="https://www.facebook.com/" target="_blank"><img src="assets/images/Group1.svg" alt="facebook"></a>
-        </div>
-        <div>
+        </li>
+        <li>
           <a href="https://twitter.com/" target="_blank"><img src="assets/images/Group2.svg" alt="twitter"></a>
-        </div>
-        <div>
+        </li>
+        <li>
           <a href="https://www.instagram.com/" target="_blank"><img src="assets/images/Group3.svg" alt="instagram"></a>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
-    <header>
+    <header id="myHeader">
         <div class="header_container">
-          <div class="header_top ">
+          <div class="header_top" id="headerChange">
             <div class="wow animate__backInLeft">
               <img src="assets/images/Logo.png" alt="logo">
             </div>
@@ -154,17 +154,17 @@
                   </span>
                 </button>
               </div>
-              <div class="header_links wow animate__backInDown">
-                <div>
+              <ul class="header_links wow animate__backInDown">
+                <li>
                   <a href="#" target="_blank"><img src="assets/images/Group1.svg" alt="facebook"></a>
-                </div>
-                <div>
+                </li>
+                <li>
                   <a href="#" target="_blank"><img src="assets/images/Group2.svg" alt="twitter"></a>
-                </div>
-                <div>
+                </li>
+                <li>
                   <a href="#" target="_blank"><img src="assets/images/Group3.svg" alt="instagram"></a>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -398,7 +398,7 @@
           </div>
         </div>
       </section>
-      <section class="map-section">
+      <section class="map-section" id="myChangeIndex">
         <div>
           <div id="map">
             <a href="#" class="map_link" onclick="myMap(this)">
@@ -412,7 +412,7 @@
     <footer>
       <div class="footer-form">
         <div class="form-position">
-          <div class="form-bg">
+          <div class="form-bg" id="myForm">
             <h2 class="new-el">GET IN TOUCH</h2>
             <div class="info-links">
               <nav>
@@ -460,17 +460,17 @@
           </div>
         </div>
         <div class="nav_footer">
-          <div class="footer_links">
-            <div>
+          <ul class="footer_links">
+            <li>
               <a href="https://www.facebook.com/" target="_blank"><img src="assets/images/Group1.svg" alt="facebook"></a>
-            </div>
-            <div>
+            </li>
+            <li>
               <a href="https://twitter.com/" target="_blank"><img src="assets/images/Group2.svg" alt="twitter"></a>
-            </div>
-            <div>
+            </li>
+            <li>
               <a href="https://www.instagram.com/" target="_blank"><img src="assets/images/Group3.svg" alt="instagram"></a>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

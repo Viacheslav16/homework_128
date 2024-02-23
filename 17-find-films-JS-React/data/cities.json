@@ -1,0 +1,26 @@
+ [
+    {
+        "width": "lisbon",
+        "name": "Lisbon",
+        "temp": 21,
+        "icon": "day-sunny"
+    },
+    {
+        "width": "paris",
+        "name": "Paris",
+        "temp": 11,
+        "icon": "night-sleet"
+    },
+    {
+        "width": "belgrade",
+        "name": "Belgrade",
+        "temp": 15,
+        "icon": "day-cloudy"
+    },
+    {
+        "width": "venice",
+        "name": "Venice",
+        "temp": 21,
+        "icon": "day-cloudy-high"
+    }
+]

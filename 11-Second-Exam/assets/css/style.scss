@@ -83,25 +83,25 @@ body {
     justify-content: space-between;
     min-height: 100vh;
 }
-header {
+#myHeader {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 160px;
     z-index: 10;
-    background: linear-gradient(270deg, rgba(206, 205, 205, 0.3) 50%, rgba(255, 255, 255, 0.4) 54.1%, rgba(255, 255, 255, 0.00) 77.19%), rgba(255, 255, 255, 0.02);
+    background: linear-gradient(270deg, rgba(256, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.4) 54.1%, rgba(255, 255, 255, 0.00) 77.19%), rgba(255, 255, 255, 0.02);
     -webkit-backdrop-filter: blur(4.5px);
             backdrop-filter: blur(4.5px);
-    .header_top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 54px;
-        margin-top: 53px;
-        .hamburger {
-            display: none;
-        }
+}
+.header_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    margin: 53px 0 0;
+    .hamburger {
+        display: none;
     }
 }
 
@@ -945,7 +945,6 @@ footer {
     .news {
         h3 {
             font-size: 18px;
-            font-weight: 700;
             line-height: 24px;
         }
         img {
@@ -994,7 +993,6 @@ footer {
         }
     }
     .third-contain {
-        padding-top: 100px;
         h2 {
             margin-bottom: 60px;
             &::before {
@@ -1005,7 +1003,6 @@ footer {
     .news {
         h3 {
             font-size: 18px;
-            font-weight: 700;
             line-height: 24px;
         }
         img {
@@ -1014,7 +1011,6 @@ footer {
         }
         p {
             min-height: 75px;
-            font-size: 16px;
             margin-bottom: 5px;
         }
     }
@@ -1089,7 +1085,6 @@ footer {
 
     }
     .third-contain {
-        padding-top: 100px;
         h2 {
             margin-bottom: 30px;
             &::before {
@@ -1100,7 +1095,6 @@ footer {
     .news {
         h3 {
             font-size: 15px;
-            font-weight: 700;
             line-height: 22px;
         }
         img {
@@ -1242,7 +1236,6 @@ footer {
     .news {
         h3 {
             font-size: 12px;
-            font-weight: 700;
             line-height: 22px;
         }
         img {
@@ -1313,19 +1306,6 @@ footer {
     } 
 }
 @media screen and (max-width: 1030px) {
-    header {
-        .header_top {
-            .nav_link {
-                display: none;
-            }
-            .header_links {
-                display: none;
-            }
-            .hamburger {
-                display:flex;
-            }
-        }
-    }
     
     h1 {
         font-size: 60px;
@@ -1388,7 +1368,6 @@ footer {
         }
     }
     .third-contain {
-        padding-top: 70px;
         h2 {
             margin-bottom: 20px;
             &::before {
@@ -1399,7 +1378,6 @@ footer {
     .news {
         h3 {
             font-size: 12px;
-            font-weight: 700;
             line-height: 22px;
         }
         img {
@@ -1439,13 +1417,6 @@ footer {
         padding: 0 14px 14px;
     }
     .gallery-section {
-        margin-bottom: 100px;
-        .anime-gallery {
-            grid-template-columns: repeat(2, 360px);
-            grid-template-rows: repeat(3, 210px);
-            justify-content: center;
-            gap: 10px;
-        }
         h2 {
             &::before {
                 content: '';
@@ -1531,9 +1502,7 @@ footer {
         }
     }
     .third-contain {
-        padding-top: 70px;
         h2 {
-            margin-bottom: 20px;
             &::before {
                 left: 378px;
             }
@@ -1542,7 +1511,6 @@ footer {
     .news {
         h3 {
             font-size: 12px;
-            font-weight: 700;
             line-height: 22px;
         }
         img {
@@ -1571,23 +1539,10 @@ footer {
             line-height: 17px;
         }
     }
-    .third-sec {
-        margin-bottom: 100px;
-        .lSSlideOuter .lSPager.lSpg {
-            display: none;
-        }
-    }
     .topic-name {
         padding: 0 14px 14px;
     }
     .gallery-section {
-        margin-bottom: 100px;
-        .anime-gallery {
-            grid-template-columns: repeat(2, 360px);
-            grid-template-rows: repeat(3, 210px);
-            justify-content: center;
-            gap: 10px;
-        }
         h2 {
             &::before {
                 content: '';
@@ -1685,9 +1640,7 @@ footer {
         }
     }
     .third-contain {
-        padding-top: 70px;
         h2 {
-            margin-bottom: 20px;
             &::before {
                 left: 334px;
             }
@@ -1728,22 +1681,12 @@ footer {
             line-height: 17px;
         }
     }
-    .third-sec {
-        margin-bottom: 100px;
-        .lSSlideOuter .lSPager.lSpg {
-            display: none;
-        }
-    }
     .topic-name {
         padding: 0 14px 14px;
     }
     .gallery-section {
-        margin-bottom: 100px;
         .anime-gallery {
             grid-template-columns: repeat(2, 320px);
-            grid-template-rows: repeat(3, 210px);
-            justify-content: center;
-            gap: 10px;
         }
         h2 {
             &::before {
@@ -1787,9 +1730,6 @@ footer {
         line-height: 90px;
     }
     .main-contain {
-        .lSSlideOuter .lSPager.lSpg {
-            gap: 5px;
-        }
         .custom-pic {
             left: 370px;
             .vectors {
@@ -1844,9 +1784,7 @@ footer {
         }
     }
     .third-contain {
-        padding-top: 70px;
         h2 {
-            margin-bottom: 20px;
             &::before {
                 left: 296px;
             }
@@ -1887,22 +1825,12 @@ footer {
             line-height: 17px;
         }
     }
-    .third-sec {
-        margin-bottom: 100px;
-        .lSSlideOuter .lSPager.lSpg {
-            display: none;
-        }
-    }
     .topic-name {
         padding: 0 14px 14px;
     }
     .gallery-section {
-        margin-bottom: 100px;
         .anime-gallery {
             grid-template-columns: repeat(2, 300px);
-            grid-template-rows: repeat(3, 210px);
-            justify-content: center;
-            gap: 10px;
         }
         h2 {
             margin-bottom: 60px;
@@ -1911,14 +1839,6 @@ footer {
                 bottom: 82px;
                 left: 296px;
             }
-        }
-    }
-    .footer-form {
-        position:static;
-        .form-position {
-            display: flex;
-            justify-content: center;
-            padding: 60px 0 100px;
         }
     }
     .footer_top {
@@ -1974,9 +1894,7 @@ footer {
     }
     
     .third-contain {
-        padding-top: 70px;
         h2 {
-            margin-bottom: 20px;
             &::before {
                 left: 270px;
             }
@@ -2020,22 +1938,12 @@ footer {
             line-height: 17px;
         }
     }
-    .third-sec {
-        margin-bottom: 100px;
-        .lSSlideOuter .lSPager.lSpg {
-            display: none;
-        }
-    }
     .topic-name {
         padding: 0 14px 14px;
     }
     .gallery-section {
-        margin-bottom: 100px;
         .anime-gallery {
             grid-template-columns: repeat(2, 280px);
-            grid-template-rows: repeat(3, 210px);
-            justify-content: center;
-            gap: 10px;
         }
         h2 {
             margin-bottom: 60px;
@@ -2044,14 +1952,6 @@ footer {
                 bottom: 82px;
                 left: 272px;
             }
-        }
-    }
-    .footer-form {
-        position:static;
-        .form-position {
-            display: flex;
-            justify-content: center;
-            padding: 60px 0 100px;
         }
     }
     .footer_top {
@@ -2119,9 +2019,7 @@ footer {
     }
     
     .third-contain {
-        padding-top: 70px;
         h2 {
-            margin-bottom: 20px;
             &::before {
                 left: 254px;
             }
@@ -2133,7 +2031,6 @@ footer {
     .news {
         h3 {
             font-size: 12px;
-            font-weight: 700;
             line-height: 22px;
         }
         img {
@@ -2165,22 +2062,12 @@ footer {
             line-height: 17px;
         }
     }
-    .third-sec {
-        margin-bottom: 100px;
-        .lSSlideOuter .lSPager.lSpg {
-            display: none;
-        }
-    }
     .topic-name {
         padding: 0 14px 14px;
     }
     .gallery-section {
-        margin-bottom: 100px;
         .anime-gallery {
             grid-template-columns: repeat(2, 240px);
-            grid-template-rows: repeat(3, 210px);
-            justify-content: center;
-            gap: 10px;
         }
         h2 {
             margin-bottom: 60px;
@@ -2189,14 +2076,6 @@ footer {
                 bottom: 82px;
                 left: 244px;
             }
-        }
-    }
-    .footer-form {
-        position:static;
-        .form-position {
-            display: flex;
-            justify-content: center;
-            padding: 60px 0 100px;
         }
     }
     .footer_top {
@@ -2251,7 +2130,7 @@ footer {
     .new-el {
         margin-bottom: 40px;
         &::before {
-            left: 264px;
+            left: 260px;
         }
     }
     .info-first,
@@ -2268,9 +2147,7 @@ footer {
     }
     
     .third-contain {
-        padding-top: 70px;
         h2 {
-            margin-bottom: 20px;
             &::before {
                 left: 216px;
             }
@@ -2314,22 +2191,13 @@ footer {
             line-height: 17px;
         }
     }
-    .third-sec {
-        margin-bottom: 100px;
-        .lSSlideOuter .lSPager.lSpg {
-            display: none;
-        }
-    }
     .topic-name {
         padding: 0 14px 14px;
     }
     .gallery-section {
-        margin-bottom: 100px;
         .anime-gallery {
             grid-template-columns: repeat(2, 200px);
             grid-template-rows: repeat(3, 160px);
-            justify-content: center;
-            gap: 10px;
         }
         h2 {
             margin-bottom: 60px;
@@ -2340,14 +2208,7 @@ footer {
             }
         }
     }
-    .footer-form {
-        position:static;
-        .form-position {
-            display: flex;
-            justify-content: center;
-            padding: 60px 0 100px;
-        }
-    }
+
     .footer_top {
         padding: 0 0 30px;
         gap: 100px;
@@ -2385,11 +2246,6 @@ footer {
         }
     }
     .main-contain {
-        .lSSlideOuter .lSPager.lSpg {
-            top: 10px;
-            right: 10px;
-            gap: 1px;
-        }
         .custom-pic {
             left: 240px;
             .vectors {
@@ -2424,9 +2280,7 @@ footer {
         gap: 20px;
     }
     .third-contain {
-        padding-top: 70px;
         h2 {
-            margin-bottom: 20px;
             &::before {
                 left: 174px;
             }
@@ -2470,22 +2324,13 @@ footer {
             line-height: 17px;
         }
     }
-    .third-sec {
-        margin-bottom: 100px;
-        .lSSlideOuter .lSPager.lSpg {
-            display: none;
-        }
-    }
     .topic-name {
         padding: 0 14px 14px;
     }
     .gallery-section {
-        margin-bottom: 100px;
         .anime-gallery {
             grid-template-columns: repeat(2, 180px);
             grid-template-rows: repeat(3, 140px);
-            justify-content: center;
-            gap: 10px;
         }
         h2 {
             margin-bottom: 60px;
@@ -2494,14 +2339,6 @@ footer {
                 bottom: 82px;
                 left: 176px;
             }
-        }
-    }
-    .footer-form {
-        position:static;
-        .form-position {
-            display: flex;
-            justify-content: center;
-            padding: 60px 0 100px;
         }
     }
     .footer_top {
@@ -2547,11 +2384,6 @@ footer {
         font-size: 30px;
     }
     .main-contain {
-        .lSSlideOuter .lSPager.lSpg {
-            top: 10px;
-            right: 10px;
-            gap: 1px;
-        }
         .custom-pic {
             left: 202px;
             .vectors {
@@ -2593,9 +2425,7 @@ footer {
         gap: 20px;
     }
     .third-contain {
-        padding-top: 70px;
         h2 {
-            margin-bottom: 20px;
             &::before {
                 left: 142px;
             }
@@ -2607,7 +2437,6 @@ footer {
     .news {
         h3 {
             font-size: 12px;
-            font-weight: 700;
             line-height: 22px;
             margin-bottom: 5px;
         }
@@ -2640,21 +2469,13 @@ footer {
             line-height: 17px;
         }
     }
-    .third-sec {
-        margin-bottom: 100px;
-        .lSSlideOuter .lSPager.lSpg {
-            display: none;
-        }
-    }
     .topic-name {
         padding: 0 14px 14px;
     }
     .gallery-section {
-        margin-bottom: 100px;
         .anime-gallery {
             grid-template-columns: repeat(2, 160px);
             grid-template-rows: repeat(3, 120px);
-            justify-content: center;
             gap: 5px;
         }
         h2 {
@@ -2664,14 +2485,6 @@ footer {
                 bottom: 82px;
                 left: 146px;
             }
-        }
-    }
-    .footer-form {
-        position:static;
-        .form-position {
-            display: flex;
-            justify-content: center;
-            padding: 60px 0 100px;
         }
     }
     .footer_top {
@@ -2686,10 +2499,6 @@ footer {
         }
         .footer_links {
             gap: 10px;
-            img {
-                width: 30px;
-                height: 30px;
-            }
         }
     }
     .info-links {
@@ -2735,9 +2544,7 @@ footer {
     }
     
     .third-contain {
-        padding-top: 70px;
         h2 {
-            margin-bottom: 20px;
             &::before {
                 left: 136px;
             }
@@ -2748,11 +2555,9 @@ footer {
     }
     
     .gallery-section {
-        margin-bottom: 100px;
         .anime-gallery {
             grid-template-columns: repeat(2, 140px);
             grid-template-rows: repeat(3, 100px);
-            justify-content: center;
             gap: 5px;
         }
         h2 {
@@ -2765,10 +2570,7 @@ footer {
         }
     }
     .footer-form {
-        position:static;
         .form-position {
-            display: flex;
-            justify-content: center;
             padding: 60px 0 100px;
         }
     }
@@ -2781,13 +2583,6 @@ footer {
         }
         .copiright {
             font-size: 7px;
-        }
-        .footer_links {
-            gap: 10px;
-            img {
-                width: 30px;
-                height: 30px;
-            }
         }
     }
     .info-links {
@@ -2805,59 +2600,31 @@ footer {
     }
 }
 @media screen and (max-width: 400px) {
-    h2 {
-        font-size: 26px;
-    }
+    
     .main-contain {
-        
         .custom-pic {
             left: 186px;
         }
     }
     .new-el {
-        margin-bottom: 40px;
         &::before {
             left: 150px;
         }
     }
-    .info-contain {
-        h2 {
-            font-size: 22px;
-        }
-        .info_sub  {
-            font-size: 13px;
-        }
-        p {
-            font-size: 14px;
-        }
-    }
-    
+
     .third-contain {
-        padding-top: 70px;
         h2 {
-            margin-bottom: 20px;
             &::before {
                 left: 124px;
             }
-        }
-        .subtitle {
-            margin-bottom: 50px;
         }
     }
     
     .gallery-section {
         margin-bottom: 100px;
-        .anime-gallery {
-            grid-template-columns: repeat(2, 140px);
-            grid-template-rows: repeat(3, 100px);
-            justify-content: center;
-            gap: 5px;
-        }
         h2 {
-            margin-bottom: 60px;
             &::before {
                 content: '';
-                bottom: 82px;
                 left: 128px;
             }
         }
@@ -2865,76 +2632,37 @@ footer {
     .form-bg {
         h2 {
             &::before {
-                bottom: 86px;
                 left: 134px;
             } 
         }
     }
 }
 @media screen and (max-width: 390px) {
-    h2 {
-        font-size: 26px;
-    }
     .main-contain {
-        
         .custom-pic {
             left: 180px;
         }
     }
     .new-el {
-        margin-bottom: 40px;
         &::before {
             left: 146px;
         }
     }
-    .info-contain {
-        h2 {
-            font-size: 22px;
-        }
-        .info_sub  {
-            font-size: 13px;
-        }
-        p {
-            font-size: 14px;
-        }
-    }
-    
     .third-contain {
-        padding-top: 70px;
         h2 {
-            margin-bottom: 20px;
             &::before {
                 left: 120px;
             }
-        }
-        .subtitle {
-            margin-bottom: 50px;
         }
     }
     
     .gallery-section {
         margin-bottom: 100px;
-        .anime-gallery {
-            grid-template-columns: repeat(2, 140px);
-            grid-template-rows: repeat(3, 100px);
-            justify-content: center;
-            gap: 5px;
-        }
         h2 {
-            margin-bottom: 60px;
             &::before {
                 content: '';
-                bottom: 82px;
                 left: 124px;
             }
-        }
-    }
-    .form-bg {
-        h2 {
-            &::before {
-                bottom: 86px;
-                left: 134px;
-            } 
         }
     }
 }
