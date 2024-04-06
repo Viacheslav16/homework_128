@@ -1,0 +1,112 @@
+/*Hamburger*/
+
+.page_overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 1000vw;
+    height: 1000vh;
+    background-color: $black_text;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease;
+}
+
+.menu-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 1000vh;
+    color: $secondary-white;
+    background-color: $panel_bg;
+    z-index: 1001;
+    box-shadow: 0 0 10px 10px $color_wt;
+    transform: translateX(-120%);
+    transition: all .4s ease;
+
+    .mobile_nav_top {
+        overflow-y: auto;
+        padding-top: 25px;
+    }
+
+}
+
+.panel_top {
+    display: flex;
+    gap: 125px;
+    border-bottom: 1px solid $color_wt;
+    padding-top: 10px;
+
+    .mobile_logo {
+        margin: 50px 0 50px 25px;
+
+        img {
+            max-width: 150px;
+        }
+    }
+}
+
+.mobile_foto {
+    text-align: center;
+    padding: 100px 30px;
+
+    img {
+        max-width: 250px;
+    }
+}
+
+.mobile_nav_link {
+    margin-bottom: 80px;
+    a {
+        display: inline-block;
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px 30px;
+        text-decoration: none;
+        color: $color_wt;
+        background-color: transparent;
+
+        &:hover {
+            color: $secondary-bg;
+        }
+
+        &:focus {
+            color:$secondary-bg;
+        }
+    }
+
+    li:hover {
+        background-color: $color_wt;
+    }
+}
+
+.mobile_social_link {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    img {
+        &:hover {
+            -webkit-filter: brightness(0) saturate(100%) invert(30%) sepia(82%) saturate(2090%) hue-rotate(194deg) brightness(101%) contrast(97%);
+                    filter: brightness(0) saturate(100%) invert(30%) sepia(82%) saturate(2090%) hue-rotate(194deg) brightness(101%) contrast(97%);        
+        }
+        &:focus {
+            -webkit-filter: brightness(0) saturate(100%) invert(30%) sepia(82%) saturate(2090%) hue-rotate(194deg) brightness(101%) contrast(97%);
+                    filter: brightness(0) saturate(100%) invert(30%) sepia(82%) saturate(2090%) hue-rotate(194deg) brightness(101%) contrast(97%);         
+        }
+    }
+}
+
+.open_mobile_menu {
+    .page_overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-panel {
+        transform: translateX(0);
+    }
+}
+
+@import 'vars';

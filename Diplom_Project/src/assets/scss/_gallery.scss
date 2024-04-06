@@ -1,0 +1,27 @@
+.gallery-section{
+    .anime-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 44%);
+        grid-template-rows: repeat(2, 360px);
+        gap: 50px;
+        padding-bottom: 60px;
+        justify-content: center;
+        a {
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+.lg-img-wrap {
+    img {
+        border-radius: 15px;
+    }
+}
+.lg-sub-html {
+    padding: 50px 40px;
+    background-color: $secondary-bg;
+}
+
+@import 'vars';

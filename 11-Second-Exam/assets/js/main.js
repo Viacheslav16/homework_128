@@ -42,7 +42,6 @@ $(function(){
       });
     }
 
-
     width = newWidth;
     slider.refresh(); 
   }

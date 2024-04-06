@@ -1,0 +1,48 @@
+// @import 'hamburger';
+// @import 'fonts';
+@import 'vars';
+
+// $color_wt: #fff;
+// $black_text:#000;
+// $secondary-bg: rgb(25, 25, 25);
+// $color_primar:rgb(51, 176, 170);
+// $color_secondary:rgb(56, 164, 158);
+// $color_bg_next:rgb(1, 27, 25);
+// $bg-button:rgba(255, 255, 255, 0.2);
+// $color-hover-button:rgb(40, 176, 169);
+// $secondary-white: rgb(253, 250, 254);
+// $secondary-button-bg:rgba(40, 176, 169, 0.2);
+// $other_color: rgba(132, 130, 130, 0.8);
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+a, button {
+    transition: all .2s ease;
+    text-decoration: none;
+    color: $color_wt;
+}
+.container {
+    width: min(90%, 1440px);
+    margin: 0 auto;
+}
+body {
+    color: $secondary-white;
+    background-color:$color_bg_next;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}

@@ -68,7 +68,8 @@ function movieHTML(item) {
             <button class="btn btn-primary btn-detail" data-id="${item.imdbID}">Detail</button>
             <button class="btn btn-warning btn-fav" data-info='${JSON.stringify(item)}'>Add to fav</button>
         </div>
-    </div>`
+    </div>
+    `
 }
 
 function showFavMovies(){
