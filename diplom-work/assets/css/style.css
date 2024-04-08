@@ -562,10 +562,6 @@ p {
   padding-bottom: 40px;
 }
 
-form {
-  margin-bottom: 40px;
-}
-
 .form-bg {
   width: 60%;
 }
@@ -609,26 +605,72 @@ form {
   margin: 0 0 20px 0;
   padding: 20px 0 0 0;
 }
-.form-group .input {
+
+.form-control {
+  position: relative;
   width: 100%;
-  padding: 10px;
+  height: 50px;
+  margin-bottom: 25px;
+}
+.form-label {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+  left: 16px;
+  top: 12px;
+  padding: 0 4px;
+  color: #fff;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.form-input {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  resize: none;
+  width: 100%;
+  height: auto;
+  padding: 12px 20px;
   border: transparent;
   color: #fff;
   border-bottom: 2px solid #2daaf2;
   background-color: transparent;
+  transition: all 0.2s ease-in-out;
 }
-.form-group .input:focus + .label {
+.form-input::placeholder {
+  opacity: 0;
+  visibility: hidden;
+  color: transparent;
+}
+.form-input:focus {
+  outline: none;
+  border: 2px solid #10928c;
+}
+.form-input:focus ~ .form-label {
+  top: -12px;
+  left: 16px;
+  z-index: 5;
+  font-size: 14px;
+  font-weight: 500;
   color: #2daaf2;
   transform: scale(0.9) translateX(0) translateY(-10px);
+  transition: all 0.2s ease-in-out;
 }
-.form-group .label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  color: #fff;
-  transition: all 0.2s ease;
-  transform: translateX(10px) translateY(30px);
+.form-input:not(:placeholder-shown).form-input {
+  border: 1px solid #fff;
+}
+.form-input:not(:placeholder-shown).form-input:not(:focus) ~ .form-label {
+  top: -12px;
+  left: 16px;
+  z-index: 9;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2daaf2;
+  transform: scale(0.9) translateX(0) translateY(-10px);
+  transition: all 0.2s ease-in-out;
 }
 
 .form-btn {
@@ -640,7 +682,7 @@ form {
 
 .contact-links {
   display: flex;
-  padding: 10px 25px 20px;
+  padding: 30px 25px 20px;
   background-color: rgba(40, 176, 169, 0.2);
   border-radius: 20px;
 }

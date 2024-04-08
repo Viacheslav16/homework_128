@@ -74,6 +74,9 @@ main {
         display: flex;
         align-items: center;
         gap: 60px;
+        .lSSlideOuter {
+            flex-grow: 1;
+        }
     }
     .lSSlideOuter .lSPager.lSpg {
         display: none;
@@ -271,6 +274,9 @@ main {
         }
         p {
             font-size: 16px; 
+        }
+        ol {
+            list-style-position: inside;
         }
     }
 }

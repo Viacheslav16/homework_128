@@ -74,13 +74,8 @@ $(function(){
    
 });
 
-
-lightGallery(document.getElementById('aniimated-thumbnials'), {
-thumbnail:true
-});
-
-function myMap(link) {
-    link.remove();
+function myMap(event) {
+    event.preventDefault();
     const map = L.map('map').setView([51.505, -0.09], 13);
   
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -115,15 +110,99 @@ $(document).ready(function(){
       return false;
     });
     
+    lightGallery(document.getElementById('aniimated-thumbnials'), {
+        thumbnail:true
+    });
+
+
+    const form = document.getElementById('feedback-form')
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault()
+        const errors = [];
+    
+        const nameFld = document.getElementById('yourName')
+        const emailFld = document.getElementById('yourEmail')
+        const addressFld = document.getElementById('yourAddress')
+    
+        const addName = nameFld.value.trim()
+        const addEmail = emailFld.value.trim()
+        const addAddress = addressFld.value.trim()
+        
+    
+        if (addName.value === ''){
+            errors.push('Enter your name, please')
+            nameFld.classList.add('mistake')
+        }else{
+            if (addName.length < 2){
+                errors.push('Your name is too short')
+                nameFld.classList.add('mistake')
+            }
+        }
+        
+        if (addEmail === ''){
+            errors.push('Enter your email, please')
+            emailFld.classList.add('mistake')
+        }else{
+            if(!isValidEmail(addEmail)){
+                errors.push('Incorrect email address')
+                emailFld.classList.add('mistake')
+            }
+        }
+        
+        if (addAddress.value === ''){
+            errors.push('Enter your address, please')
+            addressFld.classList.add('mistake')
+        }else{
+            if (addAddress.length < 2){
+                errors.push('Your address is too short')
+                addressFld.classList.add('mistake')
+            }
+        }
+    
+        if(errors.length){
+            toast.error(errors.join('. '))
+            return
+        }
+    
+        const CHAT_ID = '-1002027278536';
+        const BOT_TOKEN = '7016630485:AAHuCKIU3ORwH_w8w7clzX6rCek2PqwWcEw';
+        const message = `<b>Name: </b>${addName}\r\n<b>Email: </b>${addEmail}\r\n<b>Address: </b>${addAddress}`
+    
+        const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURI(message)}&parse_mode=HTML`;
+    
+        fetch(url, {
+            method: 'post'
+        })
+        .then(resp => resp.json())
+        .then(resp => {
+            if(resp.ok){
+                nameFld.value = '';
+                emailFld.value = '';
+                addressFld.value = '';
+                toast.success('Your message successfully sent')
+            }else {
+                toast.error('Some errors')
+            }
+        })
+    
+        return false
+    })
+        
 });
 
-
-
-const form = document.getElementById('feedback-form')
 
 function isValidEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
+}
+
+function clearForm() {
+    // Отримуємо посилання на поле введення за його ID
+    var inputField = document.getElementById('inputFieldId'); // Замість 'inputFieldId' вкажіть ID вашого поля введення
+
+    // Очищаємо значення поля введення
+    inputField.value = '';
 }
 
 document.querySelectorAll('.input').forEach(elem=>{
@@ -134,73 +213,4 @@ document.querySelectorAll('.input').forEach(elem=>{
     }
 })
 
-form.addEventListener('submit', function(e){
-    e.preventDefault()
-    const errors = [];
 
-    const nameFld = document.getElementById('yourName')
-    const emailFld = document.getElementById('yourEmail')
-    const addressFld = document.getElementById('yourAddress')
-
-    const addName = nameFld.value.trim()
-    const addEmail = emailFld.value.trim()
-    const addAddress = addressFld.value.trim()
-    
-
-    if (addName.value === ''){
-        errors.push('Enter your name, please')
-        nameFld.classList.add('mistake')
-    }else{
-        if (addName.length < 2){
-            errors.push('Your name is too short')
-            nameFld.classList.add('mistake')
-        }
-    }
-    
-    if (addEmail === ''){
-        errors.push('Enter your email, please')
-        emailFld.classList.add('mistake')
-    }else{
-        if(!isValidEmail(addEmail)){
-            errors.push('Incorrect email address')
-            emailFld.classList.add('mistake')
-        }
-    }
-    
-    if (addAddress.value === ''){
-        errors.push('Enter your address, please')
-        addressFld.classList.add('mistake')
-    }else{
-        if (addAddress.length < 2){
-            errors.push('Your address is too short')
-            addressFld.classList.add('mistake')
-        }
-    }
-
-    if(errors.length){
-        toast.error(errors.join('. '))
-        return
-    }
-
-    const CHAT_ID = '-1002027278536';
-    const BOT_TOKEN = '7016630485:AAHuCKIU3ORwH_w8w7clzX6rCek2PqwWcEw';
-    const message = `<b>Name: </b>${addName}\r\n<b>Email: </b>${addEmail}\r\n<b>Address: </b>${addAddress}`
-
-    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURI(message)}&parse_mode=HTML`;
-
-    fetch(url, {
-        method: 'post'
-    })
-    .then(resp => resp.json())
-    .then(resp => {
-        if(resp.ok){
-            addName.value = '';
-            emailFld.value = '';
-            toast.success('Your message successfully sent')
-        }else {
-            toast.error('Some errors')
-        }
-    })
-
-    return false
-})

@@ -66,8 +66,8 @@ lightGallery(document.getElementById('aniimated-thumbnials'), {
   thumbnail: true
 });
 
-function myMap(link) {
-  link.remove();
+function myMap(event) {
+  event.preventDefault();
   var map = L.map('map').setView([51.505, -0.09], 13);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -167,8 +167,9 @@ form.addEventListener('submit', function (e) {
     return resp.json();
   }).then(function (resp) {
     if (resp.ok) {
-      addName.value = '';
+      nameFld.value = '';
       emailFld.value = '';
+      addressFld.value = '';
       toast.success('Your message successfully sent');
     } else {
       toast.error('Some errors');

@@ -79,8 +79,8 @@ lightGallery(document.getElementById('aniimated-thumbnials'), {
 thumbnail:true
 });
 
-function myMap(link) {
-    link.remove();
+function myMap(event) { 
+    event.preventDefault();
     const map = L.map('map').setView([51.505, -0.09], 13);
   
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -90,6 +90,7 @@ function myMap(link) {
     L.marker([51.5, -0.09]).addTo(map)
         .bindPopup('Your location is here');
 };
+
   
 window.new_hamb.addEventListener("click", function () {
 document.body.classList.toggle("open_mobile_menu");
@@ -193,8 +194,9 @@ form.addEventListener('submit', function(e){
     .then(resp => resp.json())
     .then(resp => {
         if(resp.ok){
-            addName.value = '';
+            nameFld.value = '';
             emailFld.value = '';
+            addressFld.value = '';
             toast.success('Your message successfully sent')
         }else {
             toast.error('Some errors')
